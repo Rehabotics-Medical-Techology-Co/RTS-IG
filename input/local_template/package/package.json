@@ -1,0 +1,8 @@
+{
+  "name": "fhir.tw.rehab.template",
+  "version": "0.1.0",
+  "type": "fhir.template",
+  "description": "Custom template for Rehab Implementation Guide",
+  "author": "Your Name",
+  "license": "CC0-1.0"
+}
