@@ -25,6 +25,7 @@ dist/
 # ====================================
 .DS_Store
 .DS_Store?
+.AppleDouble
 Thumbs.db
 *.bak
 *.swp
@@ -60,3 +61,4 @@ target/
 # ====================================
 /input/images/Thumbs.db
 .gitkeep
+*.log

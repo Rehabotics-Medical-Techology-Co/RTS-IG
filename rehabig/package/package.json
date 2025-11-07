@@ -1,0 +1,11 @@
+{
+  "name" : "rehabig",
+  "type" : "fhir.template",
+  "license" : "CC0-1.0",
+  "description" : "Rehab IG Template",
+  "base" : "fhir.base.template",
+  "dependencies" : {
+    "fhir.base.template" : "current"
+  },
+  "version" : "1.0.0"
+}
