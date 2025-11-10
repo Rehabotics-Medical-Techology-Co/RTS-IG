@@ -3,9 +3,9 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: fhir.rehabig.tw
-canonical: http://example.org
-name: ExampleIG
+id: fhir.rehabig
+canonical: https://github.com/Kimsber/Rehab-IG
+name: Rehab IG
 # title: Example Title
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
@@ -19,7 +19,7 @@ publisher:
   name: Kimsber
   url: https://github.com/Kimsber
   # email: test@example.org
-
+license: CC-BY-SA-4.0
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for id, uri, and version.
