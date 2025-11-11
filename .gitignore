@@ -1,64 +1,15 @@
-# ====================================
-# IG Publisher 編譯產物
-# ====================================
-output/
-temp/
-template/
-fsh-generated/
-
-# ====================================
-# IG Publisher JAR 檔案（自動下載）
-# ====================================
-/input-cache/org.hl7.fhir.publisher.jar
-/input-cache/publisher.jar
-/input-cache/*.jar
-
-# ====================================
-# 其他編譯資源
-# ====================================
-input-cache/
-build/
-dist/
-
-# ====================================
-# 系統與編輯器檔案
-# ====================================
-.DS_Store
-.DS_Store?
-.AppleDouble
-Thumbs.db
-*.bak
-*.swp
-*.swo
-*~
+*.db
+temp
+template
+output
+input-cache
+fsh-generated
+.vscode
+www
+/_updatePublisher.sh
+/_gencontinuous.bat
+/_gencontinuous.sh
+/_genonce.bat
+/_genonce.sh
+.index.json
 .git/
-
-# ====================================
-# IDE
-# ====================================
-.vscode/
-.idea/
-*.iml
-*.project
-*.classpath
-
-# ====================================
-# Node.js
-# ====================================
-node_modules/
-npm-debug.log
-package-lock.json
-
-# ====================================
-# Java
-# ====================================
-*.class
-*.jar
-target/
-
-# ====================================
-# 不必要的系統檔案
-# ====================================
-/input/images/Thumbs.db
-.gitkeep
-*.log
