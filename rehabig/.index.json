@@ -1,0 +1,27 @@
+{
+  "index-version" : 2,
+  "files" : [
+    {
+      "filename" : "onCheck-validation.json",
+      "resourceType" : "OperationOutcome"
+    },
+    {
+      "filename" : "onGenerate-ig-working.json",
+      "resourceType" : "ImplementationGuide",
+      "id" : "fhir.example",
+      "url" : "http://example.org/ImplementationGuide/fhir.example",
+      "version" : "0.1.0"
+    },
+    {
+      "filename" : "onGenerate-validation.json",
+      "resourceType" : "OperationOutcome"
+    },
+    {
+      "filename" : "onLoad-ig-working.json",
+      "resourceType" : "ImplementationGuide",
+      "id" : "fhir.example",
+      "url" : "http://example.org/ImplementationGuide/fhir.example",
+      "version" : "0.1.0"
+    }
+  ]
+}
