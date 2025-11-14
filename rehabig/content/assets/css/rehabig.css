@@ -16,7 +16,7 @@ Usage:
   --navbar-bg-color: #f88826; /* 2. Header container color */
   --footer-bg-color: #f88826; /* 3. Footer background color*/
   --footer-container-bg-color: #f88826; /* 4. Footer container color */
-  --stripe-bg-color: #f88826; /* 5. Header strip color */
+  /*--stripe-bg-color: #f88826; /* 5. Header strip color */
 
   --btn-hover-color: #0093d5;  /* 6. Menu button hover color */
   --btn-active-color: #f88826; /* 7. Menu button active color */
