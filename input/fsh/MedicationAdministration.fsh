@@ -23,7 +23,7 @@ Title: "用藥資料範例"
 Description: "一個用藥資料的範例"
 * status = #completed
 * medicationCodeableConcept.text = "阿莫西林 500mg"
-* subject = Reference(Patient/example)
+* subject = Reference(PatientExample)
 * effectiveDateTime = "2025-10-16T10:00:00+08:00"
 
 
@@ -34,5 +34,5 @@ Title: "PAC用藥資料範例"
 Description: "一個用藥資料的範例"
 * status = #completed
 * medicationCodeableConcept.text = "阿莫西林 500mg"
-* subject = Reference(Patient/example)
+* subject = Reference(PatientExample)
 * effectiveDateTime = "2025-10-16T10:00:00+08:00"

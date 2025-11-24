@@ -38,7 +38,9 @@ Instance: ObservationScreeningAssessmentExample
 InstanceOf: ObservationScreeningAssessment
 Title: "健康狀態篩檢與評估範例"
 Description: "一個健康狀態篩檢與評估的範例"
+
 * status = #final
 * code.coding[0].system = "http://loinc.org"
 * code.coding[0].display = "Health Status Screening"
-* subject = Reference(Patient/example)
+* subject = Reference(PatientExample)
+* dataAbsentReason.coding = #unknown

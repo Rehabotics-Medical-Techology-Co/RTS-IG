@@ -4,7 +4,7 @@ Usage: #example
 
 * questionnaire = "http://example.org/fhir/Questionnaire/IDALQuestionnaireInstance"
 * status = #completed
-* subject = Reference(Patient/PatientPACExample)
+* subject = Reference(PatientExample)
 * authored = "2023-10-01T10:00:00+08:00"
 
 * item[0].linkId = "A-telephone"

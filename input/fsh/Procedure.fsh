@@ -17,5 +17,5 @@ Title: "介入資料範例"
 Description: "一個介入的範例"
 * status = #completed
 * code = http://snomed.info/sct#80146002 "Appendectomy"
-* subject = Reference(Patient/001)
+* subject = Reference(PatientExample)
 * performedDateTime = "2025-10-09T10:00:00+08:00"

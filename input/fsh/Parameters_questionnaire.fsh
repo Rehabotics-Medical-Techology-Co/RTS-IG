@@ -9,7 +9,7 @@
 Instance: QuestionnaireIdentifier
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://example.org/fhir/SearchParameter/Questionnaire-identifier"
+* url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/QuestionnaireIdentifier"
 * name = "QuestionnaireIdentifier"
 * status = #active
 * description = "問卷識別碼"
@@ -20,7 +20,7 @@ Usage: #definition
 Instance: QuestionnaireTitle
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://example.org/fhir/SearchParameter/Questionnaire-title"
+* url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/QuestionnaireTitle"
 * name = "QuestionnaireTitle"
 * status = #active
 * description = "問卷標題"
@@ -31,7 +31,7 @@ Usage: #definition
 Instance: QuestionnaireLinkID
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://example.org/fhir/SearchParameter/Questionnaire-LinkID"
+* url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/QuestionnaireLinkID"
 * name = "QuestionnaireLinkID"
 * status = #active
 * description = "問卷項目"
@@ -46,7 +46,7 @@ Usage: #definition
 Instance: QuestionnaireResponseId
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://example.org/fhir/SearchParameter/QuestionnaireResponse-_id"
+* url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/QuestionnaireResponseId"
 * name = "QuestionnaireResponseId"
 * status = #active
 * description = "搜尋QuestionnaireResponse的_id參數"
@@ -58,7 +58,7 @@ Usage: #definition
 Instance: QuestionnaireResponsePatient
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://example.org/fhir/SearchParameter/QuestionnaireResponse-patient"
+* url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/QuestionnaireResponsePatient"
 * name = "QuestionnaireResponsePatient"
 * status = #active
 * description = "搜尋QuestionnaireResponse的patient參數"
@@ -70,7 +70,7 @@ Usage: #definition
 Instance: QuestionnaireResponseStatus
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://example.org/fhir/SearchParameter/QuestionnaireResponse-status"
+* url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/QuestionnaireResponseStatus"
 * name = "QuestionnaireResponseStatus"
 * status = #active
 * description = "搜尋QuestionnaireResponse的status參數"
@@ -82,7 +82,7 @@ Usage: #definition
 Instance: QuestionnaireResponseAuthored
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://example.org/fhir/SearchParameter/QuestionnaireResponse-authored"
+* url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/QuestionnaireResponseAuthored"
 * name = "QuestionnaireResponseAuthored"
 * status = #active
 * description = "搜尋QuestionnaireResponse的authored參數"
@@ -94,7 +94,7 @@ Usage: #definition
 Instance: QuestionnaireResponseQuestionnaire
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://example.org/fhir/SearchParameter/QuestionnaireResponse-questionnaire"
+* url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/QuestionnaireResponseQuestionnaire"
 * name = "QuestionnaireResponseQuestionnaire"
 * status = #active
 * description = "搜尋QuestionnaireResponse的questionnaire參數"
@@ -106,7 +106,7 @@ Usage: #definition
 Instance: QuestionnaireResponseSubject
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://example.org/fhir/SearchParameter/QuestionnaireResponse-subject"
+* url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/QuestionnaireResponseSubject"
 * name = "QuestionnaireResponseSubject"
 * status = #active
 * description = "問卷回應主體"
@@ -117,7 +117,7 @@ Usage: #definition
 Instance: QuestionnaireResponseLinkID
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://example.org/fhir/SearchParameter/QuestionnaireResponse-LinkID"
+* url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/QuestionnaireResponseLinkID"
 * name = "QuestionnaireResponseLinkID"
 * status = #active
 * description = "問卷標題"

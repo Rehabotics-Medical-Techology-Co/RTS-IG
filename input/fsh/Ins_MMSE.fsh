@@ -172,7 +172,7 @@ Description: "簡易心智狀況檢查表 (Mini-Mental State Examination, MMSE)"
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
 // 5.2 題目
-* item[=].item[0].linkId = "e-2-stuff"
+* item[=].item[+].linkId = "e-2-stuff"
 * item[=].item[=].text = "指著鉛筆和手錶問病人：這是什麼東西？(答對一個一分)"
 * item[=].item[=].type = #display
 // 5.2_score (2分)
@@ -183,7 +183,7 @@ Description: "簡易心智狀況檢查表 (Mini-Mental State Examination, MMSE)"
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 // 5.3題目
-* item[=].item[0].linkId = "e-3-phrase"
+* item[=].item[+].linkId = "e-3-phrase"
 * item[=].item[=].text = "請病人重複以下這句話『種瓜得瓜、種豆得豆』(國語)。 『人死留名、虎死留皮』(閩南語)。"
 * item[=].item[=].type = #display
 // 5.3_score (1分)
@@ -193,7 +193,7 @@ Description: "簡易心智狀況檢查表 (Mini-Mental State Examination, MMSE)"
 * item[=].item[=].answerOption[0].valueInteger = 0
 * item[=].item[=].answerOption[+].valueInteger = 1
 // 5.4題目
-* item[=].item[0].linkId = "e-4-fold"
+* item[=].item[+].linkId = "e-4-fold"
 * item[=].item[=].text = "連續給病人三個口令：用右或左(好)手拿紙、將紙對摺成一半、再將紙放到桌上(命令全說完後再讓他做，每完成一個給一分)。"
 * item[=].item[=].type = #display
 // 5.4_score (3分)
@@ -205,7 +205,7 @@ Description: "簡易心智狀況檢查表 (Mini-Mental State Examination, MMSE)"
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
 // 5.5 題目 (1分)
-* item[=].item[0].linkId = "e-5-sen"
+* item[=].item[+].linkId = "e-5-sen"
 * item[=].item[=].text = "請您隨意寫一個句子(用另一張空白的紙)或說一句話(用於不識字者)。"
 * item[=].item[=].type = #display
 // 5.5_score (1分)
@@ -229,7 +229,7 @@ Description: "簡易心智狀況檢查表 (Mini-Mental State Examination, MMSE)"
 * item[=].item[=].answerOption[0].valueInteger = 0
 * item[=].item[=].answerOption[+].valueInteger = 1
 // 6.2 題目
-* item[=].item[0].linkId = "f-2-draw"
+* item[=].item[+].linkId = "f-2-draw"
 * item[=].item[=].text = "請病人把下面的圖形(印於另一張紙)再畫一次(用另一張空白的紙)。"
 * item[=].item[=].type = #display
 // 6.2_score (1分)
@@ -243,9 +243,7 @@ Description: "簡易心智狀況檢查表 (Mini-Mental State Examination, MMSE)"
 * item[=].text = "總分（自動計算)"
 * item[=].type = #integer
 * item[=].readOnly = true
-* item[=].extension[0].url = $sdcCalc
-* item[=].extension[0].valueExpression.language = #text/fhirpath
-* item[=].extension[0].valueExpression.expression = "%resource.item.descendants().where(answer.valueInteger.exists() and (linkId.endsWith('_score') or linkId.contains('-score'))).answer.valueInteger.sum()"
+
 
 // 轉換為Observation
 * item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"

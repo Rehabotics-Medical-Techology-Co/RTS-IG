@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: fhir.rehabig
-canonical: https://github.com/Kimsber/Rehab-IG
+canonical: https://build.fhir.org/ig/Kimsber/Rehab-IG
 name: RoboHand Training IG
 title: "機器手訓練實作指引 (RoboHand Training Implementation Guide)"
 # description: Example Implementation Guide for getting started with SUSHI

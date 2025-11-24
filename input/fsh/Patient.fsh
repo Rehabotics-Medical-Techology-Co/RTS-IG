@@ -30,4 +30,10 @@ Description: "右側中風患者，接受左側上肢功能評估"
 * birthDate = "1965-03-15"
 * address.city = "台北市"
 * address.country = "台灣"
+/* GOAL 病人資料範例
+Instance: PatientGoalExample
+InstanceOf: TWCorePatient
+Usage: #example
+Title: "目標"
+*/ 
 

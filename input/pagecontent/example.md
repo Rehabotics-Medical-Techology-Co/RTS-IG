@@ -37,7 +37,7 @@ title: 範例
 ### Questionnaire
 - [巴氏量表問卷](Questionnaire-BarthelQuestionnaireInstance.html)
 
-- [BBT量表問卷](Questionnaire-BBTQuestionnaireInstance.html)
+- [BBT量表問卷](Questionnaire-BBTQuestionnaire.html)
 
 - [MAS量表問卷](Questionnaire-MASQuestionnaireInstance.html)
 
@@ -60,9 +60,10 @@ title: 範例
 
 
 ### QuestionnaireResponse
-- [巴氏量表問卷回覆範例](Questionnaire-BarthelQuestionnaireResponseExample.html)
+- [巴氏量表問卷回覆範例](QuestionnaireResponse-BarthelIndexExample.html)
 
-- [BBT量表問卷回覆範例](QuestionnaireResponse-BBTQuestionnaireResponseExample.html)
+- [BBT量表問卷回覆範例](QuestionnaireResponse-BBTExample.html)
+
 
 - [MAS量表問卷回覆範例](QuestionnaireResponse-MASQuestionnaireResponseExample.html)
 

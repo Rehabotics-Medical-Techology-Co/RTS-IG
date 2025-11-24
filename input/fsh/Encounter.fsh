@@ -27,10 +27,15 @@ Description: "進行ARAT評估的門診會期"
 
 * id = "arat-assessment-encounter-001"
 * status = #finished
-* class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "門診"
-* type = http://snomed.info/sct#410155007 "職能治療評估"
+* class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "ambulatory"
+
+* type = http://snomed.info/sct#410155007 "Occupational therapy assessment"
+* type.text = "職能治療評估"
 * subject = Reference(Patient/stroke-patient-001)
 * participant.individual = Reference(Practitioner/ot-therapist-001)
 * period.start = "2025-10-11T14:00:00+08:00"
 * period.end = "2025-10-11T15:00:00+08:00"
-* reasonCode = http://snomed.info/sct#230690007 "中風後復健"
+* reasonCode = http://snomed.info/sct#2517002
+* reasonCode.coding[0].system = "http://snomed.info/sct"
+* reasonCode.coding[=].code = $SCT#2517002
+* reasonCode.text =  "中風後復健"

@@ -20,6 +20,6 @@ Title: "健康照護服務提供者角色資料範例"
 Description: "一名健康照護服務提供者角色的範例"
 * practitioner = Reference(PractitionerExample)
 * organization = Reference(OrganizationExample)
-* code = http://terminology.hl7.org/CodeSystem/v2-0286#DO "Doctor"
+* code = http://terminology.hl7.org/CodeSystem/v2-0286#PP "Primary Care Provider"
 * active = true
-* specialty = http://snomed.info/sct#394802001 "General medicine"
+* specialty = http://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medical-consultation-department-nhi-tw#00 "General medicine"

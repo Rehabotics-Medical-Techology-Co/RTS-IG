@@ -13,5 +13,5 @@ title: 結構定義與範例檔下載
 
 **文件定義** [xml](definitions.xml.zip) [JSON](definitions.json.zip) [Turtle](definitions.ttl.zip)  
 
-**範例** [xml](example.xml.zip) [JSON](example.json.zip) [Turtle](examples.ttl.zip)
+**範例** [xml](examples.xml.zip) [JSON](examples.json.zip) [Turtle](examples.ttl.zip)
 

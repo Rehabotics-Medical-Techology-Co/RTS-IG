@@ -10,7 +10,7 @@ Description: "針對 Fugl-Meyer 上肢動作評估問卷的完整回覆範例，
 
 * questionnaire = "http://example.org/fhir/Questionnaire/FMAUEMotorQuestionnaireInstance"
 * status = #completed
-* subject = Reference(Patient/PatientPACExample)
+* subject = Reference(PatientExample)
 * authored = "2023-10-01T10:00:00+08:00"
 
 // ============================================
@@ -26,7 +26,8 @@ Description: "針對 Fugl-Meyer 上肢動作評估問卷的完整回覆範例，
 * item[1].linkId = "assessment-side-fmaue-motion"
 * item[=].text = "請選擇評估階段"
 * item[=].answer.valueCoding.code = $snomed#7771000
-* item[=].answer.valueCoding.display = "患者左側"
+* item[=].answer.valueCoding.display = "Left"
+
 
 // ============================================
 // Section A：肩關節/肘關節/前臂動作評估回覆

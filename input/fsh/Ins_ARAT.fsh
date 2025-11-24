@@ -45,10 +45,10 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].required = true
 * item[=].answerOption[0].valueCoding.system = $snomed 
 * item[=].answerOption[=].valueCoding.code = $snomed#24028007
-* item[=].answerOption[=].valueCoding.display = "患者左側"
+* item[=].answerOption[=].valueCoding.display = "Right"
 * item[=].answerOption[+].valueCoding.system = $snomed
 * item[=].answerOption[=].valueCoding.code = $snomed#7771000
-* item[=].answerOption[=].valueCoding.display = "患者右側"
+* item[=].answerOption[=].valueCoding.display = "Left"
 
 // ============================================
 // Section A：掌握分量表 (6個項目)
@@ -67,7 +67,7 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // A2. Block,2.5 cm3 
 * item[=].item[+].linkId = "A-I-block-2.5cm3"
@@ -78,7 +78,7 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // A3. Block,5 cm3 
 * item[=].item[+].linkId = "A-I-block-5cm3"
@@ -89,7 +89,7 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // A4. Block,7.5 cm3 
 * item[=].item[+].linkId = "A-I-block-7.5cm3"
@@ -100,7 +100,7 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // A5. Cricket ball 
 * item[=].item[+].linkId = "A-I-cricket-ball"
@@ -111,7 +111,7 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // A6. Sharpening stone 
 * item[=].item[+].linkId = "A-I-sharpening-stone"
@@ -122,7 +122,7 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // A 分量表分數顯示
 * item[=].item[+].linkId = "A-grasp-subscale-subscore"
@@ -154,7 +154,7 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // B2. Displace 2.25-cm alloy tube from one side oftable to the other 
 * item[=].item[+].linkId = "B-I-displace-2.25-cm-alloy-tube-from-one-side-oftable-to-the-other"
@@ -165,7 +165,7 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // B3. Displace 1-cm alloy tube from one side of table to the other
 * item[=].item[+].linkId = "B-I-displace-1-cm-alloy-tube-from-one-side-of-table-to-the-other"
@@ -176,7 +176,7 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // B4. Put washer over bolt
 * item[=].item[+].linkId = "B-I-put-washer-over-bolt"
@@ -187,7 +187,7 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // B 分量表分數顯示
 * item[=].item[+].linkId = "B-grip-subscale-subscore"
@@ -219,7 +219,7 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // C2. Marble,held between index finger and thumb 
 * item[=].item[+].linkId = "C-I-marble-held-between-index-finger-and-thumb"
@@ -230,7 +230,7 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // C3. Ball bearing,held between middle finger and thumb
 * item[=].item[+].linkId = "C-I-ball-bearing-held-between-middle-finger-and-thumb"
@@ -241,7 +241,7 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // C4. Ball bearing,held between index finger and thumb
 * item[=].item[+].linkId = "C-I-ball-bearing-held-between-index-finger-and-thumb"
@@ -252,7 +252,7 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // C5. Marble,held between ring finger and thumb
 * item[=].item[+].linkId = "C-I-marble-held-between-ring-finger-and-thumb"
@@ -263,7 +263,7 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // C6. Marble,held between middle finger and thumb
 * item[=].item[+].linkId = "C-I-marble-held-between-middle-finger-and-thumb"
@@ -274,7 +274,7 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // C 分量表分數顯示
 * item[=].item[+].linkId = "C-pinch-subscale-subscore"
@@ -306,7 +306,7 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // D2. Hand to top of head
 * item[=].item[+].linkId = "D-I-hand-to-top-of-head"
@@ -317,7 +317,7 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // D3. Hand to mouth
 * item[=].item[+].linkId = "D-I-hand-to-mouth"
@@ -328,7 +328,7 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // D 分量表分數顯示
 * item[=].item[+].linkId = "D-gross-movement-subscale-subscore"

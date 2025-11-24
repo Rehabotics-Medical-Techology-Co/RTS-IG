@@ -52,4 +52,5 @@ title: FHIR profiles及Extensions
 - [健康照護服務提供者角色](StructureDefinition-PractitionerRole.html)
 
 #### Procedure
-- [處置或手術](StructureDefinition-Procedure-twcore.html)
+- [處置或手術](StructureDefinition-Procedure.html)
+

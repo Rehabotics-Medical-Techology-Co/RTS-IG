@@ -1,5 +1,6 @@
 // 問卷填入的值
 Alias: $loinc = http://loinc.org
+
 Instance: BarthelIndexExample
 InstanceOf: BarthelQuestionnaireResponse
 Usage: #example
@@ -21,14 +22,14 @@ Usage: #example
 * item[grooming].answer.valueCoding = $loinc#LA31643-2
 
 // Section 3 答案
-* item[toiletuse].linkId = "C-toilet Use"
+* item[toiletuse].linkId = "C-toiletUse"
 * item[toiletuse].text = "上廁所 (Toilet Use)"
 * item[toiletuse].answer.valueCoding = $loinc#LA31631-7
 
 // Section 4 答案
 * item[bathing].linkId = "D-bathing"
 * item[bathing].text = "洗澡 (Bathing)"
-* item[bathing].answer.valueCoding = $loinc#LA12304-4
+* item[bathing].answer.valueCoding  = $loinc#LA12304-4
 
 // Section 5 答案
 * item[dressing].linkId = "E-dressing"

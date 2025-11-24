@@ -23,10 +23,11 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 * item[=].required = true
 * item[=].answerOption[0].valueCoding.system = $snomed
 * item[=].answerOption[=].valueCoding.code = $snomed#24028007
-* item[=].answerOption[=].valueCoding.display = "患者左側"
+* item[=].answerOption[=].valueCoding.display = "Right"
 * item[=].answerOption[+].valueCoding.system = $snomed
 * item[=].answerOption[=].valueCoding.code = $snomed#7771000
-* item[=].answerOption[=].valueCoding.display = "患者右側"
+* item[=].answerOption[=].valueCoding.display = "Left"
+
 
 // ============================================
 // Section A
@@ -47,7 +48,7 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 * item[=].item[=].answerOption[+].valueInteger = 3
 * item[=].item[=].answerOption[+].valueInteger = 4
 * item[=].item[=].answerOption[+].valueInteger = 5
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // A2 
 * item[=].item[+].linkId = "A-I-forearm-to-box-side"
@@ -60,7 +61,7 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 * item[=].item[=].answerOption[+].valueInteger = 3
 * item[=].item[=].answerOption[+].valueInteger = 4
 * item[=].item[=].answerOption[+].valueInteger = 5
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // A3 
 * item[=].item[+].linkId = "A-I-extended-elbow-side"
@@ -73,7 +74,7 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 * item[=].item[=].answerOption[+].valueInteger = 3
 * item[=].item[=].answerOption[+].valueInteger = 4
 * item[=].item[=].answerOption[+].valueInteger = 5
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // A4 
 * item[=].item[+].linkId = "A-I-extended-elbow-to-the-side-with-1lb-weight"
@@ -86,7 +87,7 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 * item[=].item[=].answerOption[+].valueInteger = 3
 * item[=].item[=].answerOption[+].valueInteger = 4
 * item[=].item[=].answerOption[+].valueInteger = 5
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // A5 
 * item[=].item[+].linkId = "A-I-hand-to-table-front"
@@ -99,7 +100,7 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 * item[=].item[=].answerOption[+].valueInteger = 3
 * item[=].item[=].answerOption[+].valueInteger = 4
 * item[=].item[=].answerOption[+].valueInteger = 5
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // A6
 * item[=].item[+].linkId = "A-I-hand-to-box-front"
@@ -112,7 +113,7 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 * item[=].item[=].answerOption[+].valueInteger = 3
 * item[=].item[=].answerOption[+].valueInteger = 4
 * item[=].item[=].answerOption[+].valueInteger = 5
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // A 分量表分數顯示
 * item[=].item[+].linkId = "A-timed-joint-segment-movements-subscore"
@@ -136,7 +137,7 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 * item[=].required = true
 
 // B1
-* item[=].item[+].linkId = "B-I-reach-and-retrieve-front"
+* item[=].item[0].linkId = "B-I-reach-and-retrieve-front"
 * item[=].item[=].text = "透過手肘和彎曲手腕將 1 磅重的物體拉過桌子"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
@@ -146,10 +147,9 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 * item[=].item[=].answerOption[+].valueInteger = 3
 * item[=].item[=].answerOption[+].valueInteger = 4
 * item[=].item[=].answerOption[+].valueInteger = 5
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
-
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 // B2
-* item[=].item[0].linkId = "B-I-lift-can-front"
+* item[=].item[+].linkId = "B-I-lift-can-front"
 * item[=].item[=].text = "舉起一個罐子，並用圓柱形的抓握方式將其靠近嘴唇"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
@@ -159,7 +159,7 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 * item[=].item[=].answerOption[+].valueInteger = 3
 * item[=].item[=].answerOption[+].valueInteger = 4
 * item[=].item[=].answerOption[+].valueInteger = 5
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // B3 
 * item[=].item[+].linkId = "B-I-lift-pencil-front"
@@ -172,7 +172,7 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 * item[=].item[=].answerOption[+].valueInteger = 3
 * item[=].item[=].answerOption[+].valueInteger = 4
 * item[=].item[=].answerOption[+].valueInteger = 5
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // B4
 * item[=].item[+].linkId = "B-I-pick-up-paper-clip-front"
@@ -185,7 +185,7 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 * item[=].item[=].answerOption[+].valueInteger = 3
 * item[=].item[=].answerOption[+].valueInteger = 4
 * item[=].item[=].answerOption[+].valueInteger = 5
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // B5
 * item[=].item[+].linkId = "B-I-stack-checkers-front"
@@ -198,7 +198,7 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 * item[=].item[=].answerOption[+].valueInteger = 3
 * item[=].item[=].answerOption[+].valueInteger = 4
 * item[=].item[=].answerOption[+].valueInteger = 5
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // B6
 * item[=].item[+].linkId = "B-I-flip-3-cards-front"
@@ -211,7 +211,7 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 * item[=].item[=].answerOption[+].valueInteger = 3
 * item[=].item[=].answerOption[+].valueInteger = 4
 * item[=].item[=].answerOption[+].valueInteger = 5
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // B7
 * item[=].item[+].linkId = "B-I-turning-the-key-in-lock-front"
@@ -224,7 +224,7 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 * item[=].item[=].answerOption[+].valueInteger = 3
 * item[=].item[=].answerOption[+].valueInteger = 4
 * item[=].item[=].answerOption[+].valueInteger = 5
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // B8
 * item[=].item[+].linkId = "B-I-fold-towel-front"
@@ -237,7 +237,7 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 * item[=].item[=].answerOption[+].valueInteger = 3
 * item[=].item[=].answerOption[+].valueInteger = 4
 * item[=].item[=].answerOption[+].valueInteger = 5
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // B9
 * item[=].item[+].linkId = "B-I-lift-basket-standing"
@@ -250,7 +250,7 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 * item[=].item[=].answerOption[+].valueInteger = 3
 * item[=].item[=].answerOption[+].valueInteger = 4
 * item[=].item[=].answerOption[+].valueInteger = 5
-* item[=].item[=].extension.url = "http://example.org/fhir/TestTimeExtension"
+//* item[=].item[=].extension.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition-test-time-extension"
 
 // B 分量表分數顯示（自動計算）
 * item[=].item[+].linkId = "B-timed-integrative-functional-movements-subscore"

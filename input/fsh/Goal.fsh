@@ -23,5 +23,5 @@ Title: "目標資料範例"
 Description: "一個目標的範例"
 * lifecycleStatus = #active
 * description.text = "控制血糖在目標範圍內"
-* subject = Reference(Patient/001)
-* category = http://terminology.hl7.org/CodeSystem/goal-category#health-management
+* subject = Reference(PatientExample)
+* category = http://terminology.hl7.org/CodeSystem/goal-category#dietary

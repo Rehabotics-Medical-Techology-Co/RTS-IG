@@ -21,4 +21,3 @@ Description: "問卷回覆的結構化定義，實際問回覆內容可參考Exa
 * item.answer 0..* MS
 * item.answer.extension[ordinalValue] 0..1 MS
 * item.answer.value[x] 0..1 MS
-* item.item 0..* MS

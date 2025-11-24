@@ -6,7 +6,8 @@
 Instance: MyFHIRClientCapabilityStatement
 InstanceOf: CapabilityStatement
 Usage: #definition
-* url = "http://example.org/fhir/CapabilityStatement/MyFHIRClient"
+
+* url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/CapabilityStatement/MyFHIRClientCapabilityStatement"
 * name = "MyFHIRClientCapabilityStatement"
 * title = "My FHIR Client Capability Statement"
 * status = #active
@@ -23,7 +24,7 @@ Usage: #definition
 * rest.documentation = "用戶端建議應該（SHOULD）使用伺服端能力聲明中的查詢參數，支援讀取和查詢一個或多個 Profile。系統互動能力：可能可以（MAY）支援交易（transaction）、批次（batch）與查詢系統（search-system）。"
 
 * rest.resource[0].type = #Bundle
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Bundle"
+* rest.resource[=].profile = "https://github.com/Kimsber/StructureDefinition/Bundle"
 * rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].profile.extension.valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -35,7 +36,7 @@ Usage: #definition
 * rest.resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Bundle-_id"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IGSearchParameter/BundleId"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
@@ -44,7 +45,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 
 * rest.resource[+].type = #CarePlan
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/CarePlan"
+* rest.resource[=].profile = "https://github.com/Kimsber/StructureDefinition/CarePlan"
 * rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].profile.extension.valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -75,7 +76,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 
 * rest.resource[+].type = #Condition
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Condition"
+* rest.resource[=].profile = "https://github.com/Kimsber/fhir/StructureDefinition/Condition"
 * rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].profile.extension.valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -121,7 +122,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 
 * rest.resource[+].type = #Encounter
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Encounter"
+* rest.resource[=].profile = "https://github.com/Kimsber/StructureDefinition/Encounter"
 * rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].profile.extension.valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -167,7 +168,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 
 * rest.resource[+].type = #Goal
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Goal"
+* rest.resource[=].profile = "https://github.com/Kimsber/StructureDefinition/Goal"
 * rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].profile.extension.valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -198,7 +199,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 
 * rest.resource[+].type = #MedicationAdministration
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/MedicationAdministration"
+* rest.resource[=].profile = "https://github.com/Kimsber/StructureDefinition/MedicationAdministration"
 * rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].profile.extension.valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -274,7 +275,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #reference
 
 * rest.resource[+].type = #Observation
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Observation"
+* rest.resource[=].profile = "https://github.com/Kimsber/StructureDefinition/Observation"
 * rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].profile.extension.valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -330,7 +331,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #date
 
 * rest.resource[+].type = #Organization
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Organization"
+* rest.resource[=].profile = "https://github.com/Kimsber/StructureDefinition/Organization"
 * rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].profile.extension.valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -361,7 +362,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 
 * rest.resource[+].type = #Patient
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Patient"
+* rest.resource[=].profile = "https://github.com/Kimsber/StructureDefinition/Patient"
 * rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].profile.extension.valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -401,7 +402,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #string
 
 * rest.resource[+].type = #Practitioner
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Practitioner"
+* rest.resource[=].profile = "https://github.com/Kimsber/StructureDefinition/Practitioner"
 * rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].profile.extension.valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -427,7 +428,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #string
 
 * rest.resource[+].type = #PractitionerRole
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+* rest.resource[=].profile = "https://github.com/Kimsber/StructureDefinition/PractitionerRole"
 * rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].profile.extension.valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -453,7 +454,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 
 * rest.resource[+].type = #Procedure
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Procedure"
+* rest.resource[=].profile = "https://github.com/Kimsber/StructureDefinition/Procedure"
 * rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].profile.extension.valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -489,7 +490,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #date
 
 * rest.resource[+].type = #Questionnaire
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Questionnaire"
+* rest.resource[=].profile = "https://github.com/Kimsber/StructureDefinition/Questionnaire"
 * rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].profile.extension.valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -510,7 +511,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #string
 
 * rest.resource[+].type = #QuestionnaireResponse
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"
+* rest.resource[=].profile = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/QuestionnaireResponse"
 * rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].profile.extension.valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
