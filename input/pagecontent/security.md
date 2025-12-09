@@ -11,7 +11,7 @@ title: 安全性
 - [安全標籤 (Security Labels)](https://hl7.org/fhir/R4/security-labels.html)
 - [說明 (Narrative)](https://hl7.org/fhir/R4/security.html#narrative)
 
-就 TW LTC IG 而言，安全一致性要求如下。
+就 xx IG 而言，安全一致性要求如下。
 
 - **系統建議應該(SHOULD)** 保留各種交易的稽核日誌(audit logs)
 - **系統建議應該(SHOULD)** 符合FHIR通訊安全（Communications Security）要求

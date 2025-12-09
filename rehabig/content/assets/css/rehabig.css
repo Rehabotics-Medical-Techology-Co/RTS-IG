@@ -1,7 +1,7 @@
 /* 
 Color scheme definitions
 
-http://build.fhir.org/ig/FHIR/ig-guidance/index.html
+https://build.fhir.org/ig/FHIR/ig-guidance/colors.html
 
 Usage:
    var(--publish-box-bg-color); 
@@ -30,4 +30,5 @@ Usage:
   --ig-header-container-color: #ffffff; /* 22. Header container color (center) */
 
 }
+
 

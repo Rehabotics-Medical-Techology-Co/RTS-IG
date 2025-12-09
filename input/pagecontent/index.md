@@ -1,16 +1,21 @@
 ---
 title: 應用說明
 ---
-
-### 專案介紹
-
-機器手訓練實作指引(RoboHand Training Implementation Guide
-)採用HL7® FHIR® standard（Fast Healthcare Interoperability 
-Resources）IG 建置方法，在FHIR R4.0.1  之標準基礎上，繼承臺灣核
-心實作指引（Taiwan Core Implementation Guide，簡稱TW core 
-IG）V0.3.2 版本，進一步定義適用於機器手訓練資料需求的Resources
-（類似資料表）、其中的資料項目（意即欄位）、基數（意即0..1、0..、
-1..1或1..）及資料類型（文字、日期時間、代碼等）等。
+<!--
+<div class="bg-warning" style="ol { counter-reset: item } li { display: block } li:before { content: counters（item, ">
+此實作指引仍處於開發試驗階段
+<ol>  
+	<li>因實務需求，工研院次世代數位醫療平台專案辦公室新增<a href="twcdi.html">TWCDI</a>內容說明。</li>
+  <li>更新代碼系統<a href="CodeSystem-icd-10-cm-2023-tw.html">臺灣健保署2023年中文版ICD-10-CM</a>，並新增property："USE" 表「代碼有效/無效」以利專案使用。</li>
+	<li>更新代碼系統<a href="CodeSystem-icd-10-pcs-2023-tw.html">臺灣健保署2023年中文版ICD-10-PCS</a>，並新增property："USE" 表「代碼有效/無效」以利專案使用。</li>
+	<li>更新代碼系統<a href="CodeSystem-medical-service-payment-tw.html">臺灣健保署醫療服務給付項目</a>，以利專案使用。</li>
+</ol>
+請留意這些異動，以避免影響您的實作。
+</div --> 
+### 介紹
+復健訓練評估量表實作指引 (Rehabilitation Training Scale Implementation Guide，簡稱RTS IG)」採用HL7® FHIR®（Fast Healthcare Interoperability Resources）為基礎，運用其 Implementation Guide（IG）設計模式進行編制。本指引建立於 [FHIR R4.0.1](https://hl7.org/fhir/R4/) 的技術版次之上，並採用 [TW Core IG](https://twcore.mohw.gov.tw/ig/twcore/index.html) 作為基礎框架，再擴充出專屬於復健成效量測與訓練紀錄交換的資料結構。
+在本 IG 中，針對復健領域所需的資料交換內容，定義了適用的 Resource 類型（可視為資料表結構）、欄位屬性、必要性與重複次數（例如 0..1、0..、1..1、1..），以及各項資料所需使用的格式（例如字串、代碼、日期時間、量測值等）。
+本 IG 的核心目的，是提供復健醫療資訊系統、研發者與臨床場域一套一致且可相互溝通的資料交換框架，使不同系統能依據此規範延伸或建立自身需求的資料格式，進而提升復健訓練紀錄與功能評估量表在跨單位、跨系統間的標準化與互操作能力。
 
 ### 專案背景
 隨著復健科技的快速發展，機器手臂輔助訓練已成為上肢功能障礙患
@@ -19,38 +24,150 @@ IG）V0.3.2 版本，進一步定義適用於機器手訓練資料需求的Resou
 訓練資料標準化與互通性，本工作小組提出適用於機器手訓練情境的FHIR
 技術規格，旨在標準化機器手輔助復健的資料收集與交換流程，促進復健
 醫療資訊的整合與應用，提升整體照護品質。讓醫療單位能以電子化且一
-致的方式記錄與交換訓練資料，有效整合患者完整復健歷程。旨在標準化
+致的方式記錄與交換訓練資料，有效整合患者完整復健歷程。此實作指引目的在於標準化
 機器手輔助復健的資料收集與交換流程，促進復健醫療資訊的整合與應用，
 提升整體照護品質。
-### 專案範圍
-待確認
 
-xx 實作指引（Implementation Guide，簡稱 **TW xx IG**）採用 HL7® FHIR® 標準（Fast Healthcare Interoperability Resources）建置方法，
-在 FHIR R4.0.1 標準基礎上，參考：
+復健醫療領域中，臨床人員針對個案進行功能評估、制定訓練計畫與追蹤治療成效時，會運用多種標準化量表與量測工具。然而，不同臨床人員以及不同院所之間的紀錄方式、欄位定義、資料格式與編碼系統往往並不一致，使得量表內容難以在系統之間交換，也不利於跨機構研究、資料整合與長期追蹤分析。
+此外，隨著數位復健、遠距復健服務與 AI 輔助評估等新興應用快速發展，臨床評估量表的資料不僅需保留完整性，也必須能以結構化方式被系統讀取、篩選與再利用。此需求促使復健量表資料的標準化交換成為不可或缺的基礎建設。
+在此背景下，「復健訓練評估量表實作指引 RTS IG」應運而生。本 IG 提供復健量表資料在不同資訊系統間交換時的共通語言，包括資源架構、欄位定義、資料格式、基數要求，以及需配合使用的代碼系統。透過一致化的資料模型，本 IG 協助：
 
-- [台灣核心實作指引 (TW Core Implementation Guide)v.0.3.2](https://twcore.mohw.gov.tw/ig/twcore/index.html)
-- [美國長期照顧實作指引 (eLTSS IG), STU2](https://www.fhir.org/guides/astp/bhp/index.html)
-- [台灣長期照顧實作指引 (Taiwan Long-Term Care Implementation Guide)v0.4.0 ](https://ltc-ig.fhir.tw/)
-- [美國核心實作指引 (US Core Implementation Guide)](https://build.fhir.org/ig/HL7/US-Core/en/index.html)
+- **臨床與資訊系統建立可被不同平台解析的結構化量表資料**
+- **促進院內外復健紀錄的共享、比對與彙整**
+- **支援長期追蹤、研究分析、品質監測與 AI 模型訓練**
+- **建立復健醫療資訊互通的技術基礎，使系統能依據需求延伸應用**
+此實作指引旨在串連復健醫療流程中各類資料的產生者與使用者，使量表資料不再僅侷限於單一醫療院所的紀錄，而能成為支援臨床照護、管理決策與創新發展的可交換資源。
 
-進一步定義適用於臺灣健康照護資料交換需求的 Resources、欄位、基數、資料型態、代碼綁定及查詢參數等。
+### 專案目的
+在復健醫療照護流程中，病患從初診、訓練介入到成效追蹤，往往需要多位專業人員共同參與，包括復健醫師、物理治療師、職能治療師、語言治療師及照護管理團隊。不同階段所產生的功能評估量表與訓練紀錄，其資料通常散落於各自的資訊系統，格式不一、欄位定義不一致，也缺乏跨平台共通語言。
+以下是一個典型且常見的跨機構使用情境：
+1. **初始評估**
+  病患至醫療院所接受專科門診，復健醫師根據臨床需求開立特定功能評估量表（如 MMT、FMA、BBS 等）。治療師在院內系統中建立初評量表紀錄。
+2. **復健訓練與連續追蹤**
+  病患開始復健訓練，每次治療過程中治療師會更新相關訓練紀錄與階段性評估量表。這些資料可能來自院內 HIS/EMR、復健系統、遠距復健平台或穿戴式裝置。
+3. **跨單位資料共享**
+  若病患轉至其他院所、參與長照機構、接受居家復能或使用遠距復健，新的照護單位需要了解過去的功能狀況與訓練成果。
+若無標準化資料，各院所需重新建立量表紀錄，造成資訊斷裂與額外負擔。
+4. **研究、管理與 AI 分析需求**
+  醫院或研究團隊經常需要整合大量量表資料，用於治療成效比較、品質監測或 AI 預測模型訓練。若資料未結構化，整併困難且品質不一致。
 
-TW xx IG 的實作方式有兩種：
+為了讓上述流程中的所有系統能夠順利讀取、交換與解析這些量表資料，「復健訓練評估量表實作指引 RTS IG」提供一套可跨院所、跨平台使用的共通資料架構，使得
+- **治療師建立的量表與訓練紀錄**能被其他單位正確理解
+- **跨機構轉介與銜接**不需重新填寫相同量表
+- **長期追蹤**能連續呈現病患功能變化
+- **AI/研究使用**有一致性與可計算的資料來源
+- **各式復健資訊系統**可依照標準更容易地進行資料介接
+透過本 IG 建立的共同情境架構，復健評估量表不再是孤立於單一院所的紀錄，而能成為在不同照護環節之間流通的重要資訊資產。
 
-1. **僅支援 Profiles**：系統僅支援 TW xx Profiles 以呈現健康照護資料。
-2. **支援 Profiles + RESTful 互動**：系統支援 TW xx Profiles 及 RESTful API 互動。
+### 預期效益
 
----
+「復健訓練評估量表實作指引 RTS IG」透過建立一致化的資料結構、欄位定義與交換格式，使復健訓練與功能量表資訊能在不同資訊系統間順利流通，其帶來的效益如下：
 
-### 背景
+1. 對臨床人員（醫師、PT、OT、ST）的效益  
 
-鑒於衛生福利部全民健康保險急性後期整合照護計畫及電子病歷資料交換之需求，
-本版本以 **FHIR R4.0.1** 為基礎，繼承自 **Taiwan xx Profiles/ValueSet** 與 **TW Core Profiles/ValueSet**，
-以最大程度滿足電子病歷資料交換的相容性，同時參考其他國家長期照顧 IG 與衛福部電子病歷規範。
+   - 提升臨床溝通效率：統一量表格式後，跨單位或跨專業的紀錄能被快速理解，不需重新解讀不同系統輸出。  
+   - 減少重複填寫與重工：病患轉介或跨院所治療時，可直接調閱先前量表資料，避免重複評估。  
+   - 改善追蹤與治療決策：結構化資料有助於呈現功能變化趨勢，讓臨床人員能更精準調整治療計畫。  
+   - 提升臨床紀錄品質：明確定義必要欄位可避免遺漏重要資訊，提高紀錄一致性。  
 
-TW xx IG 將持續更新，各版本附有版本異動說明。  
-所有經進一步定義的 Resource 或 Profile 稱為 Profiles，並依 **FMM 等級** 標記成熟度。
+2. 對醫療院所與資訊系統開發者（HIS、EMR、復健系統）的效益  
 
+   - 降低介接成本：不同系統依同一標準建置後，介接邏輯更簡化，整合速度提高。  
+   - 減少客製化負擔：避免每家醫療機構使用不同格式，減少重複開發。  
+   - 促進資料一致性與可驗證性：標準化格式讓資料更容易被比對、稽核與管理。  
+   - 提升系統延展性：未來若增加新的量表或功能，只需沿用既有標準架構進行擴充。  
+
+3. 對病患（患者與照護者）的效益  
+
+   - 連續性的復健照護：無論在哪個醫療院所接受治療，量表資料都能一致呈現，避免資訊中斷。  
+   - 減少不必要的測試或重複評估：過往紀錄可即時取得，提高照護效率並減輕病患負擔。  
+   - 提升治療透明度：量表以結構化方式呈現功能變化，有助於患者理解自己康復的進展。  
+
+4. 對長照、居家復能與遠距復健服務提供者  
+
+   - 跨場域資訊可無縫連結：院所量表紀錄可直接用於長照或遠距平台。  
+   - 提升跨團隊協作能力：照護者能同步掌握病患功能變化與訓練成果。  
+   - 支援多場域連續照護模型：例如：出院準備 → 居家復能 → 社區復能 → 追蹤回診。  
+
+5. 對研究者、資料分析與 AI 團隊的效益  
+
+   - 提升資料品質：結構化欄位、明確的代碼與基數，使資料更適合分析與建模。  
+   - 加速 AI 與預後模型開發：標準化格式使大量量表資料可被快速匯入並訓練模型。  
+   - 促進跨院所資料整合研究：多中心研究不再因格式不統一而產生清理負擔。  
+
+6. 對政府與政策推動單位  
+
+   - 建立復健醫療資訊標準化基礎：可作為未來推動復健資訊互通政策的基準架構。  
+   - 支援品質監測與健康政策決策：一致性資料有利於了解全國復健服務的品質與需求。  
+   - 促進智慧醫療與典範示範場域發展：提升台灣在復健資訊標準化與國際交換的能見度。  
+
+此 IG 透過標準化復健量表資料，不僅改善臨床流程，也串聯醫療、長照、遠距服務與研究場域，使復健照護真正具備跨系統、跨專業、跨階段的互通性，為智慧復健與數位健康奠定核心基礎。
+
+
+### 應用情境
+  **應用情境一:院內初診與功能評估**
+
+  情境描述：病患首次至復健門診就診，治療師需進行功能評估並建立量表紀錄。
+<div style="text-align: center;">
+<img src="assets/images/apply-situation1.svg" alt="應用情境一" style="width: 70%; max-width: 100%;" />
+</div>
+
+
+  **應用情境二:跨院所轉診與資料互通**
+
+  情境描述：病患需轉診至另一家醫院或復健中心繼續治療。
+<div style="text-align: center;">
+<img src="assets/images/apply-situation2.svg" alt="應用情境二" style="width: 70%; max-width: 100%;" />
+</div>
+
+  **應用情境三：遠距復健與居家追蹤**
+
+  情境描述：病患出院後進行居家復健或參與遠距復健服務，需持續追蹤功能改善。
+<div style="text-align: center;">
+<img src="assets/images/apply-situation3.svg" alt="應用情境三" style="width: 70%; max-width: 100%;" />
+</div>
+
+
+
+<!-- 
+<table class="grid"> 
+  <thead>
+    <tr>
+      <th>等級</th>
+      <th>說明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr> 
+      <td>DRAFT 0</td>
+      <td>草稿</td>
+    </tr>
+    <tr> 
+      <td>FMM 1</td>
+      <td>基本完成，可實作</td>
+    </tr>
+    <tr> 
+      <td>FMM 2</td>
+      <td>經測試，有三套系統互通資料</td>
+    </tr>
+    <tr> 
+      <td>FMM 3</td>
+      <td>經工作小組審查與修改</td>
+    </tr>
+    <tr> 
+      <td>FMM 4</td>
+      <td>正式出版並應用於多個專案</td>
+    </tr>
+    <tr> 
+      <td>FMM 5</td>
+      <td>維持兩個正式出版週期穩定</td>
+    </tr>
+    <tr> 
+      <td>Normative</td>
+      <td>已被認定為穩定</td>
+    </tr>
+  </tbody>
+</table> 
 | 等級 | 說明 |
 |------|------|
 | DRAFT 0 | 草稿 |
@@ -59,33 +176,32 @@ TW xx IG 將持續更新，各版本附有版本異動說明。
 | FMM 3 | 經工作小組審查與修改 |
 | FMM 4 | 正式出版並應用於多個專案 |
 | FMM 5 | 維持兩個正式出版週期穩定 |
-| Normative | 已被認定為穩定 |
-
----
+| Normative | 已被認定為穩定 | -->
 
 ### 如何閱讀這個實作指引 (IG)
 
-TW xx IG 網站主要架構如下：
+RTS IG網站主要架構如下：
 
 <img class="figure-img img-responsive img-rounded center-block" src="assets/images/flowchart.jpg" alt="IG架構圖" style="display: block;margin-left: auto;margin-right: auto;width: 70%;" />
 <div style="clear:both;"></div>
 
 
-- [應用說明](index.html):TW xx IG 介紹及背景說明  
-- [規範文件](regulation.html)：TW xx IG 能力聲明、所有 Profiles 與查詢參數及操作定義、專門術語及 Extensions。
-  - [能力聲明](capability.html)：應用 TW xx IG 於建置業務目的使用的 FHIR Server 時，該 FHIR Server 必須及建議應該支援的操作功能。  
+- [應用說明](index.html): 介紹復健訓練評估量表 IG 的背景、應用情境與實際運用場景。說明各類病患量表資料在院內、跨院所或遠距復健的交換流程。
+- [視覺化邏輯模型](): 
+- [規範文件](regulation.html)：復健訓練評估量表實作指引 RTS IG 能力聲明、所有 Profiles 與查詢參數及操作定義、專門術語及 Extensions。
+  - [能力聲明](capability.html)：復健訓練評估量表實作指引 RTS IG 於建置業務目的使用的 FHIR Server 時，該 FHIR Server 必須及建議應該支援的操作功能。  
   - [查詢參數及操作定義](parameter.html)：查詢 FHIR Server 的 Profiles時，針對各 Profiles可使用的查詢參數及操作定義。
-  - [邏輯模型 (Logical Models)](logic.html)：TW xx IG 的所有邏輯模型（Logical Models），各邏輯模型會定義相應情境下使用的所有資料欄位。為了便於實作者快速理解，資料欄位會使用易於理解的命名，實作者再透過邏輯模型中的功能頁籤「Mappings」瞭解各資料欄位實際使用本IG的哪個Profiles的哪個資料項目（element）。
+  - [邏輯模型 (Logical Models)](logic.html)：復健訓練評估量表實作指引 RTS IG 的所有邏輯模型（Logical Models），各邏輯模型會定義相應情境下使用的所有資料欄位。為了便於實作者快速理解，資料欄位會使用易於理解的命名，實作者再透過邏輯模型中的功能頁籤「Mappings」瞭解各資料欄位實際使用本IG的哪個Profiles的哪個資料項目（element）。
   - [FHIR Profiles 及 Extensions](extension.html)：
-    - TW xx IG 的所有 Profiles 之定義與範例及Extensions。
+    - 復健訓練評估量表實作指引 RTS IG 的所有 Profiles 之定義與範例及Extensions。
     - 各資料項目不同實作強制程度的 Terminology
     - 各資料項目的限制（Constraints）。
-    - 查詢依據 TW xx IG 實作之 FHIR Server 的特定 Profiles 時，可使用的查詢參數。
+    - 查詢依據復健訓練評估量表實作指引 RTS IG 實作之 FHIR Server 的特定 Profiles 時，可使用的查詢參數。
     - 有哪些 Profiles 具有查詢參數以及 Server 必須支援哪些必要的查詢參數功能。  
-- [專門術語](terminology.html)：TW XX IG網站所使用的專門術語，包括代碼系統（Code Systems）及值集（Value Sets），內容主要依據全國專門術語服務平臺（TW terminology services）與長期照顧情境使用之術語建置。  
-- [範例](example.html)：TW XX IG 的所有範例。
+- [專門術語](terminology.html)：復健訓練評估量表實作指引 RTS IG網站所使用的專門術語，包括代碼系統（Code Systems）及值集（Value Sets），內容主要依據全國專門術語服務平臺（TW terminology services）與長期照顧情境使用之術語建置。  
+- [範例](example.html)：復健訓練評估量表實作指引 RTS IG 的所有範例。
 - [結構定義與範例下載](download.html)：實作者若不偏好使用 FHIR RESTful API 驗證資料是否遵從 Profiles，可直接下載所需的格式驗證檔，包括 XML、JSON 及 Turtle 三種格式，亦可於此下載完整範例。  
-- [安全性](security.html)：主要說明採用 TW xx IG 網站進行實作時，有關資料存取授權的作法。
+- [安全性](security.html)：主要說明採用 復健訓練評估量表實作指引 RTS IG 網站進行實作時，有關資料存取授權的作法。
 
 
 ---

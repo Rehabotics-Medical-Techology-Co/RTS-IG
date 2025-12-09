@@ -6,7 +6,7 @@
 id: fhir.rehabig
 canonical: https://build.fhir.org/ig/Kimsber/Rehab-IG
 name: RoboHand Training IG
-title: "機器手訓練實作指引 (RoboHand Training Implementation Guide)"
+title: "復健訓練評估量表實作指引(Rehabilitation Training Scale Implementation Guide)"
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
 version: 0.1.0
