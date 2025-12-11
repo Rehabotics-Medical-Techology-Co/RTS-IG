@@ -63,39 +63,39 @@ title: 應用說明
 
 「復健訓練評估量表實作指引 RTS IG」透過建立一致化的資料結構、欄位定義與交換格式，使復健訓練與功能量表資訊能在不同資訊系統間順利流通，其帶來的效益如下：
 
-1. 對臨床人員（醫師、PT、OT、ST）的效益  
+1. **對臨床人員（醫師、PT、OT、ST）的效益** 
 
    - 提升臨床溝通效率：統一量表格式後，跨單位或跨專業的紀錄能被快速理解，不需重新解讀不同系統輸出。  
    - 減少重複填寫與重工：病患轉介或跨院所治療時，可直接調閱先前量表資料，避免重複評估。  
    - 改善追蹤與治療決策：結構化資料有助於呈現功能變化趨勢，讓臨床人員能更精準調整治療計畫。  
    - 提升臨床紀錄品質：明確定義必要欄位可避免遺漏重要資訊，提高紀錄一致性。  
 
-2. 對醫療院所與資訊系統開發者（HIS、EMR、復健系統）的效益  
+2. **對醫療院所與資訊系統開發者（HIS、EMR、復健系統）的效益**
 
    - 降低介接成本：不同系統依同一標準建置後，介接邏輯更簡化，整合速度提高。  
    - 減少客製化負擔：避免每家醫療機構使用不同格式，減少重複開發。  
    - 促進資料一致性與可驗證性：標準化格式讓資料更容易被比對、稽核與管理。  
    - 提升系統延展性：未來若增加新的量表或功能，只需沿用既有標準架構進行擴充。  
 
-3. 對病患（患者與照護者）的效益  
+3. **對病患（患者與照護者）的效益**  
 
    - 連續性的復健照護：無論在哪個醫療院所接受治療，量表資料都能一致呈現，避免資訊中斷。  
    - 減少不必要的測試或重複評估：過往紀錄可即時取得，提高照護效率並減輕病患負擔。  
    - 提升治療透明度：量表以結構化方式呈現功能變化，有助於患者理解自己康復的進展。  
 
-4. 對長照、居家復能與遠距復健服務提供者  
+4. **對長照、居家復能與遠距復健服務提供者**  
 
    - 跨場域資訊可無縫連結：院所量表紀錄可直接用於長照或遠距平台。  
    - 提升跨團隊協作能力：照護者能同步掌握病患功能變化與訓練成果。  
    - 支援多場域連續照護模型：例如：出院準備 → 居家復能 → 社區復能 → 追蹤回診。  
 
-5. 對研究者、資料分析與 AI 團隊的效益  
+5. **對研究者、資料分析與 AI 團隊的效益**  
 
    - 提升資料品質：結構化欄位、明確的代碼與基數，使資料更適合分析與建模。  
    - 加速 AI 與預後模型開發：標準化格式使大量量表資料可被快速匯入並訓練模型。  
    - 促進跨院所資料整合研究：多中心研究不再因格式不統一而產生清理負擔。  
 
-6. 對政府與政策推動單位  
+6. **對政府與政策推動單位**  
 
    - 建立復健醫療資訊標準化基礎：可作為未來推動復健資訊互通政策的基準架構。  
    - 支援品質監測與健康政策決策：一致性資料有利於了解全國復健服務的品質與需求。  
@@ -109,7 +109,7 @@ title: 應用說明
 
   情境描述：病患首次至復健門診就診，治療師需進行功能評估並建立量表紀錄。
 <div style="text-align: center;">
-<img src="assets/images/apply-situation1.svg" alt="應用情境一" style="width: 70%; max-width: 100%;" />
+<img src="assets/images/apply-situation01.svg" alt="應用情境一" style="width: 70%; max-width: 100%;" />
 </div>
 
 
@@ -117,14 +117,14 @@ title: 應用說明
 
   情境描述：病患需轉診至另一家醫院或復健中心繼續治療。
 <div style="text-align: center;">
-<img src="assets/images/apply-situation2.svg" alt="應用情境二" style="width: 70%; max-width: 100%;" />
+<img src="assets/images/apply-situation02.svg" alt="應用情境二" style="width: 70%; max-width: 100%;" />
 </div>
 
   **應用情境三：遠距復健與居家追蹤**
 
   情境描述：病患出院後進行居家復健或參與遠距復健服務，需持續追蹤功能改善。
 <div style="text-align: center;">
-<img src="assets/images/apply-situation3.svg" alt="應用情境三" style="width: 70%; max-width: 100%;" />
+<img src="assets/images/apply-situation03.svg" alt="應用情境三" style="width: 70%; max-width: 100%;" />
 </div>
 
 
@@ -182,8 +182,9 @@ title: 應用說明
 
 RTS IG網站主要架構如下：
 
-<img class="figure-img img-responsive img-rounded center-block" src="assets/images/flowchart.jpg" alt="IG架構圖" style="display: block;margin-left: auto;margin-right: auto;width: 70%;" />
-<div style="clear:both;"></div>
+<div style="text-align: center;">
+<img src="assets/images/flowchart.jpg" alt="IG 架構圖" style="width: 70%; max-width: 100%;" />
+</div>
 
 
 - [應用說明](index.html): 介紹復健訓練評估量表 IG 的背景、應用情境與實際運用場景。說明各類病患量表資料在院內、跨院所或遠距復健的交換流程。
@@ -205,11 +206,10 @@ RTS IG網站主要架構如下：
 
 
 ---
-
 ### 作者與貢獻者
 
+<table class="grid" style="width: 100%;">
 
-<table class="grid">
   <thead>
     <tr>
       <th>角色</th>
@@ -220,40 +220,32 @@ RTS IG網站主要架構如下：
     </tr>
   </thead>
   <tbody>
-      <tr>
+    <tr>
       <td>作者</td>
       <td>v0.1.0</td>
-      <td>富伯生醫股份有限公司</td>
+      <td rowspan="5" style="text-align: center; vertical-align:middle">富伯生醫股份有限公司</td>
       <td>黃建嘉</td>
-      <td>富伯生醫股份有限公司</td>
+      <td rowspan="5" style="text-align: center; vertical-align:middle">富伯生醫股份有限公司</td> 
     </tr>
     <tr>
       <td>作者</td>
       <td>v0.1.0</td>
-      <td>富伯生醫股份有限公司</td>
       <td>黃嗣承</td>
-      <td>富伯生醫股份有限公司</td>
     </tr>
     <tr>
       <td>作者</td>
       <td>v0.1.0</td>
-      <td>富伯生醫股份有限公司</td>
       <td>高旭恩</td>
-      <td>富伯生醫股份有限公司</td>
     </tr>
     <tr>
       <td>作者</td>
       <td>v0.1.0</td>
-      <td>富伯生醫股份有限公司</td>
       <td>王世東</td>
-      <td>富伯生醫股份有限公司</td>
     </tr>
     <tr>
       <td>作者</td>
       <td>v0.1.0</td>
-      <td>富伯生醫股份有限公司</td>
       <td>楊芷紜</td>
-      <td>富伯生醫股份有限公司</td>
     </tr>
   </tbody>
 </table>
