@@ -11,7 +11,7 @@ Description: "MRC問卷回覆"
 * item ^slicing.discriminator[0].type = #value
 * item ^slicing.discriminator[0].path = "linkId"
 * item ^slicing.rules = #closed
-* item contains
+* item contains // 這個item 所需要用到的slice有哪些
     abduction-arm 1..1 MS and
     flexion-forearm 1..1 MS and
     extension-wrist 1..1 MS

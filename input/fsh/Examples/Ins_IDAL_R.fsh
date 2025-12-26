@@ -1,5 +1,5 @@
 Instance: IDALQuestionnaireResponseInstance
-InstanceOf: SPACQuestionnaireResponse
+InstanceOf: SPACQuestionnaireResponse // IADLQuestionnaireResponse (應該是這個才對)
 Usage: #example
 
 * questionnaire = "http://example.org/fhir/Questionnaire/IDALQuestionnaireInstance"

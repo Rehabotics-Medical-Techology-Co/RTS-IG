@@ -6,8 +6,6 @@ Usage: #definition
 Title: "BBT評估量表"
 Description: "評估手部功能"
 * status = #active
-
-
 * item[0].linkId = "left-hand"
 * item[0].text = "左手移動的積木數"
 * item[0].type = #integer

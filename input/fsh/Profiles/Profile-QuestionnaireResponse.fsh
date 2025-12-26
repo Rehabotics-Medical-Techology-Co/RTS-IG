@@ -2,9 +2,10 @@
 // Profile 定義：評估問卷
 // ============================================
 Profile: SPACQuestionnaireResponse
+// 若想限制各問卷回覆欄位，請Parent 此Profile 並進行擴充
 Parent: SDCQuestionnaireResponse 
 Id: SPACQuestionnaireResponse
-Title: "評估問卷回覆"
+Title: "評估問卷回覆-總體"
 Description: "問卷回覆的結構化定義，實際問回覆內容可參考Examples，可依據前者內容做為範本進行擴充"
 
 * questionnaire 1..1 MS

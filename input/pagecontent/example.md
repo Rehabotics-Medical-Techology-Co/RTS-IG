@@ -5,9 +5,13 @@ title: 範例
 以下為本實作指引 (Example IG) 所有 Profiles 的範例說明。
 ### Bundle
 - [Bundle ARAT評估範例](Bundle-arat-bundle-001.html)
+- [兒童職能治療文件:Document](Bundle-ChildBundle.html):依照FHIR Resource Bundle-Document 形式呈現臨床文件資料交換基本單位 type=document之範例
 
 ### Care Plan
 - [照護計畫範例](CarePlan-CarePlanExample.html)
+- [兒童職能治療照護計畫](CarePlan-CarePlanExample01.html): 根據醫院實際範例撰寫
+### Condition 
+- [兒童職能治療診斷範例](Condition-ConditionExample01.html)
 
 ### Encounter
 - [就醫事件範例](Encounter-arat-assessment-encounter-001.html)
