@@ -11,13 +11,22 @@ Description: "病人的資料定義範例，包含姓名、識別碼等基本資
 * name ^definition = "病患姓名，包含名與姓，可有名子多個(以串列表示)"
 * identifier 1..* MS
 
+RuleSet: PatientNarrative(name, birthDate, gender, idNumber)
+* text.status = #generated
+* text.div = """<div xmlns="http://www.w3.org/1999/xhtml">
+  <h3><b>病人基本資料</b></h3>
+  <p><b>姓名：</b> {name}</p>
+  <p><b>出生日期：</b> {birthDate}</p>
+  <p><b>性別：</b> {gender}</p>
+  <p><b>身分證字號：</b> {idNumber}</p>
+</div>"""
+
 // 患者資源範例
 Instance: PatientExample
 InstanceOf: Patient
 Usage: #example
 Title: "中風患者範例"
 Description: "右側中風患者，接受左側上肢功能評估"
-
 * id = "stroke-patient-001"
 * active = true
 * name.use = #official
@@ -25,15 +34,9 @@ Description: "右側中風患者，接受左側上肢功能評估"
 * name.given = "先生"
 * identifier
   * system = "http://example.org/mrn"
-  * value = "12345"
+  * value = "A123456789"
 * gender = #male
 * birthDate = "1965-03-15"
 * address.city = "台北市"
 * address.country = "台灣"
-/* GOAL 病人資料範例
-Instance: PatientGoalExample
-InstanceOf: TWCorePatient
-Usage: #example
-Title: "目標"
-*/ 
-
+* insert PatientNarrative("張先生", "1965-03-15", "男性", "A123456789")
