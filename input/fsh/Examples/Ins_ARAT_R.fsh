@@ -7,16 +7,16 @@ Usage: #example
 Title: "ARAT問卷回覆範例"
 Description: "一位中風患者進行ARAT上肢功能評估的完整問卷回覆範例，包含所有測試項目分數、完成時間及自動計算總分"
 
-* id = "arat-response-example-001"
+* id = "arat-response-example-001" // server 可以被查詢的id 
 * questionnaire = "https://build.fhir.org/ig/Kimsber/Rehab-IG/Questionnaire/ARATQuestionnaireInstance"
 * status = #completed
 * subject = Reference(Patient/stroke-patient-001) "張先生"
 * authored = "2025-10-11T14:30:00+08:00"
 * author = Reference(Practitioner/ot-therapist-001) "復健治療師 - 李小姐"
 
-// ============================================
-// 評估側別選擇 item 0 
-// ============================================
+//================================
+//評估側別選擇 item 0 
+//================================
 * item[assessmentSide].linkId = "assessment-side-arat"
 * item[assessmentSide].text = "請選擇評估側"
 * item[assessmentSide].answer.valueCoding = http://snomed.info/sct#24028007 "Right"

@@ -3,9 +3,9 @@ InstanceOf: SPACQuestionnaireResponse
 Usage: #example
 Title: "Rating of Everyday Arm-use in the Community and at Home (REACH) 評估量表問卷回覆範例"
 Description: "REACH 評估量表問卷回覆範例"
-* questionnaire = Canonical(REACHQuestionnaireInstance)
+* questionnaire = Canonical(REACHQuestionnaireInstance) //使用哪個問卷
 * status = #completed
-* subject = Reference(Patient/stroke-patient-001) 
+* subject = Reference(stroke-patient-001) 
 * authored = "2025-11-10"
 // ====評估側: 右手====
 * item[0].linkId = "reach-side"
@@ -17,5 +17,6 @@ Description: "REACH 評估量表問卷回覆範例"
 * item[=].text = "右上肢 REACH 評分"
 * item[=].answer[0].valueCoding = CSReach#4
 // ====左手評估 (未啟用)====
-* item[+].linkId = "reach-left"
-* item[=].text = "左上肢 REACH 評分"
+
+// * item[+].linkId = "reach-left"
+// * item[=].text = "左上肢 REACH 評分"

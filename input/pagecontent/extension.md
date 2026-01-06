@@ -4,7 +4,7 @@ title: FHIR profiles及Extensions
 
 
 ### Resources 之 Profiles
-以下為XX實作指引（XX IG）使用到的所有Profiles。
+以下為復健訓練評估量表實作指引（RTS IG）使用到的所有Profiles。
 
 #### Bundle
 - [資料交換基本文件](StructureDefinition-ReponseBundle.html)

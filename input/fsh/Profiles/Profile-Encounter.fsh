@@ -31,8 +31,8 @@ Description: "進行ARAT評估的門診會期"
 
 * type = http://snomed.info/sct#410155007 "Occupational therapy assessment"
 * type.text = "職能治療評估"
-* subject = Reference(Patient/stroke-patient-001)
-* participant.individual = Reference(Practitioner/ot-therapist-001)
+* subject = Reference(stroke-patient-001)
+* participant.individual = Reference(ot-therapist-001)
 * period.start = "2025-10-11T14:00:00+08:00"
 * period.end = "2025-10-11T15:00:00+08:00"
 * reasonCode = http://snomed.info/sct#2517002

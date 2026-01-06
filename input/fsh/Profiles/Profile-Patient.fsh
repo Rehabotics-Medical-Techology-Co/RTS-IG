@@ -11,7 +11,9 @@ Description: "病人的資料定義範例，包含姓名、識別碼等基本資
 * name ^definition = "病患姓名，包含名與姓，可有名子多個(以串列表示)"
 * identifier 1..* MS
 
-RuleSet: PatientNarrative(name, birthDate, gender, idNumber)
+// -----
+// 建立模板，使其代筆
+RuleSet: PatientNarrative(name, birthDate, gender, idNumber,address)
 * text.status = #generated
 * text.div = """<div xmlns="http://www.w3.org/1999/xhtml">
   <h3><b>病人基本資料</b></h3>
@@ -19,7 +21,9 @@ RuleSet: PatientNarrative(name, birthDate, gender, idNumber)
   <p><b>出生日期：</b> {birthDate}</p>
   <p><b>性別：</b> {gender}</p>
   <p><b>身分證字號：</b> {idNumber}</p>
+  <p><b>住址:</b> {address}
 </div>"""
+
 
 // 患者資源範例
 Instance: PatientExample
@@ -32,11 +36,25 @@ Description: "右側中風患者，接受左側上肢功能評估"
 * name.use = #official
 * name.family = "張"
 * name.given = "先生"
-* identifier
-  * system = "http://example.org/mrn"
-  * value = "A123456789"
+* identifier[idCardNumber].type.coding = $v2-0203#NNxxx
+* identifier[idCardNumber].type.coding.extension[0].url = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/identifier-suffix"
+* identifier[idCardNumber].type.coding.extension[=].valueString = "TWN"
+* identifier.value = "A123456789"
 * gender = #male
 * birthDate = "1965-03-15"
-* address.city = "台北市"
-* address.country = "台灣"
-* insert PatientNarrative("張先生", "1965-03-15", "男性", "A123456789")
+* address.extension[0].url = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/tw-section" //段
+* address.extension[=].valueString = "五段"
+* address.extension[+].url = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/tw-lane"
+* address.extension[=].valueString = "609巷"
+* address.extension[+].url = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/tw-number" //號
+* address.extension[=].valueString = "16號"
+* address.extension[+].url = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/tw-floor"
+* address.extension[=].valueString = "6樓之11"
+* address.line = "重新路"
+* address.city = "三重區"
+* address.district = "新北市"
+* address.postalCode.extension.url = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/tw-postal-code"
+* address.postalCode.extension.valueCodeableConcept = $postal-code6-tw#241408
+* address.country = "臺灣(TW)"
+
+// * insert PatientNarrative("張先生", "1965-03-15", "男性", "A123456789", "台北市")

@@ -1,4 +1,3 @@
-Alias: $snomed = http://snomed.info/sct
 
 // ============================================
 // ARAT QuestionnaireResponse Profile
@@ -77,5 +76,5 @@ ValueSet: AssessmentSideValueSet
 Id: assessment-side-valueset
 Title: "評估側別選項"
 Description: "受試者評估側別選項"
-* $snomed#24028007 "患者左側"
-* $snomed#7771000 "患者右側"
+* $SCT#24028007 "患者左側"
+* $SCT#7771000 "患者右側"
