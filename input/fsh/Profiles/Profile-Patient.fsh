@@ -1,15 +1,16 @@
 // ============================================
 // Profile 定義：病人
 // ============================================
-Profile: Patient
-Parent: TWCorePatient //Tw Core 病人profile 名稱
-Title: "Patient"
+Profile: Patient // 
+Parent: TWCorePatient
+Title: "根據醫院實際病人範例進行資料定義"
 Description: "病人的資料定義範例，包含姓名、識別碼等基本資訊"
 
 * name 1..* MS
 * name ^short = "病患姓名，至少需要一組名與姓"
 * name ^definition = "病患姓名，包含名與姓，可有名子多個(以串列表示)"
-* identifier 1..* MS
+* identifier 1..* MS 
+* identifier ^short = "病人識別碼，通常為健保卡號、病歷號、身分證"
 
 // -----
 // 建立模板，使其代筆
@@ -36,9 +37,10 @@ Description: "右側中風患者，接受左側上肢功能評估"
 * name.use = #official
 * name.family = "張"
 * name.given = "先生"
+// 正確的 identifier-suffix 用法
 * identifier[idCardNumber].type.coding = $v2-0203#NNxxx
-* identifier[idCardNumber].type.coding.extension[0].url = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/identifier-suffix"
-* identifier[idCardNumber].type.coding.extension[=].valueString = "TWN"
+//* identifier[idCardNumber].type.coding.code.extension[identifier-suffix].url = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/identifier-suffix
+//* identifier[idCardNumber].type.coding.code.extension[identifier-suffix].valueString = "TWN"
 * identifier.value = "A123456789"
 * gender = #male
 * birthDate = "1965-03-15"

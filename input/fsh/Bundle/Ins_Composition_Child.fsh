@@ -17,13 +17,13 @@ Description: "顯示臨床文件(Composition)實際範例"
 * category = $loinc#47039-3
 * subject = Reference(PatientExample)
 * date = "2025-12-26T10:30:00Z"
-* author = Reference(PractitionerExample)
+* author = Reference(ot-therapist-001)
 * title = "兒童職能治療接案紀錄範本"
 
 * confidentiality = #R
 * attester.mode = #personal
 * attester.time = "2023-09-10T11:00:00Z"
-* attester.party = Reference(PractitionerExample)
+* attester.party = Reference(ot-therapist-001)
 * custodian = Reference(OrganizationExample)
 * event.period.start = "2025-12-26T10:30:00Z"
 * event.period.end = "2025-12-26T13:30:00Z"
