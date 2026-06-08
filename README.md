@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # RTS IG
 
 RTS IG（Rehabilitation Training Scale Implementation Guide，復健訓練量表實作指引）是一個以 HL7 FHIR R4 為基礎的 Implementation Guide 專案。此 IG 聚焦於中風個案在復健與急性後期照護（post-acute care）情境中的評估量表與問卷資料交換。
@@ -134,4 +133,3 @@ _build.bat notx
 - 若更新 IG Publisher 腳本或 `publisher.jar`，請留意建置結果是否與既有輸出一致。
 =======
 復健訓練評估量表實作指引 (Rehabilitation Training Scale Implementation Guide，簡稱RTS IG)」採用HL7® FHIR®（Fast Healthcare Interoperability Resources）為基礎，運用其 Implementation Guide（IG）設計模式進行編制。本指引建立於 FHIR R4.0.1 的技術版次之上，並採用 TW Core IG 作為基礎框架，再擴充出專屬於復健成效量測與訓練紀錄交換的資料結構。 在本 IG 中，針對復健領域所需的資料交換內容，定義了適用的 Resource 類型（可視為資料表結構）、欄位屬性、必要性與重複次數（例如 0..1、0..、1..1、1..），以及各項資料所需使用的格式（例如字串、代碼、日期時間、量測值等）。 本 IG 的核心目的，是提供復健醫療資訊系統、研發者與臨床場域一套一致且可相互溝通的資料交換框架，使不同系統能依據此規範延伸或建立自身需求的資料格式，進而提升復健訓練紀錄與功能評估量表在跨單位、跨系統間的標準化與互操作能力。
->>>>>>> 80f658b3e75a64f343e8464a58e622a16da2af47
