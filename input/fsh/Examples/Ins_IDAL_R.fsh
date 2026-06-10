@@ -1,5 +1,5 @@
 Instance: IDALQuestionnaireResponseInstance
-InstanceOf: SPACQuestionnaireResponse // IADLQuestionnaireResponse (應該是這個才對)
+InstanceOf: SPACQuestionnaireResponse // Linked to IADLQuestionnaireResponse via exampleCanonical
 Usage: #example
 
 * questionnaire = Canonical(IDALQuestionnaireInstance)

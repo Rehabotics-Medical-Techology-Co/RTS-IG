@@ -12,5 +12,5 @@ Description: "軀幹控制測試問卷回應，用於記錄病患在TCT評估中
 
 // 每題都要有一個答案，答案型別限定為 Coding，並綁定到 TCT 分數值集
 * item.answer 1..1 MS
-* item.answer.value[x] only Coding
+* item.answer.value[x] only Coding or integer
 * item.answer.valueCoding from VSTCT (required)

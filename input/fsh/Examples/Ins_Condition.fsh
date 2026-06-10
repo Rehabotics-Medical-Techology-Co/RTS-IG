@@ -1,5 +1,5 @@
 Instance: ConditionExample01
-InstanceOf: TWCoreCondition
+InstanceOf: PACCondition
 Usage: #example
 Title: "兒童職能治療範本"
 Description: "醫院實際兒童職能治療格式"
@@ -12,8 +12,9 @@ Description: "醫院實際兒童職能治療格式"
   <p> 個案父母表示家中上有兩個哥哥，在家和案兄互動沒有困難，案母為中國籍，之前曾帶個案回中國就讀幼兒園約3個月，而後返回臺灣就讀中班，在學校中較我行我素少和同儕互動，學東西較慢，由老師建議就診早療。</p>
 </div>
 """
-* category = $condition-category#problem-list-item
+* category = $condition-category#encounter-diagnosis
 * subject = Reference(PatientExample)
+* bodySite[0] = $SCT#91775009
 * recordedDate = "2025-03-06"
 * recorder = Reference(PractitionerExample)
 * text.status = #generated

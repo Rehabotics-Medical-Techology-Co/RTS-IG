@@ -4,19 +4,21 @@ Alias: $snomed = http://snomed.info/sct
 // Fugl-Meyer Upper Extremity Sensory QuestionnaireResponse Profile
 // ============================================
 Profile: FMAUEMotionQuestionnaireResponse
-Parent: SPACQuestionnaireResponse
+Parent: QuestionnaireResponse
 Id: FMAUEMotionQuestionnaireResponse
 Title: "FMAUE動作評估問卷回覆"
 Description: "針對FMAUE上肢動作評估問卷的QuestionnaireResponse Profile，強制回傳格式符合問卷結構"
 
 // 固定問卷參考
+* questionnaire 1..1 MS
 * questionnaire = Canonical(FMAUEMotorQuestionnaireInstance) (exactly)
 
 // 基本約束
+* status 1..1 MS
 * status = #completed
 * subject 1..1
 * subject only Reference(Patient)
-* authored 1..1
+* authored 1..1 MS
 
 // ============================================
 // 第一層 item slicing
@@ -60,7 +62,7 @@ Description: "針對FMAUE上肢動作評估問卷的QuestionnaireResponse Profil
 * item[ShoulderElbowForearm].text = "A.肩部/肘部/前臂"
 * item[ShoulderElbowForearm].item ^slicing.discriminator.type = #value
 * item[ShoulderElbowForearm].item ^slicing.discriminator.path = "linkId"
-* item[ShoulderElbowForearm].item ^slicing.rules = #closed
+* item[ShoulderElbowForearm].item ^slicing.rules = #open
 * item[ShoulderElbowForearm].item contains
     a1 1..1 MS and
     a2a 1..1 MS and
@@ -70,11 +72,11 @@ Description: "針對FMAUE上肢動作評估問卷的QuestionnaireResponse Profil
     a5 1..1 MS
 
 // A.I.反射反應
-* item[ShoulderElbowForearm].item[a1].linkId = "A-I-FMAUEMotion"
+* item[ShoulderElbowForearm].item[a1].linkId = "A-I-FMAUEMotion" (exactly)
 * item[ShoulderElbowForearm].item[a1].text = "I.反射反應"
 * item[ShoulderElbowForearm].item[a1].item ^slicing.discriminator.type = #value
 * item[ShoulderElbowForearm].item[a1].item ^slicing.discriminator.path = "linkId"
-* item[ShoulderElbowForearm].item[a1].item ^slicing.rules = #closed
+* item[ShoulderElbowForearm].item[a1].item ^slicing.rules = #open
 * item[ShoulderElbowForearm].item[a1].item contains
     Flexors 1..1 MS and
     Extensors 1..1 MS
@@ -98,11 +100,11 @@ Description: "針對FMAUE上肢動作評估問卷的QuestionnaireResponse Profil
 * item[ShoulderElbowForearm].item[a1].item[Extensors].answer.valueInteger ^maxValueInteger = 2
 
 // A.II.a.屈肌協同動作
-* item[ShoulderElbowForearm].item[a2a].linkId = "A-II-a-FMAUEMotion"
+* item[ShoulderElbowForearm].item[a2a].linkId = "A-II-a-FMAUEMotion" (exactly)
 * item[ShoulderElbowForearm].item[a2a].text = "II.a.屈肌協同動作"
 * item[ShoulderElbowForearm].item[a2a].item ^slicing.discriminator.type = #value
 * item[ShoulderElbowForearm].item[a2a].item ^slicing.discriminator.path = "linkId"
-* item[ShoulderElbowForearm].item[a2a].item ^slicing.rules = #closed
+* item[ShoulderElbowForearm].item[a2a].item ^slicing.rules = #open
 * item[ShoulderElbowForearm].item[a2a].item contains
     ShoulderRetraction 1..1 MS and
     ShoulderElevation 1..1 MS and
@@ -145,7 +147,7 @@ Description: "針對FMAUE上肢動作評估問卷的QuestionnaireResponse Profil
 * item[ShoulderElbowForearm].item[a2a].item[ShoulderOutwardsRotation].answer.value[x] only integer
 * item[ShoulderElbowForearm].item[a2a].item[ShoulderOutwardsRotation].answer.valueInteger ^short = "分數 0-2"
 * item[ShoulderElbowForearm].item[a2a].item[ShoulderOutwardsRotation].answer.valueInteger ^minValueInteger = 0
-* item[ShoulderElbowForearm].item[a2a].item[ShoulderOutwardsRotation].answer.valueInteger ^maxValueInteger = 0
+* item[ShoulderElbowForearm].item[a2a].item[ShoulderOutwardsRotation].answer.valueInteger ^maxValueInteger = 2
 
 // A.II.a.手肘屈曲
 * item[ShoulderElbowForearm].item[a2a].item[ElbowFlexion].linkId = "A-II-a-elbow-flexion" (exactly)
@@ -166,11 +168,11 @@ Description: "針對FMAUE上肢動作評估問卷的QuestionnaireResponse Profil
 * item[ShoulderElbowForearm].item[a2a].item[ForearmSupination].answer.valueInteger ^maxValueInteger = 2
 
 // A.II.b.伸肌協同動作
-* item[ShoulderElbowForearm].item[a2b].linkId = "A-II-b-FMAUEMotion"
+* item[ShoulderElbowForearm].item[a2b].linkId = "A-II-b-FMAUEMotion" (exactly)
 * item[ShoulderElbowForearm].item[a2b].text = "II.b.伸肌協同動作"
 * item[ShoulderElbowForearm].item[a2b].item ^slicing.discriminator.type = #value
 * item[ShoulderElbowForearm].item[a2b].item ^slicing.discriminator.path = "linkId"
-* item[ShoulderElbowForearm].item[a2b].item ^slicing.rules = #closed
+* item[ShoulderElbowForearm].item[a2b].item ^slicing.rules = #open
 * item[ShoulderElbowForearm].item[a2b].item contains
     ShoulderAddInwardRotation 1..1 MS and
     ElbowExtension 1..1 MS and
@@ -204,11 +206,11 @@ Description: "針對FMAUE上肢動作評估問卷的QuestionnaireResponse Profil
 * item[ShoulderElbowForearm].item[a2b].item[ForearmPronation].answer.valueInteger ^maxValueInteger = 2
 
 // A.III.反射反應
-* item[ShoulderElbowForearm].item[a3].linkId = "A-III-FMAUEMotion"
+* item[ShoulderElbowForearm].item[a3].linkId = "A-III-FMAUEMotion" (exactly)
 * item[ShoulderElbowForearm].item[a3].text = "III.部份協同動作（不可代償）"
 * item[ShoulderElbowForearm].item[a3].item ^slicing.discriminator.type = #value
 * item[ShoulderElbowForearm].item[a3].item ^slicing.discriminator.path = "linkId"
-* item[ShoulderElbowForearm].item[a3].item ^slicing.rules = #closed
+* item[ShoulderElbowForearm].item[a3].item ^slicing.rules = #open
 * item[ShoulderElbowForearm].item[a3].item contains
     HandToLumbarSpine 1..1 MS and
     ShoulderFlexion090 1..1 MS and
@@ -242,11 +244,11 @@ Description: "針對FMAUE上肢動作評估問卷的QuestionnaireResponse Profil
 * item[ShoulderElbowForearm].item[a3].item[ElbowProSupination].answer.valueInteger ^maxValueInteger = 2
 
 // A.IV.自主運動
-* item[ShoulderElbowForearm].item[a4].linkId = "A-IV-FMAUEMotion"
+* item[ShoulderElbowForearm].item[a4].linkId = "A-IV-FMAUEMotion" (exactly)
 * item[ShoulderElbowForearm].item[a4].text = "IV.自主運動"
 * item[ShoulderElbowForearm].item[a4].item ^slicing.discriminator.type = #value
 * item[ShoulderElbowForearm].item[a4].item ^slicing.discriminator.path = "linkId"
-* item[ShoulderElbowForearm].item[a4].item ^slicing.rules = #closed
+* item[ShoulderElbowForearm].item[a4].item ^slicing.rules = #open
 * item[ShoulderElbowForearm].item[a4].item contains
     ShoulderAbduction090 1..1 MS and
     ShoulderFlexion90180 1..1 MS and
@@ -280,11 +282,11 @@ Description: "針對FMAUE上肢動作評估問卷的QuestionnaireResponse Profil
 * item[ShoulderElbowForearm].item[a4].item[ElbowProSupination].answer.valueInteger ^maxValueInteger = 2
 
 // A.V.自主運動
-* item[ShoulderElbowForearm].item[a5].linkId = "A-V-FMAUEMotion"
+* item[ShoulderElbowForearm].item[a5].linkId = "A-V-FMAUEMotion" (exactly)
 * item[ShoulderElbowForearm].item[a5].text = "V.反射強度"
 * item[ShoulderElbowForearm].item[a5].item ^slicing.discriminator.type = #value
 * item[ShoulderElbowForearm].item[a5].item ^slicing.discriminator.path = "linkId"
-* item[ShoulderElbowForearm].item[a5].item ^slicing.rules = #closed
+* item[ShoulderElbowForearm].item[a5].item ^slicing.rules = #open
 * item[ShoulderElbowForearm].item[a5].item contains
     NormalReflexActivity 1..1 MS
 
@@ -304,18 +306,18 @@ Description: "針對FMAUE上肢動作評估問卷的QuestionnaireResponse Profil
 * item[WristHand].text = "B.手腕/手部"
 * item[WristHand].item ^slicing.discriminator.type = #value
 * item[WristHand].item ^slicing.discriminator.path = "linkId"
-* item[WristHand].item ^slicing.rules = #closed
+* item[WristHand].item ^slicing.rules = #open
 * item[WristHand].item contains
     b1 1..1 MS and
     b2 1..1 MS and
     b3 1..1 MS
 
 // B.I.手腕穩定度
-* item[WristHand].item[b1].linkId = "B-I-FMAUEMotion"
+* item[WristHand].item[b1].linkId = "B-I-FMAUEMotion" (exactly)
 * item[WristHand].item[b1].text = "I.手腕穩定度"
 * item[WristHand].item[b1].item ^slicing.discriminator.type = #value
 * item[WristHand].item[b1].item ^slicing.discriminator.path = "linkId"
-* item[WristHand].item[b1].item ^slicing.rules = #closed
+* item[WristHand].item[b1].item ^slicing.rules = #open
 * item[WristHand].item[b1].item contains
     Elbow90WristStability 1..1 MS and
     Elbow90WristFlexExtension 1..1 MS and
@@ -369,11 +371,11 @@ Description: "針對FMAUE上肢動作評估問卷的QuestionnaireResponse Profil
 * item[WristHand].item[b1].item[WristCircumduction].answer.valueInteger ^maxValueInteger = 2
 
 // B.II.手指伸屈
-* item[WristHand].item[b2].linkId = "B-II-FMAUEMotion"
+* item[WristHand].item[b2].linkId = "B-II-FMAUEMotion" (exactly)
 * item[WristHand].item[b2].text = "II.手指伸屈"
 * item[WristHand].item[b2].item ^slicing.discriminator.type = #value
 * item[WristHand].item[b2].item ^slicing.discriminator.path = "linkId"
-* item[WristHand].item[b2].item ^slicing.rules = #closed
+* item[WristHand].item[b2].item ^slicing.rules = #open
 * item[WristHand].item[b2].item contains
     FingersMassFlexion 1..1 MS and
     FingersMassExtension 1..1 MS
@@ -397,11 +399,11 @@ Description: "針對FMAUE上肢動作評估問卷的QuestionnaireResponse Profil
 * item[WristHand].item[b2].item[FingersMassExtension].answer.valueInteger ^maxValueInteger = 2
 
 // B.III.抓握功能
-* item[WristHand].item[b3].linkId = "B-III-FMAUEMotion"
+* item[WristHand].item[b3].linkId = "B-III-FMAUEMotion" (exactly)
 * item[WristHand].item[b3].text = "III.抓握功能"
 * item[WristHand].item[b3].item ^slicing.discriminator.type = #value
 * item[WristHand].item[b3].item ^slicing.discriminator.path = "linkId"
-* item[WristHand].item[b3].item ^slicing.rules = #closed
+* item[WristHand].item[b3].item ^slicing.rules = #open
 * item[WristHand].item[b3].item contains
     Grasp_a 1..1 MS and
     Grasp_b 1..1 MS and
@@ -457,19 +459,19 @@ Description: "針對FMAUE上肢動作評估問卷的QuestionnaireResponse Profil
 // ============================================
 // Section C：協調性/速度
 // ============================================
-* item[CoordinationSpeed].linkId = "C-coordination-speed"
+* item[CoordinationSpeed].linkId = "C-coordination-speed" (exactly)
 * item[CoordinationSpeed].text = "C.協調性/速度"
 * item[CoordinationSpeed].item ^slicing.discriminator.type = #value
 * item[CoordinationSpeed].item ^slicing.discriminator.path = "linkId"
-* item[CoordinationSpeed].item ^slicing.rules = #closed
+* item[CoordinationSpeed].item ^slicing.rules = #open
 * item[CoordinationSpeed].item contains
     c1 1..1 MS
 
-* item[CoordinationSpeed].item[c1].linkId = "C-I-FMAUEMotion"
+* item[CoordinationSpeed].item[c1].linkId = "C-I-FMAUEMotion" (exactly)
 * item[CoordinationSpeed].item[c1].text = "I.協調性/速度"
 * item[CoordinationSpeed].item[c1].item ^slicing.discriminator.type = #value
 * item[CoordinationSpeed].item[c1].item ^slicing.discriminator.path = "linkId"
-* item[CoordinationSpeed].item[c1].item ^slicing.rules = #closed
+* item[CoordinationSpeed].item[c1].item ^slicing.rules = #open
 * item[CoordinationSpeed].item[c1].item contains
     Tremor 1..1 MS and
     Dysmetria 1..1 MS and

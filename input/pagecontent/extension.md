@@ -35,7 +35,7 @@ title: FHIR profiles及Extensions
 - [Barthel Index 巴氏量表問卷回覆](StructureDefinition-BarthelQuestionnaireResponse.html)
 - [BBT評估量表問卷回覆](StructureDefinition-bbt-questionnaire-response.html)
 - [FMAUE動作評估問卷回覆](StructureDefinition-FMAUEMotionQuestionnaireResponse.html)
-- [FMAU感覺評估問卷回覆](StructureDefinition-FMAUESensoryQuestionnaireResponse.html)
+- [FMAUE感覺評估問卷回覆](StructureDefinition-FMAUESensoryQuestionnaireResponse.html)
 - [IADL評估問卷回覆](StructureDefinition-IADLQuestionnaireResponse.html)
 - [MAS量表問卷回覆](StructureDefinition-MASQuestionnaireResponse.html)
 - [MI-UL量表問卷回覆](StructureDefinition-MIULQuestionnaireResponse.html)

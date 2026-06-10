@@ -79,6 +79,39 @@ menu:
   範例: example.html
   下載: download.html
   安全性: security.html
+
+resources:
+  QuestionnaireResponse/arat-response-example-001:
+    exampleCanonical: ARATQuestionnaireResponse
+  QuestionnaireResponse/BarthelIndexExample:
+    exampleCanonical: BarthelQuestionnaireResponse
+  QuestionnaireResponse/BBTExample:
+    exampleCanonical: BBTQR
+  QuestionnaireResponse/FMAUEMotorQuestionnaireResponseExample:
+    exampleCanonical: FMAUEMotionQuestionnaireResponse
+  QuestionnaireResponse/FMAUESensoryQuestionnaireResponseExample:
+    exampleCanonical: FMAUESensoryQuestionnaireResponse
+  QuestionnaireResponse/IDALQuestionnaireResponseInstance:
+    exampleCanonical: IADLQuestionnaireResponse
+  QuestionnaireResponse/MASQuestionnaireResponseExample:
+    exampleCanonical: MASQuestionnaireResponse
+  QuestionnaireResponse/MIULQuestionnaireResponseExample:
+    exampleCanonical: MIULQuestionnaireResponse
+  QuestionnaireResponse/MMSEQuestionnaireResponseExample:
+    exampleCanonical: MMSEQuestionnaireResponse
+  QuestionnaireResponse/MRCQuestionnaireResponseExample:
+    exampleCanonical: MRCQuestionnaireResponse
+  QuestionnaireResponse/REACHQuestionnaireResponseExample:
+    exampleCanonical: ReachQuestionnaireResponse
+  QuestionnaireResponse/TCTQuestionnaireResponseInstance:
+    exampleCanonical: TCTQuestionnaireResponse
+  QuestionnaireResponse/WMFTQuestionnaireResponseExample:
+    exampleCanonical: WMFTQuestionnaireResponse
+  CarePlan/CarePlanExample01:
+    exampleCanonical: CarePlan
+  Condition/ConditionExample01:
+    exampleCanonical: PACCondition
+
 # ?????????????????????????????Less Common Implementation Guide Properties????????????????????????????
 # ?? Uncomment the properties below to configure additional properties on the ImplementationGuide  ??
 # ?? resource. These properties are less commonly needed than those above.                         ??
