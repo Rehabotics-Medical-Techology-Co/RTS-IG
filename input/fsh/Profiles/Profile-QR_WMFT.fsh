@@ -10,7 +10,7 @@ Title: "WMFT上肢功能評估問卷回覆"
 Description: "針對WMFT上肢功能評估問卷的QuestionnaireResponse Profile，強制回傳格式符合問卷結構"
 
 // 固定問卷參考
-* questionnaire = "https://build.fhir.org/ig/Kimsber/Rehab-IG/Questionnaire/WMFTQuestionnaireInstance" (exactly)
+* questionnaire = Canonical(WMFTQuestionnaireInstance) (exactly)
 
 // 基本約束
 * status = #completed

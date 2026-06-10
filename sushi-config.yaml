@@ -1,12 +1,12 @@
-# ╭─────────────────────────Commonly Used ImplementationGuide Properties───────────────────────────╮
-# │  The properties below are used to create the ImplementationGuide resource. The most commonly   │
-# │  used properties are included. For a list of all supported properties and their functions,     │
-# │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# ???????????????????????????Commonly Used ImplementationGuide Properties?????????????????????????????
+# ?? The properties below are used to create the ImplementationGuide resource. The most commonly   ??
+# ?? used properties are included. For a list of all supported properties and their functions,     ??
+# ?? see: https://fshschool.org/docs/sushi/configuration/.                                         ??
+# ????????????????????????????????????????????????????????????????????????????????????????????????????
 id: fhir.rehabig
 canonical: https://build.fhir.org/ig/Kimsber/Rehab-IG
 name: RTSIG
-title: "復健訓練評估量表實作指引(Rehabilitation Training Scale Implementation Guide)"
+title: "復健訓練量表實作指引 (Rehabilitation Training Scale Implementation Guide)"
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
 version: 0.1.0
@@ -31,7 +31,7 @@ license: CC-BY-SA-4.0
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
 #     version: 1.0.0
 dependencies:
-  tw.gov.mohw.twcore: 0.3.2
+  tw.gov.mohw.twcore: 1.0.0
   hl7.fhir.uv.sdc: 3.0.0
 
 #
@@ -48,72 +48,41 @@ dependencies:
 #
 pages:
   index.md:
-    title: 應用說明
+    title: 首頁
   regulation.md:
-    title: 規範文件
-    # 這裡是「下拉選單」的子頁面
+    title: 規範
     capability.md:
       title: 能力聲明
     parameter.md:
-      title: 查詢參數及操作定義
+      title: 查詢參數
     logic.md:
       title: 邏輯模型
     extension.md:
-      title: FHIR Profiles及Extensions
+      title: FHIR Profiles 與 Extensions
     terminology.md:
-      title: 專門術語
-  example.md: 
+      title: 術語
+  example.md:
     title: 範例
   download.md:
-    title: 結構定義與範例檔下載
+    title: 下載
   security.md:
     title: 安全性
-   
-#   implementation.xml:
-#   examples.xml:
-#     title: Examples Overview
-#     simpleExamples.xml:
-#     complexExamples.xml:
-#
-#
-# The parameters property represents IG.definition.parameter. Rather
-# than a list of code/value pairs (as in the ImplementationGuide
-# resource), the code is the YAML key. If a parameter allows repeating
-# values, the value in the YAML should be a sequence/array.
-# For parameters defined by core FHIR see:
-# http://build.fhir.org/codesystem-guide-parameter-code.html
-# For parameters defined by the FHIR Tools IG see:
-# http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
-#
-# parameters:
-#   excludettl: true
-#   validation: [allow-any-extensions, no-broken-links]
-#
-# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
-# │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
-# │ as a simple structure where the YAML key is the menu item name and the value is the URL.       │
-# │ The IG publisher currently only supports one level deep on sub-menus. To provide a             │
-# │ custom menu.xml file, do not include this property and include a `menu.xml` file in            │
-# │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
-# │ property below.                                                                                │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
-  應用說明: index.html
+  首頁: index.html
   目錄: toc.html
-  規範文件: 
+  規範:
     能力聲明: capability.html
-    查詢參數及操作定義: parameter.html
+    查詢參數: parameter.html
     邏輯模型: logic.html
-    FHIR Profiles及Extensions: extension.html
-    專門術語: terminology.html
+    FHIR Profiles 與 Extensions: extension.html
+    術語: terminology.html
   範例: example.html
-  結構定義與範例檔下載: download.html
+  下載: download.html
   安全性: security.html
-
-# ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
-# │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
-# │  resource. These properties are less commonly needed than those above.                         │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# ?????????????????????????????Less Common Implementation Guide Properties????????????????????????????
+# ?? Uncomment the properties below to configure additional properties on the ImplementationGuide  ??
+# ?? resource. These properties are less commonly needed than those above.                         ??
+# ????????????????????????????????????????????????????????????????????????????????????????????????????
 #
 # Those who need more control or want to add additional details to the contact values can use
 # contact directly and follow the format outlined in the ImplementationGuide resource and
@@ -209,9 +178,9 @@ menu:
 # * packageId
 #
 #
-# ╭──────────────────────────────────────────SUSHI flags───────────────────────────────────────────╮
-# │  The flags below configure aspects of how SUSHI processes FSH.                                 │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# ????????????????????????????????????????????SUSHI flags?????????????????????????????????????????????
+# ?? The flags below configure aspects of how SUSHI processes FSH.                                 ??
+# ????????????????????????????????????????????????????????????????????????????????????????????????????
 # The FSHOnly flag indicates if only FSH resources should be exported.
 # If set to true, no IG related content will be generated.
 # The default value for this property is false.

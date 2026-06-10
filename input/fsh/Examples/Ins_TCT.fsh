@@ -4,7 +4,6 @@ Usage: #definition
 Title: "Trunk Control Test (TCT) 評估量表"
 Description: "軀幹控制測試，病患需接受四種姿勢測試，以評估軀幹控制功能"
 // 基本欄位資訊
-* url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/Questionnaire/TCTQuestionnaireInstance"
 * version = "1.0.0"
 * status = #active
 * date = "2025-11-10"

@@ -10,7 +10,7 @@ Title: "FMAUE動作評估問卷回覆"
 Description: "針對FMAUE上肢動作評估問卷的QuestionnaireResponse Profile，強制回傳格式符合問卷結構"
 
 // 固定問卷參考
-* questionnaire = "http://example.org/fhir/Questionnaire/FMAUEMotorQuestionnaireInstance" (exactly)
+* questionnaire = Canonical(FMAUEMotorQuestionnaireInstance) (exactly)
 
 // 基本約束
 * status = #completed
@@ -263,7 +263,7 @@ Description: "針對FMAUE上肢動作評估問卷的QuestionnaireResponse Profil
 
 // A.IV.肩部屈曲90°-180°
 * item[ShoulderElbowForearm].item[a4].item[ShoulderFlexion90180].linkId = "A-IV-shoulder-flexion-90-180" (exactly)
-* item[ShoulderElbowForearm].item[a4].item[ShoulderFlexion90180].text = "手肘 90° 前傾/旋後"
+* item[ShoulderElbowForearm].item[a4].item[ShoulderFlexion90180].text = "肩部屈曲90°-180°"
 * item[ShoulderElbowForearm].item[a4].item[ShoulderFlexion90180].answer 1..1
 * item[ShoulderElbowForearm].item[a4].item[ShoulderFlexion90180].answer.value[x] only integer
 * item[ShoulderElbowForearm].item[a4].item[ShoulderFlexion90180].answer.valueInteger ^short = "分數 0-2"

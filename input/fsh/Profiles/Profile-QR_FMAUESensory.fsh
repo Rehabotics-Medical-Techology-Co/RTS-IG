@@ -10,7 +10,7 @@ Title: "FMAUE感覺評估問卷回覆"
 Description: "針對FMAUE上肢感覺評估問卷的QuestionnaireResponse Profile，強制回傳格式符合問卷結構"
 
 // 固定問卷參考
-* questionnaire = Canonical (FMAUESensoryQuestionnaireInstance)
+* questionnaire = Canonical(FMAUESensoryQuestionnaireInstance)
 
 // 基本約束
 * status = #completed

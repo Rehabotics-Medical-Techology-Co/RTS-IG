@@ -41,6 +41,9 @@ Description: "一個健康狀態篩檢與評估的範例"
 
 * status = #final
 * code.coding[0].system = "http://loinc.org"
-* code.coding[0].display = "Health Status Screening"
+* code.coding[0].code = #100256-7
+* code.coding[0].display = "Fallen in last 6 months"
 * subject = Reference(PatientExample)
+* effectiveDateTime = "2026-06-08T09:00:00+08:00"
+* performer = Reference(PractitionerExample)
 * dataAbsentReason.coding = #unknown

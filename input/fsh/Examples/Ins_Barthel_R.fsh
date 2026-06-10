@@ -5,8 +5,7 @@ Instance: BarthelIndexExample
 InstanceOf: BarthelQuestionnaireResponse
 Usage: #example
 * status = #completed
-* subject.reference = "http://example.org/fhir/Questionnaire/BarthelQuestionnaire"
-* status = #completed
+* questionnaire = Canonical(BarthelQuestionnaireInstance)
 * subject = Reference(Patient/stroke-patient-001) "張先生"
 * authored = "2025-10-11T14:30:00+08:00"
 * author = Reference(Practitioner/ot-therapist-001) "復健治療師 - 李小姐"

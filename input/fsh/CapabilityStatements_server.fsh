@@ -1,6 +1,5 @@
 // ================================================
 // CapabilityStatement
-// 根據 Parameter.xlsx 及範例格式生成
 // ================================================
 
 Instance: MyFHIRServerCapabilityStatement
@@ -13,7 +12,7 @@ Usage: #definition
 * experimental = false
 * date = "2025-10-24"
 * publisher = "Example Organization"
-* description = "此 CapabilityStatement 定義了伺服端必須支援的 FHIR RESTful API 功能"
+* description = "Server CapabilityStatement for the Rehab IG FHIR RESTful API."
 * kind = #instance
 * fhirVersion = #4.0.1
 * implementation.description = "Rehab FHIR Server"
@@ -26,9 +25,10 @@ Usage: #definition
 * rest.mode = #server
 
 * rest.resource[0].type = #Patient //0
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Patient"
-* rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].profile.extension.valueCode = #SHOULD
+* rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Patient-twcore"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/Patient"
+* rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #read
@@ -42,33 +42,34 @@ Usage: #definition
 * rest.resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Patient-_id"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Patient-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "birthdate"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Patient-birthdate"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Patient-birthdate"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "gender"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Patient-gender"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Patient-gender"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "identifier"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Patient-identifier"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Patient-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "name"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Patient-name"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Patient-name"
 * rest.resource[=].searchParam[=].type = #string
 
 * rest.resource[+].type = #Bundle //1
 * rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Bundle"
-* rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].profile.extension.valueCode = #SHOULD
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/ReponseBundle"
+* rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #read
@@ -78,18 +79,19 @@ Usage: #definition
 * rest.resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Bundle-_id"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Bundle-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "identifier"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Bundle-identifier"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Bundle-identifier"
 * rest.resource[=].searchParam[=].type = #token
 
 * rest.resource[+].type = #CarePlan //2
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/CarePlan"
-* rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].profile.extension.valueCode = #SHOULD
+* rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CarePlan-twcore"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/CarePlan"
+* rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #read
@@ -99,28 +101,29 @@ Usage: #definition
 * rest.resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "patient"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/CarePlan-patient"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/CarePlan-patient"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "category"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/CarePlan-category"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/CarePlan-category"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "date"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/CarePlan-date"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/CarePlan-date"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "status"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/CarePlan-status"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/CarePlan-status"
 * rest.resource[=].searchParam[=].type = #token
 
 * rest.resource[+].type = #Condition //3
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Condition"
-* rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].profile.extension.valueCode = #SHOULD
+* rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Condition-twcore"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/PACCondition"
+* rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #read
@@ -130,43 +133,44 @@ Usage: #definition
 * rest.resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Condition-_id"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Condition-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "clinical-status"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Condition-clinical-status"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Condition-clinical-status"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "code"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Condition-code"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Condition-code"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "subject"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Condition-subject"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Condition-subject"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "onset-date"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Condition-onset-date"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Condition-onset-date"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "abatement-date"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Condition-abatement-date"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Condition-abatement-date"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "severity"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Condition-severity"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Condition-severity"
 * rest.resource[=].searchParam[=].type = #token
 
 * rest.resource[+].type = #Encounter //4
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Encounter"
-* rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].profile.extension.valueCode = #SHOULD
+* rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Encounter-twcore"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/Encounter"
+* rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #read
@@ -176,43 +180,44 @@ Usage: #definition
 * rest.resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Encounter-_id"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Encounter-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "class"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Encounter-class"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Encounter-class"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "date"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Encounter-date"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Encounter-date"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "identifier"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Encounter-identifier"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Encounter-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "location"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Encounter-location"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Encounter-location"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "subject"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Encounter-subject"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Encounter-subject"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "status"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Encounter-status"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Encounter-status"
 * rest.resource[=].searchParam[=].type = #token
 
 * rest.resource[+].type = #Goal //5
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Goal"
-* rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].profile.extension.valueCode = #SHOULD
+* rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Goal-twcore"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/Goal"
+* rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #read
@@ -222,28 +227,29 @@ Usage: #definition
 * rest.resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "patient"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Goal-patient"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Goal-patient"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "lifecycle-status"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Goal-lifecycle-status"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Goal-lifecycle-status"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "target-date"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Goal-target-date"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Goal-target-date"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "description"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Goal-description"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Goal-description"
 * rest.resource[=].searchParam[=].type = #token
 
 * rest.resource[+].type = #MedicationAdministration //6
 * rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/MedicationAdministration"
-* rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].profile.extension.valueCode = #SHOULD
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/MyMedicationAdministration"
+* rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #read
@@ -253,73 +259,74 @@ Usage: #definition
 * rest.resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "code"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/MedicationAdministration-code"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-code"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "identifier"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/MedicationAdministration-identifier"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "medication"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/MedicationAdministration-medication"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-medication"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "patient"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/MedicationAdministration-patient"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-patient"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "status"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/MedicationAdministration-status"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-status"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "context"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/MedicationAdministration-context"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-context"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "device"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/MedicationAdministration-device"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-device"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "effective-time"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/MedicationAdministration-effective-time"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-effective-time"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "performer"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/MedicationAdministration-performer"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-performer"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "reason-given"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/MedicationAdministration-reason-given"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-reason-given"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "reason-not-given"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/MedicationAdministration-reason-not-given"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-reason-not-given"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "request"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/MedicationAdministration-request"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-request"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "subject"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/MedicationAdministration-subject"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-subject"
 * rest.resource[=].searchParam[=].type = #reference
 
 * rest.resource[+].type = #Observation //7
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Observation"
-* rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].profile.extension.valueCode = #SHOULD
+* rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Observation-screening-assessment-twcore"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/ObservationScreeningAssessment"
+* rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #read
@@ -329,53 +336,54 @@ Usage: #definition
 * rest.resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Observation-_id"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Observation-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "category"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Observation-category"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Observation-category"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "code"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Observation-code"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Observation-clinical-code"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "date"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Observation-date"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Observation-date"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "performer"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Observation-performer"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Observation-performer"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "status"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Observation-status"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Observation-status"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "subject"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Observation-subject"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Observation-subject"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "patient"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Observation-patient"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Observation-patient"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "_lastUpdated"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Observation-_lastUpdated"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Observation-lastupdated"
 * rest.resource[=].searchParam[=].type = #date
 
 * rest.resource[+].type = #Organization //8
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Organization"
-* rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].profile.extension.valueCode = #SHOULD
+* rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Organization-twcore"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/Organization"
+* rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #read
@@ -385,28 +393,29 @@ Usage: #definition
 * rest.resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Organization-_id"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Organization-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "identifier"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Organization-identifier"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Organization-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "name"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Organization-name"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Organization-name"
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "type"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Organization-type"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Organization-type"
 * rest.resource[=].searchParam[=].type = #token
 
 * rest.resource[+].type = #Practitioner //9
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Practitioner"
-* rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].profile.extension.valueCode = #SHOULD
+* rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Practitioner-twcore"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/Practitioner"
+* rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #read
@@ -416,23 +425,24 @@ Usage: #definition
 * rest.resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Practitioner-_id"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Practitioner-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "identifier"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Practitioner-identifier"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Practitioner-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "name"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Practitioner-name"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Practitioner-name"
 * rest.resource[=].searchParam[=].type = #string
 
 * rest.resource[+].type = #PractitionerRole //10
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
-* rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].profile.extension.valueCode = #SHOULD
+* rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/PractitionerRole-twcore"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/PractitionerRole"
+* rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #read
@@ -442,23 +452,24 @@ Usage: #definition
 * rest.resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/PractitionerRole-_id"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/PractitionerRole-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "identifier"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/PractitionerRole-identifier"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/PractitionerRole-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "specialty"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/PractitionerRole-specialty"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/PractitionerRole-specialty"
 * rest.resource[=].searchParam[=].type = #token
 
 * rest.resource[+].type = #Procedure //11
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Procedure"
-* rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].profile.extension.valueCode = #SHOULD
+* rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Procedure-twcore"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/Procedure"
+* rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #read
@@ -468,33 +479,34 @@ Usage: #definition
 * rest.resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Procedure-_id"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Procedure-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "code"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Procedure-code"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Procedure-code"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "status"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Procedure-status"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Procedure-status"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "subject"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Procedure-subject"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Procedure-subject"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "date"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Procedure-date"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/Procedure-date"
 * rest.resource[=].searchParam[=].type = #date
 
 * rest.resource[+].type = #QuestionnaireResponse //12
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"
-* rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].profile.extension.valueCode = #SHOULD
+* rest.resource[=].profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/SPACQuestionnaireResponse"
+* rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #read
@@ -502,36 +514,35 @@ Usage: #definition
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #search-type
 * rest.resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].interaction[=].extension.valueCode = #SHALL  // Server 必須接收提交
+* rest.resource[=].interaction[=].extension.valueCode = #SHALL  // Server must accept submissions
 * rest.resource[=].interaction[=].code = #create
 * rest.resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].interaction[=].extension.valueCode = #SHOULD  // Server 應支援修改
+* rest.resource[=].interaction[=].extension.valueCode = #SHOULD  // Server should support update
 * rest.resource[=].interaction[=].code = #update
 * rest.resource[=].operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].operation[=].extension.valueCode = #SHALL  // Server 必須支援
+* rest.resource[=].operation[=].extension.valueCode = #SHALL  // Server must support extract
 * rest.resource[=].operation[=].name = "extract"
 * rest.resource[=].operation[=].definition = "http://hl7.org/fhir/uv/sdc/OperationDefinition/QuestionnaireResponse-extract"
 * rest.resource[=].operation[=].documentation = """
-伺服器必須實現 $extract 操作以：
 
-1. 接收已填寫的 QuestionnaireResponse
-2. 解析 Questionnaire 中的 extraction extension
-3. 根據提取定義轉換為結構化 FHIR 資源
-4. 返回 Bundle 或單一資源
+The server must implement $extract to:
 
-技術要求：
-• 支援 ObservationExtract（最常見）
-• 支援 DefinitionExtract（複雜資源）
-• 支援 TemplateExtract（預設樣板）
-• StructureMapExtract（高級轉換）
+1. Receive a completed QuestionnaireResponse.
+2. Parse extraction extensions from the Questionnaire.
+3. Convert the response into structured FHIR resources.
+4. Return a Bundle or a single extracted resource.
 
-提取優先級：
-1. 簡單 Observation 提取（計分、測量）
-2. 複雜資源提取（診斷/藥物）
-3. 自動計算欄位（如 BMI）
-4. 交易 Bundle 生成
+Technical expectations:
+- Support ObservationExtract as the common extraction path.
+- Support DefinitionExtract, TemplateExtract, or StructureMapExtract when required by the Questionnaire design.
 
-回傳格式：
+Extraction priority:
+1. Simple Observation extraction, such as scores or measurements.
+2. Complex resource extraction, such as diagnosis or medication data.
+3. Calculated fields, such as BMI.
+4. Transaction Bundle generation.
+
+Example response format:
 {
   "resourceType": "Bundle",
   "type": "transaction",
@@ -547,43 +558,38 @@ Usage: #definition
   ]
 }
 
-這是 SDC 工作流的最終步驟，用於自動導入結構化資料
+This is the final SDC workflow step for importing structured data automatically.
 """
 * rest.resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/QuestionnaireResponse-_id"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/QuestionnaireResponse-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "patient"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/QuestionnaireResponse-patient"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/QuestionnaireResponse-patient"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "status"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/QuestionnaireResponse-status"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/QuestionnaireResponse-status"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "authored"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/QuestionnaireResponse-authored"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/QuestionnaireResponse-authored"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "questionnaire"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/QuestionnaireResponse-questionnaire"
+* rest.resource[=].searchParam[=].definition = "https://twcore.mohw.gov.tw/ig/twcore/SearchParameter/QuestionnaireResponse-questionnaire"
 * rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
-* rest.resource[=].searchParam[=].name = "subject"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/QuestionnaireResponse-subject"
-* rest.resource[=].searchParam[=].type = #reference
-
 * rest.resource[+].type = #Questionnaire //13
-* rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Questionnaire"
-* rest.resource[=].profile.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].profile.extension.valueCode = #SHOULD
+* rest.resource[=].profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-obsn"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/SPACQuestionnaire"
+* rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #read
@@ -591,35 +597,36 @@ Usage: #definition
 * rest.resource[=].interaction[=].extension.valueCode = #SHALL
 * rest.resource[=].interaction[=].code = #search-type
 * rest.resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].interaction[=].extension.valueCode = #SHOULD  // Server 應支援問卷上傳
+* rest.resource[=].interaction[=].extension.valueCode = #SHOULD  // Server should support questionnaire upload
 * rest.resource[=].interaction[=].code = #create
 * rest.resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].interaction[=].extension.valueCode = #SHOULD  // Server 應支援問卷更新
+* rest.resource[=].interaction[=].extension.valueCode = #SHOULD  // Server should support questionnaire update
 * rest.resource[=].interaction[=].code = #update
 * rest.resource[=].operation[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].operation[=].extension.valueCode = #SHALL  // Server 必須支援
+* rest.resource[=].operation[=].extension.valueCode = #SHALL  // Server must support populate
 * rest.resource[=].operation[=].name = "populate"
 * rest.resource[=].operation[=].definition = "http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-populate"
 * rest.resource[=].operation[=].documentation = """
-伺服器必須實現 $populate 操作以：
 
-1. 接收 Client 的預填請求
-2. 根據 questionnaire.item.definition 查詢患者資料
-3. 根據 FHIRPath expression 預填答案
-4. 返回已預填的 QuestionnaireResponse
+The server must implement $populate to:
 
-技術要求：
-• FHIRPath 引擎支援
-• 資料查詢引擎（能查詢 Patient/Observation 等資源）
-• Extension 解析（processingPriority/itemWeight/calculatedExpression）
+1. Receive a pre-population request from a client.
+2. Query patient data according to questionnaire.item.definition.
+3. Pre-fill answers according to FHIRPath expressions.
+4. Return the pre-populated QuestionnaireResponse.
 
-實現優先級：
-1. 基本預填（根據 definition 字段）
-2. FHIRPath 評估
-3. answerExpression 支援
-4. 複雜表達式與條件
+Technical expectations:
+- Support a FHIRPath engine.
+- Support data lookup for resources such as Patient and Observation.
+- Parse extensions such as processingPriority, itemWeight, and calculatedExpression.
 
-回傳格式：
+Implementation priority:
+1. Basic pre-population from definition.
+2. FHIRPath evaluation.
+3. answerExpression support.
+4. Complex expressions and conditions.
+
+Example response format:
 {
   "resourceType": "QuestionnaireResponse",
   "questionnaire": "Questionnaire/q1",
@@ -627,31 +634,33 @@ Usage: #definition
   "item": [
     {
       "linkId": "patient-name",
-      "answer": [{ "valueString": "[自動填入的病人名稱]" }]
+      "answer": [{ "valueString": "[automatically populated patient name]" }]
     }
   ]
 }
 """
 * rest.resource[=].operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].operation[=].extension.valueCode = #MAY  // Server 可選支援
+* rest.resource[=].operation[=].extension.valueCode = #MAY  // Server may support render
 * rest.resource[=].operation[=].name = "render"
 * rest.resource[=].operation[=].definition = "http://hl7.org/fhir/OperationDefinition/StructureDefinition-questionnaire"
 * rest.resource[=].operation[=].documentation = """
-伺服器可選支援 $render 操作以：
-• 將 Questionnaire 轉換為可用格式（HTML/PDF/JSON）
-• 應用主題樣式和客製化呈現
-• 支援多語言
 
-大多數 Client 會自行實現渲染，此操作非必要
+The server may support $render to:
+- Convert Questionnaire into a renderable format, such as HTML, PDF, or JSON.
+- Apply themes or custom presentation rules.
+- Support multilingual rendering.
+
+Most clients can render questionnaires themselves, so this operation is optional.
 """
 
 * rest.resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "identifier"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Questionnaire-identifier"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Questionnaire-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "title"
-* rest.resource[=].searchParam[=].definition = "http://example.org/fhir/SearchParameter/Questionnaire-title"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Questionnaire-title"
 * rest.resource[=].searchParam[=].type = #string
+

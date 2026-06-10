@@ -8,7 +8,7 @@ Title: "IADL評估問卷回覆"
 Description: "針對IADL評估問卷的QuestionnaireResponse Profile，強制回傳格式符合問卷結構"
 
 // 固定問卷參考
-* questionnaire = "http://example.org/fhir/Questionnaire/IDALQuestionnaireInstance" (exactly)
+* questionnaire = Canonical(IDALQuestionnaireInstance) (exactly)
 
 // 基本約束
 * status = #completed

@@ -8,7 +8,7 @@ Usage: #example
 Title: "Fugl-Meyer上肢動作評估問卷回覆範例"
 Description: "針對 Fugl-Meyer 上肢動作評估問卷的完整回覆範例，展示左側上肢動作功能評估結果"
 
-* questionnaire = "http://example.org/fhir/Questionnaire/FMAUEMotorQuestionnaireInstance"
+* questionnaire = Canonical(FMAUEMotorQuestionnaireInstance)
 * status = #completed
 * subject = Reference(PatientExample)
 * authored = "2023-10-01T10:00:00+08:00"
@@ -24,9 +24,8 @@ Description: "針對 Fugl-Meyer 上肢動作評估問卷的完整回覆範例，
 // 評估側別選擇
 // ============================================
 * item[1].linkId = "assessment-side-fmaue-motion"
-* item[=].text = "請選擇評估階段"
-* item[=].answer.valueCoding.code = $snomed#7771000
-* item[=].answer.valueCoding.display = "Left"
+* item[=].text = "請選擇患側"
+* item[=].answer.valueCoding = $snomed#7771000 "Left"
 
 
 // ============================================
@@ -99,7 +98,7 @@ Description: "針對 Fugl-Meyer 上肢動作評估問卷的完整回覆範例，
 * item[=].item[=].item[=].text = "手到腰椎"
 * item[=].item[=].item[=].answer.valueInteger = 1
 
-* item[=].item[=].item[1].linkId = "a-3-shoulder-flexion-0-90"
+* item[=].item[=].item[1].linkId = "A-III-shoulder-flexion-0-90"
 * item[=].item[=].item[=].text = "肩部屈曲0° - 90°"
 * item[=].item[=].item[=].answer.valueInteger = 2
 
@@ -116,7 +115,7 @@ Description: "針對 Fugl-Meyer 上肢動作評估問卷的完整回覆範例，
 * item[=].item[=].item[=].answer.valueInteger = 1
 
 * item[=].item[=].item[1].linkId = "A-IV-shoulder-flexion-90-180"
-* item[=].item[=].item[=].text = "手肘 90° 前傾/旋後"
+* item[=].item[=].item[=].text = "肩部屈曲90°-180°"
 * item[=].item[=].item[=].answer.valueInteger = 0
 
 * item[=].item[=].item[2].linkId = "A-IV-elbow-0-pronation-supination"

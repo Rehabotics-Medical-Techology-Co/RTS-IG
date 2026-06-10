@@ -52,11 +52,11 @@ Description: "右側中風患者，接受左側上肢功能評估"
 * address.extension[=].valueString = "16號"
 * address.extension[+].url = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/tw-floor"
 * address.extension[=].valueString = "6樓之11"
-* address.line = "重新路"
-* address.city = "三重區"
-* address.district = "新北市"
+* address.line = "永綏街"
+* address.city = "臺北市"
+* address.district = "中正區"
 * address.postalCode.extension.url = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/tw-postal-code"
-* address.postalCode.extension.valueCodeableConcept = $postal-code6-tw#241408
+* address.postalCode.extension.valueCodeableConcept = $postal-code6-tw#100001
 * address.country = "臺灣(TW)"
 
 // * insert PatientNarrative("張先生", "1965-03-15", "男性", "A123456789", "台北市")

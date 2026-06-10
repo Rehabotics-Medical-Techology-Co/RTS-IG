@@ -8,7 +8,7 @@ Usage: #example
 Title: "WMFT上肢功能評估問卷回覆範例"
 Description: "針對 WMFT 上肢功能評估問卷的完整回覆範例，展示右側上肢功能評估結果，包含功能評分與完成時間記錄"
 
-* questionnaire = Canonical (WMFTQuestionnaireInstance)
+* questionnaire = Canonical(WMFTQuestionnaireInstance)
 * status = #completed
 * subject = Reference(PatientExample)
 * authored = "2025-10-06T13:30:00+08:00"

@@ -2,7 +2,7 @@ Instance: IDALQuestionnaireResponseInstance
 InstanceOf: SPACQuestionnaireResponse // IADLQuestionnaireResponse (應該是這個才對)
 Usage: #example
 
-* questionnaire = "http://example.org/fhir/Questionnaire/IDALQuestionnaireInstance"
+* questionnaire = Canonical(IDALQuestionnaireInstance)
 * status = #completed
 * subject = Reference(PatientExample)
 * authored = "2023-10-01T10:00:00+08:00"
@@ -13,7 +13,7 @@ Usage: #example
 * item[+].linkId = "B-shopping"
 * item[=].text = "B.購物"
 * item[=].answer.valueInteger = 3
-* item[+].linkId = "C-food-preparatio"
+* item[+].linkId = "C-food-preparation"
 * item[=].text = "C.備餐"
 * item[=].answer.valueInteger = 3
 * item[+].linkId = "D-housekeeping"

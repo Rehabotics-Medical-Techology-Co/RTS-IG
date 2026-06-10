@@ -9,7 +9,7 @@ Title: "ARAT上肢功能評估問卷回覆"
 Description: "針對ARAT上肢功能評估問卷的QuestionnaireResponse Profile，強制回傳格式符合問卷結構"
 
 // 固定問卷參考
-* questionnaire = "https://build.fhir.org/ig/Kimsber/Rehab-IG/Questionnaire/ARATQuestionnaireInstance" (exactly)
+* questionnaire = Canonical(ARATQuestionnaireInstance) (exactly)
 
 // 基本約束
 * status = #completed
