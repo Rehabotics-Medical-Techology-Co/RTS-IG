@@ -13,3 +13,6 @@
 
 # ValueSet descriptions
 %Unable to find ImplementationGuide.definition.resource.description%
+# SDC 4 generated inherited narrative links that point to retired 2025Jan pages
+%http://hl7.org/fhir/uv/sdc/2025Jan/behavior.html#itemWeight%
+%http://hl7.org/fhir/uv/sdc/2025Jan/rendering.html#hidden%

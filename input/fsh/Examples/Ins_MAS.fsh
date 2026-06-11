@@ -50,3 +50,7 @@ Description: "評估肌肉張力"
 * item[=].type = #choice
 * item[=].required = true
 * item[=].answerValueSet = Canonical(VSMAScore)
+
+// SDC 4 requires versionAlgorithm when version is present.
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+* extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"

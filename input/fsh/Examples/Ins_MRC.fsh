@@ -52,3 +52,7 @@ Description: "MRC肌力測試 (Medical Research Council Scale)"
 // 轉換為Observation
 * item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
 * item[=].extension[=].valueBoolean = true
+
+// SDC 4 requires versionAlgorithm when version is present.
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+* extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"

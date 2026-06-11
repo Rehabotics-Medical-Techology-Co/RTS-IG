@@ -279,3 +279,7 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 // 轉換為Observation
 * item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
 * item[=].extension[=].valueBoolean = true
+
+// SDC 4 requires versionAlgorithm when version is present.
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+* extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"

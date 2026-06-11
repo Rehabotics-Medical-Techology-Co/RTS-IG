@@ -50,3 +50,7 @@ Description: "MI-UL 上肢運動功能評估量表"
 * item[=].extension[0].url = $sdcCalc
 * item[=].extension[0].valueExpression.language = #text/fhirpath
 * item[=].extension[0].valueExpression.expression = "item.where(linkId='pinch-grasp').answer.valueInteger.sum() + item.where(linkId='elbow-flexion').answer.valueInteger.sum() + item.where(linkId='shoulder-abduction').answer.valueInteger.sum()"
+
+// SDC 4 requires versionAlgorithm when version is present.
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+* extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"

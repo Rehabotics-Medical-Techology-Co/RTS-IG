@@ -45,3 +45,7 @@ Description: "軀幹控制測試，病患需接受四種姿勢測試，以評估
 
 
 
+
+// SDC 4 requires versionAlgorithm when version is present.
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+* extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"

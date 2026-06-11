@@ -32,7 +32,7 @@ license: CC-BY-SA-4.0
 #     version: 1.0.0
 dependencies:
   tw.gov.mohw.twcore: 1.0.0
-  hl7.fhir.uv.sdc: 3.0.0
+  hl7.fhir.uv.sdc: 4.0.0
 
 #
 # The pages property corresponds to IG.definition.page. SUSHI can

@@ -20,5 +20,5 @@ Description: "問卷回覆的結構化定義，實際問卷回覆內容可參考
 * item.linkId 1..1 MS
 * item.text 0..1 MS
 * item.answer 0..* MS
-* item.answer.extension[ordinalValue] 0..1 MS
+* item.answer.extension[itemWeight] 0..1 MS
 * item.answer.value[x] 0..1 MS
