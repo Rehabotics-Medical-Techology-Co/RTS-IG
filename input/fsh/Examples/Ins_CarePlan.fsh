@@ -1,5 +1,5 @@
 Instance: CarePlanExample01
-InstanceOf: TWCoreCarePlan
+InstanceOf: CarePlan
 Title: "Pediatric Occupational Therapy Evaluation-CarePlan"
 Description: "醫院實際照護計畫資料範例"
 * language = #zh-TW

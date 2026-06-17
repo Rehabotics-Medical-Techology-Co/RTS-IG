@@ -1,6 +1,6 @@
 Alias: $loinc = http://loinc.org
 Instance: MIULQuestionnaireResponseExample
-InstanceOf: SPACQuestionnaireResponse
+InstanceOf: MIULQuestionnaireResponse
 Usage: #example
 Title: "MIUL 問卷回覆範例"
 Description: "完整的MI-UL 上肢運動功能評估量表問卷回覆範例"

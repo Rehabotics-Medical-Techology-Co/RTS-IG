@@ -1,4 +1,4 @@
-Alias: $mas = https://build.fhir.org/ig/Kimsber/Rehab-IG/CodeSystem/mas-score
+Alias: $mas = https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/CodeSystem/CSMAS
 Instance: MASQuestionnaireResponseExample
 InstanceOf: MASQuestionnaireResponse
 Usage: #example

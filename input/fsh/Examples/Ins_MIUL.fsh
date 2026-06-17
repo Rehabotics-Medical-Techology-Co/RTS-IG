@@ -7,7 +7,7 @@ Title: "MI-UL 評估量表"
 Description: "MI-UL 上肢運動功能評估量表"
 * status = #active
 * language = #zh-TW
-//* url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/Questionnaire/MIULQuuestionnaireInstance"
+//* url = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/StructureDefinition/Questionnaire/MIULQuuestionnaireInstance"
 // 1. pinch grasp
 * item[0].linkId = "pinch-grasp"
 * item[=].text = "抓握能力"

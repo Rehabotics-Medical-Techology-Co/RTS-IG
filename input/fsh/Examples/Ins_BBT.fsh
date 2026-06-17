@@ -1,11 +1,15 @@
 //BBT
 Instance: BBTQuestionnaire
-//InstanceOf: SPACQuestionnaire
-InstanceOf: Questionnaire
+InstanceOf: SPACQuestionnaire
 Usage: #definition
 Title: "BBT評估量表"
 Description: "評估手部功能"
 * status = #active
+
+// SDC 4 requires versionAlgorithm when version is present.
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+* extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"
+
 * item[0].linkId = "left-hand"
 * item[0].text = "左手移動的積木數"
 * item[0].type = #integer

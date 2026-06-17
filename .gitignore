@@ -8,3 +8,5 @@ fsh-generated
 www
 Requirements-fromNarrative.json
 .git/
+HAPI_TEST_NOTES.md
+HAPI_SERVER_GUIDE.md

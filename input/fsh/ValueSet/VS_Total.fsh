@@ -1,6 +1,9 @@
 ValueSet: VSBarthelTotal
+Id: VSBarthelTotal
 Title: "Barthel Index 總值集"
 Description: "整合 Barthel Index 各題之所有選項值集"
+* ^experimental = false
+* insert ShareableTerminologyMetadata
 * include codes from valueset VSBarthelFeeding
 * include codes from valueset VSBarthelGrooming
 * include codes from valueset VSBarthelToiletUse

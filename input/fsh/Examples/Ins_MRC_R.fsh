@@ -1,5 +1,5 @@
 Instance: MRCQuestionnaireResponseExample
-InstanceOf: SPACQuestionnaireResponse
+InstanceOf: MRCQuestionnaireResponse
 Usage: #example
 
 * status = #completed
@@ -10,9 +10,9 @@ Usage: #example
 // ============================================
 // 評估部位分數
 // ============================================
-* item[0].linkId = "abduction-arm"
-* item[=].answer.valueInteger = 0
-* item[+].linkId = "flexion-forearm"
-* item[=].answer.valueInteger = 2
-* item[+].linkId = "extension-wrist"
-* item[=].answer.valueInteger = 4
+* item[abduction-arm].linkId = "abduction-arm"
+* item[abduction-arm].answer.valueInteger = 0
+* item[flexion-forearm].linkId = "flexion-forearm"
+* item[flexion-forearm].answer.valueInteger = 2
+* item[extension-wrist].linkId = "extension-wrist"
+* item[extension-wrist].answer.valueInteger = 4

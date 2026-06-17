@@ -76,5 +76,7 @@ ValueSet: AssessmentSideValueSet
 Id: assessment-side-valueset
 Title: "評估側別選項"
 Description: "受試者評估側別選項"
+* ^experimental = false
+* insert ShareableTerminologyMetadata
 * $SCT#24028007 "患者左側"
 * $SCT#7771000 "患者右側"

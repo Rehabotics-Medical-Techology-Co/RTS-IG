@@ -5,7 +5,7 @@
 Instance: MyFHIRServerCapabilityStatement
 InstanceOf: CapabilityStatement
 Usage: #definition
-* url = "https://build.fhir.org/ig/Kimsber/Rehab-IG/CapabilityStatement/MyFHIRServerCapabilityStatement"
+* url = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/CapabilityStatement/MyFHIRServerCapabilityStatement"
 * name = "MyFHIRServerCapabilityStatement"
 * title = "My FHIR Server Capability Statement"
 * status = #active
@@ -16,7 +16,7 @@ Usage: #definition
 * kind = #instance
 * fhirVersion = #4.0.1
 * implementation.description = "Rehab FHIR Server"
-* implementation.url = "https://build.fhir.org/ig/Kimsber/Rehab-IG"
+* implementation.url = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG"
 * software.name = "RehabIG Server"
 * software.version = "1.0.0"
 * format[0] = #xml
@@ -26,7 +26,7 @@ Usage: #definition
 
 * rest.resource[0].type = #Patient //0
 * rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Patient-twcore"
-* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/Patient"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/StructureDefinition/Patient"
 * rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -67,7 +67,7 @@ Usage: #definition
 
 * rest.resource[+].type = #Bundle //1
 * rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Bundle"
-* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/ReponseBundle"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/StructureDefinition/ReponseBundle"
 * rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -89,7 +89,7 @@ Usage: #definition
 
 * rest.resource[+].type = #CarePlan //2
 * rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CarePlan-twcore"
-* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/CarePlan"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/StructureDefinition/CarePlan"
 * rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -121,7 +121,7 @@ Usage: #definition
 
 * rest.resource[+].type = #Condition //3
 * rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Condition-twcore"
-* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/PACCondition"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/StructureDefinition/PACCondition"
 * rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -168,7 +168,7 @@ Usage: #definition
 
 * rest.resource[+].type = #Encounter //4
 * rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Encounter-twcore"
-* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/Encounter"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/StructureDefinition/Encounter"
 * rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -215,7 +215,7 @@ Usage: #definition
 
 * rest.resource[+].type = #Goal //5
 * rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Goal-twcore"
-* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/Goal"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/StructureDefinition/Goal"
 * rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -247,7 +247,7 @@ Usage: #definition
 
 * rest.resource[+].type = #MedicationAdministration //6
 * rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/MedicationAdministration"
-* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/MyMedicationAdministration"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/StructureDefinition/MyMedicationAdministration"
 * rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -259,72 +259,72 @@ Usage: #definition
 * rest.resource[=].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "code"
-* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-code"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/SearchParameter/MedicationAdministration-code"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "identifier"
-* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-identifier"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/SearchParameter/MedicationAdministration-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "medication"
-* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-medication"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/SearchParameter/MedicationAdministration-medication"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "patient"
-* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-patient"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/SearchParameter/MedicationAdministration-patient"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "status"
-* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-status"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/SearchParameter/MedicationAdministration-status"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "context"
-* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-context"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/SearchParameter/MedicationAdministration-context"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "device"
-* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-device"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/SearchParameter/MedicationAdministration-device"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "effective-time"
-* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-effective-time"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/SearchParameter/MedicationAdministration-effective-time"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "performer"
-* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-performer"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/SearchParameter/MedicationAdministration-performer"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "reason-given"
-* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-reason-given"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/SearchParameter/MedicationAdministration-reason-given"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "reason-not-given"
-* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-reason-not-given"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/SearchParameter/MedicationAdministration-reason-not-given"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "request"
-* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-request"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/SearchParameter/MedicationAdministration-request"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "subject"
-* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Kimsber/Rehab-IG/SearchParameter/MedicationAdministration-subject"
+* rest.resource[=].searchParam[=].definition = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/SearchParameter/MedicationAdministration-subject"
 * rest.resource[=].searchParam[=].type = #reference
 
 * rest.resource[+].type = #Observation //7
 * rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Observation-screening-assessment-twcore"
-* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/ObservationScreeningAssessment"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/StructureDefinition/ObservationScreeningAssessment"
 * rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -381,7 +381,7 @@ Usage: #definition
 
 * rest.resource[+].type = #Organization //8
 * rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Organization-twcore"
-* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/Organization"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/StructureDefinition/Organization"
 * rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -413,7 +413,7 @@ Usage: #definition
 
 * rest.resource[+].type = #Practitioner //9
 * rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Practitioner-twcore"
-* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/Practitioner"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/StructureDefinition/Practitioner"
 * rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -440,7 +440,7 @@ Usage: #definition
 
 * rest.resource[+].type = #PractitionerRole //10
 * rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/PractitionerRole-twcore"
-* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/PractitionerRole"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/StructureDefinition/PractitionerRole"
 * rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -467,7 +467,7 @@ Usage: #definition
 
 * rest.resource[+].type = #Procedure //11
 * rest.resource[=].profile = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Procedure-twcore"
-* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/Procedure"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/StructureDefinition/Procedure"
 * rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -504,7 +504,7 @@ Usage: #definition
 
 * rest.resource[+].type = #QuestionnaireResponse //12
 * rest.resource[=].profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"
-* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/SPACQuestionnaireResponse"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/StructureDefinition/SPACQuestionnaireResponse"
 * rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -587,7 +587,7 @@ This is the final SDC workflow step for importing structured data automatically.
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[+].type = #Questionnaire //13
 * rest.resource[=].profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-obsn"
-* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Kimsber/Rehab-IG/StructureDefinition/SPACQuestionnaire"
+* rest.resource[=].supportedProfile[0] = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/StructureDefinition/SPACQuestionnaire"
 * rest.resource[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension[=].valueCode = #SHOULD
 * rest.resource[=].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
