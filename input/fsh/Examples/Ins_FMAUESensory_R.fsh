@@ -32,31 +32,31 @@ Description: "針對Fugl-Meyer上肢感覺評估問卷的完整回覆範例"
 // ============================================
 * item[LightTouch].linkId = "A-light-touch"
 * item[LightTouch].text = "A.輕觸覺檢測"
-* item[LightTouch].item[0].linkId = "A-I-upper-arm"
-* item[LightTouch].item[0].answer[0].valueInteger = 2
-* item[LightTouch].item[+].linkId = "A-I-forearm"
-* item[LightTouch].item[=].text = "前臂輕觸覺"
-* item[LightTouch].item[=].answer.valueInteger = 2
-* item[LightTouch].item[+].linkId = "A-I-hand"
-* item[LightTouch].item[=].text = "手部輕觸覺"
-* item[LightTouch].item[=].answer.valueInteger = 1
+* item[LightTouch].item[upperArm].linkId = "A-I-upper-arm"
+* item[LightTouch].item[upperArm].answer[0].valueInteger = 2
+* item[LightTouch].item[forearm].linkId = "A-I-forearm"
+* item[LightTouch].item[forearm].text = "前臂輕觸覺"
+* item[LightTouch].item[forearm].answer.valueInteger = 2
+* item[LightTouch].item[hand].linkId = "A-I-hand"
+* item[LightTouch].item[hand].text = "手部輕觸覺"
+* item[LightTouch].item[hand].answer.valueInteger = 1
 
 // ============================================
 // Section B：溫度覺檢測回覆 (3個部位)
 // ============================================
 * item[Temperature].linkId = "B-temperature"
 * item[Temperature].text = "B.溫度覺檢測"
-* item[Temperature].item[0].linkId = "B-I-upper-arm"
-* item[Temperature].item[0].text = "上臂溫度覺"
-* item[Temperature].item[0].answer.valueInteger = 2
+* item[Temperature].item[upperArm].linkId = "B-I-upper-arm"
+* item[Temperature].item[upperArm].text = "上臂溫度覺"
+* item[Temperature].item[upperArm].answer.valueInteger = 2
 
-* item[Temperature].item[+].linkId = "B-I-forearm"
-* item[Temperature].item[=].text = "前臂溫度覺"
-* item[Temperature].item[=].answer.valueInteger = 2
+* item[Temperature].item[forearm].linkId = "B-I-forearm"
+* item[Temperature].item[forearm].text = "前臂溫度覺"
+* item[Temperature].item[forearm].answer.valueInteger = 2
 
-* item[Temperature].item[+].linkId = "B-I-hand"
-* item[Temperature].item[=].text = "手部溫度覺"
-* item[Temperature].item[=].answer.valueInteger = 1
+* item[Temperature].item[hand].linkId = "B-I-hand"
+* item[Temperature].item[hand].text = "手部溫度覺"
+* item[Temperature].item[hand].answer.valueInteger = 1
 
 // ============================================
 // Section C：觸覺定位檢測回覆 (3個部位)
@@ -64,17 +64,17 @@ Description: "針對Fugl-Meyer上肢感覺評估問卷的完整回覆範例"
 * item[TactileLocalization].linkId = "C-tactile-localization"
 * item[TactileLocalization].text = "C.觸覺定位檢測"
 
-* item[TactileLocalization].item[0].linkId = "C-I-upper-arm"
-* item[TactileLocalization].item[0].text = "上臂觸覺定位"
-* item[TactileLocalization].item[0].answer.valueInteger = 2
+* item[TactileLocalization].item[upperArm].linkId = "C-I-upper-arm"
+* item[TactileLocalization].item[upperArm].text = "上臂觸覺定位"
+* item[TactileLocalization].item[upperArm].answer.valueInteger = 2
 
-* item[TactileLocalization].item[+].linkId = "C-I-forearm"
-* item[TactileLocalization].item[=].text = "前臂觸覺定位"
-* item[TactileLocalization].item[=].answer.valueInteger = 1
+* item[TactileLocalization].item[forearm].linkId = "C-I-forearm"
+* item[TactileLocalization].item[forearm].text = "前臂觸覺定位"
+* item[TactileLocalization].item[forearm].answer.valueInteger = 1
 
-* item[TactileLocalization].item[+].linkId = "C-I-hand"
-* item[TactileLocalization].item[=].text = "手部觸覺定位"
-* item[TactileLocalization].item[=].answer.valueInteger = 1
+* item[TactileLocalization].item[hand].linkId = "C-I-hand"
+* item[TactileLocalization].item[hand].text = "手部觸覺定位"
+* item[TactileLocalization].item[hand].answer.valueInteger = 1
 
 // ============================================
 // Section D：位置覺檢測回覆 (4個關節)
@@ -82,21 +82,21 @@ Description: "針對Fugl-Meyer上肢感覺評估問卷的完整回覆範例"
 * item[PositionSense].linkId = "D-position-sense"
 * item[PositionSense].text = "D.位置覺檢測"
 
-* item[PositionSense].item[0].linkId = "D-I-shoulder"
-* item[PositionSense].item[0].text = "肩關節位置覺"
-* item[PositionSense].item[0].answer.valueInteger = 2
+* item[PositionSense].item[shoulder].linkId = "D-I-shoulder"
+* item[PositionSense].item[shoulder].text = "肩關節位置覺"
+* item[PositionSense].item[shoulder].answer.valueInteger = 2
 
-* item[PositionSense].item[+].linkId = "D-I-elbow"
-* item[PositionSense].item[=].text = "肘關節位置覺"
-* item[PositionSense].item[=].answer.valueInteger = 2
+* item[PositionSense].item[elbow].linkId = "D-I-elbow"
+* item[PositionSense].item[elbow].text = "肘關節位置覺"
+* item[PositionSense].item[elbow].answer.valueInteger = 2
 
-* item[PositionSense].item[+].linkId = "D-I-wrist"
-* item[PositionSense].item[=].text = "腕關節位置覺"
-* item[PositionSense].item[=].answer.valueInteger = 1
+* item[PositionSense].item[wrist].linkId = "D-I-wrist"
+* item[PositionSense].item[wrist].text = "腕關節位置覺"
+* item[PositionSense].item[wrist].answer.valueInteger = 1
 
-* item[PositionSense].item[+].linkId = "D-I-thumb"
-* item[PositionSense].item[=].text = "拇指位置覺"
-* item[PositionSense].item[=].answer.valueInteger = 1
+* item[PositionSense].item[thumb].linkId = "D-I-thumb"
+* item[PositionSense].item[thumb].text = "拇指位置覺"
+* item[PositionSense].item[thumb].answer.valueInteger = 1
 
 // ============================================
 // Section E：總分計算 (自動計算結果)

@@ -65,10 +65,77 @@ Description: "針對FMAUE上肢感覺評估問卷的QuestionnaireResponse Profil
 
 // ========== 限定每個 section 中的分數型題目必須是整數 ==========
 
-* item[LightTouch].item.answer.value[x] only integer
-* item[Temperature].item.answer.value[x] only integer
-* item[TactileLocalization].item.answer.value[x] only integer
-* item[PositionSense].item.answer.value[x] only integer
+* item[LightTouch].item ^slicing.discriminator.type = #value
+* item[LightTouch].item ^slicing.discriminator.path = "linkId"
+* item[LightTouch].item ^slicing.rules = #closed
+* item[LightTouch].item contains
+    upperArm 1..1 MS and
+    forearm 1..1 MS and
+    hand 1..1 MS
+* item[LightTouch].item[upperArm].linkId = "A-I-upper-arm" (exactly)
+* item[LightTouch].item[forearm].linkId = "A-I-forearm" (exactly)
+* item[LightTouch].item[hand].linkId = "A-I-hand" (exactly)
+* item[LightTouch].item[upperArm].answer 1..1
+* item[LightTouch].item[forearm].answer 1..1
+* item[LightTouch].item[hand].answer 1..1
+* item[LightTouch].item[upperArm].answer.value[x] only integer
+* item[LightTouch].item[forearm].answer.value[x] only integer
+* item[LightTouch].item[hand].answer.value[x] only integer
+
+* item[Temperature].item ^slicing.discriminator.type = #value
+* item[Temperature].item ^slicing.discriminator.path = "linkId"
+* item[Temperature].item ^slicing.rules = #closed
+* item[Temperature].item contains
+    upperArm 1..1 MS and
+    forearm 1..1 MS and
+    hand 1..1 MS
+* item[Temperature].item[upperArm].linkId = "B-I-upper-arm" (exactly)
+* item[Temperature].item[forearm].linkId = "B-I-forearm" (exactly)
+* item[Temperature].item[hand].linkId = "B-I-hand" (exactly)
+* item[Temperature].item[upperArm].answer 1..1
+* item[Temperature].item[forearm].answer 1..1
+* item[Temperature].item[hand].answer 1..1
+* item[Temperature].item[upperArm].answer.value[x] only integer
+* item[Temperature].item[forearm].answer.value[x] only integer
+* item[Temperature].item[hand].answer.value[x] only integer
+
+* item[TactileLocalization].item ^slicing.discriminator.type = #value
+* item[TactileLocalization].item ^slicing.discriminator.path = "linkId"
+* item[TactileLocalization].item ^slicing.rules = #closed
+* item[TactileLocalization].item contains
+    upperArm 1..1 MS and
+    forearm 1..1 MS and
+    hand 1..1 MS
+* item[TactileLocalization].item[upperArm].linkId = "C-I-upper-arm" (exactly)
+* item[TactileLocalization].item[forearm].linkId = "C-I-forearm" (exactly)
+* item[TactileLocalization].item[hand].linkId = "C-I-hand" (exactly)
+* item[TactileLocalization].item[upperArm].answer 1..1
+* item[TactileLocalization].item[forearm].answer 1..1
+* item[TactileLocalization].item[hand].answer 1..1
+* item[TactileLocalization].item[upperArm].answer.value[x] only integer
+* item[TactileLocalization].item[forearm].answer.value[x] only integer
+* item[TactileLocalization].item[hand].answer.value[x] only integer
+
+* item[PositionSense].item ^slicing.discriminator.type = #value
+* item[PositionSense].item ^slicing.discriminator.path = "linkId"
+* item[PositionSense].item ^slicing.rules = #closed
+* item[PositionSense].item contains
+    shoulder 1..1 MS and
+    elbow 1..1 MS and
+    wrist 1..1 MS and
+    thumb 1..1 MS
+* item[PositionSense].item[shoulder].linkId = "D-I-shoulder" (exactly)
+* item[PositionSense].item[elbow].linkId = "D-I-elbow" (exactly)
+* item[PositionSense].item[wrist].linkId = "D-I-wrist" (exactly)
+* item[PositionSense].item[thumb].linkId = "D-I-thumb" (exactly)
+* item[PositionSense].item[shoulder].answer 1..1
+* item[PositionSense].item[elbow].answer 1..1
+* item[PositionSense].item[wrist].answer 1..1
+* item[PositionSense].item[thumb].answer 1..1
+* item[PositionSense].item[shoulder].answer.value[x] only integer
+* item[PositionSense].item[elbow].answer.value[x] only integer
+* item[PositionSense].item[wrist].answer.value[x] only integer
+* item[PositionSense].item[thumb].answer.value[x] only integer
 // ============================================
 // Section E: 總分計算
 // ============================================

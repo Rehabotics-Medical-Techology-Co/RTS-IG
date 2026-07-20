@@ -61,11 +61,120 @@ Description: "針對ARAT上肢功能評估問卷的QuestionnaireResponse Profile
 // ============================================
 // 限制各section 只能填整數integer
 // ============================================
-* item[graspSubscale].item.answer.value[x] only integer
-* item[gripSubscale].item.answer.value[x] only integer
-* item[pinchSubscale].item.answer.value[x] only integer
-* item[grossMovementSubscale].item.answer.value[x] only integer
-* item[totalScoreSection].item.answer.value[x] only integer
+* item[graspSubscale].item ^slicing.discriminator.type = #value
+* item[graspSubscale].item ^slicing.discriminator.path = "linkId"
+* item[graspSubscale].item ^slicing.rules = #closed
+* item[graspSubscale].item contains
+    block10cm3 1..1 MS and
+    block25cm3 1..1 MS and
+    block5cm3 1..1 MS and
+    block75cm3 1..1 MS and
+    cricketBall 1..1 MS and
+    sharpeningStone 1..1 MS and
+    graspSubscore 1..1 MS
+* item[graspSubscale].item[block10cm3].linkId = "A-I-block-10cm3" (exactly)
+* item[graspSubscale].item[block25cm3].linkId = "A-I-block-2.5cm3" (exactly)
+* item[graspSubscale].item[block5cm3].linkId = "A-I-block-5cm3" (exactly)
+* item[graspSubscale].item[block75cm3].linkId = "A-I-block-7.5cm3" (exactly)
+* item[graspSubscale].item[cricketBall].linkId = "A-I-cricket-ball" (exactly)
+* item[graspSubscale].item[sharpeningStone].linkId = "A-I-sharpening-stone" (exactly)
+* item[graspSubscale].item[graspSubscore].linkId = "A-grasp-subscale-subscore" (exactly)
+* item[graspSubscale].item[block10cm3].answer 1..1
+* item[graspSubscale].item[block25cm3].answer 1..1
+* item[graspSubscale].item[block5cm3].answer 1..1
+* item[graspSubscale].item[block75cm3].answer 1..1
+* item[graspSubscale].item[cricketBall].answer 1..1
+* item[graspSubscale].item[sharpeningStone].answer 1..1
+* item[graspSubscale].item[graspSubscore].answer 1..1
+* item[graspSubscale].item[block10cm3].answer.value[x] only integer
+* item[graspSubscale].item[block25cm3].answer.value[x] only integer
+* item[graspSubscale].item[block5cm3].answer.value[x] only integer
+* item[graspSubscale].item[block75cm3].answer.value[x] only integer
+* item[graspSubscale].item[cricketBall].answer.value[x] only integer
+* item[graspSubscale].item[sharpeningStone].answer.value[x] only integer
+* item[graspSubscale].item[graspSubscore].answer.value[x] only integer
+
+* item[gripSubscale].item ^slicing.discriminator.type = #value
+* item[gripSubscale].item ^slicing.discriminator.path = "linkId"
+* item[gripSubscale].item ^slicing.rules = #closed
+* item[gripSubscale].item contains
+    pourWater 1..1 MS and
+    displace225Tube 1..1 MS and
+    displace1Tube 1..1 MS and
+    washerBolt 1..1 MS and
+    gripSubscore 1..1 MS
+* item[gripSubscale].item[pourWater].linkId = "B-I-pour-water-from-one-glass-to-another" (exactly)
+* item[gripSubscale].item[displace225Tube].linkId = "B-I-displace-2.25-cm-alloy-tube-from-one-side-oftable-to-the-other" (exactly)
+* item[gripSubscale].item[displace1Tube].linkId = "B-I-displace-1-cm-alloy-tube-from-one-side-of-table-to-the-other" (exactly)
+* item[gripSubscale].item[washerBolt].linkId = "B-I-put-washer-over-bolt" (exactly)
+* item[gripSubscale].item[gripSubscore].linkId = "B-grip-subscale-subscore" (exactly)
+* item[gripSubscale].item[pourWater].answer 1..1
+* item[gripSubscale].item[displace225Tube].answer 1..1
+* item[gripSubscale].item[displace1Tube].answer 1..1
+* item[gripSubscale].item[washerBolt].answer 1..1
+* item[gripSubscale].item[gripSubscore].answer 1..1
+* item[gripSubscale].item[pourWater].answer.value[x] only integer
+* item[gripSubscale].item[displace225Tube].answer.value[x] only integer
+* item[gripSubscale].item[displace1Tube].answer.value[x] only integer
+* item[gripSubscale].item[washerBolt].answer.value[x] only integer
+* item[gripSubscale].item[gripSubscore].answer.value[x] only integer
+
+* item[pinchSubscale].item ^slicing.discriminator.type = #value
+* item[pinchSubscale].item ^slicing.discriminator.path = "linkId"
+* item[pinchSubscale].item ^slicing.rules = #closed
+* item[pinchSubscale].item contains
+    ballRingThumb 1..1 MS and
+    marbleIndexThumb 1..1 MS and
+    ballMiddleThumb 1..1 MS and
+    ballIndexThumb 1..1 MS and
+    marbleRingThumb 1..1 MS and
+    marbleMiddleThumb 1..1 MS and
+    pinchSubscore 1..1 MS
+* item[pinchSubscale].item[ballRingThumb].linkId = "C-I-ball-bearing-held-between-ring-finger-and-thumb" (exactly)
+* item[pinchSubscale].item[marbleIndexThumb].linkId = "C-I-marble-held-between-index-finger-and-thumb" (exactly)
+* item[pinchSubscale].item[ballMiddleThumb].linkId = "C-I-ball-bearing-held-between-middle-finger-and-thumb" (exactly)
+* item[pinchSubscale].item[ballIndexThumb].linkId = "C-I-ball-bearing-held-between-index-finger-and-thumb" (exactly)
+* item[pinchSubscale].item[marbleRingThumb].linkId = "C-I-marble-held-between-ring-finger-and-thumb" (exactly)
+* item[pinchSubscale].item[marbleMiddleThumb].linkId = "C-I-marble-held-between-middle-finger-and-thumb" (exactly)
+* item[pinchSubscale].item[pinchSubscore].linkId = "C-pinch-subscale-subscore" (exactly)
+* item[pinchSubscale].item[ballRingThumb].answer 1..1
+* item[pinchSubscale].item[marbleIndexThumb].answer 1..1
+* item[pinchSubscale].item[ballMiddleThumb].answer 1..1
+* item[pinchSubscale].item[ballIndexThumb].answer 1..1
+* item[pinchSubscale].item[marbleRingThumb].answer 1..1
+* item[pinchSubscale].item[marbleMiddleThumb].answer 1..1
+* item[pinchSubscale].item[pinchSubscore].answer 1..1
+* item[pinchSubscale].item[ballRingThumb].answer.value[x] only integer
+* item[pinchSubscale].item[marbleIndexThumb].answer.value[x] only integer
+* item[pinchSubscale].item[ballMiddleThumb].answer.value[x] only integer
+* item[pinchSubscale].item[ballIndexThumb].answer.value[x] only integer
+* item[pinchSubscale].item[marbleRingThumb].answer.value[x] only integer
+* item[pinchSubscale].item[marbleMiddleThumb].answer.value[x] only integer
+* item[pinchSubscale].item[pinchSubscore].answer.value[x] only integer
+
+* item[grossMovementSubscale].item ^slicing.discriminator.type = #value
+* item[grossMovementSubscale].item ^slicing.discriminator.path = "linkId"
+* item[grossMovementSubscale].item ^slicing.rules = #closed
+* item[grossMovementSubscale].item contains
+    handBehindHead 1..1 MS and
+    handTopHead 1..1 MS and
+    handMouth 1..1 MS and
+    grossMovementSubscore 1..1 MS
+* item[grossMovementSubscale].item[handBehindHead].linkId = "D-I-hand-to-behind-the-head" (exactly)
+* item[grossMovementSubscale].item[handTopHead].linkId = "D-I-hand-to-top-of-head" (exactly)
+* item[grossMovementSubscale].item[handMouth].linkId = "D-I-hand-to-mouth" (exactly)
+* item[grossMovementSubscale].item[grossMovementSubscore].linkId = "D-gross-movement-subscale-subscore" (exactly)
+* item[grossMovementSubscale].item[handBehindHead].answer 1..1
+* item[grossMovementSubscale].item[handTopHead].answer 1..1
+* item[grossMovementSubscale].item[handMouth].answer 1..1
+* item[grossMovementSubscale].item[grossMovementSubscore].answer 1..1
+* item[grossMovementSubscale].item[handBehindHead].answer.value[x] only integer
+* item[grossMovementSubscale].item[handTopHead].answer.value[x] only integer
+* item[grossMovementSubscale].item[handMouth].answer.value[x] only integer
+* item[grossMovementSubscale].item[grossMovementSubscore].answer.value[x] only integer
+
+* item[totalScoreSection].answer 1..1
+* item[totalScoreSection].answer.value[x] only integer
 
 
 
