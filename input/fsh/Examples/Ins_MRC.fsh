@@ -43,6 +43,7 @@ Description: "MRC肌力測試 (Medical Research Council Scale)"
 // 4.總分計算
 * item[+].linkId = "mrc-total-score"
 * item[=].text = "MRC總分"
+* item[=].code[0] = CSAssessmentExtract#mrc-total "MRC total score"
 * item[=].type = #integer
 * item[=].readOnly = true
 * item[=].extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression"

@@ -133,10 +133,6 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].extension[=].valueExpression.language = #text/fhirpath
 * item[=].item[=].extension[=].valueExpression.expression = "%graspScore"
 
-// 轉換為Observation
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
-* item[=].item[=].extension[=].valueBoolean = true
-
 // ============================================
 // Section B：握力分量表 (4個項目)
 // ============================================
@@ -197,10 +193,6 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression"
 * item[=].item[=].extension[=].valueExpression.language = #text/fhirpath
 * item[=].item[=].extension[=].valueExpression.expression = "%gripScore"
-
-// 轉換為Observation
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
-* item[=].item[=].extension[=].valueBoolean = true
 
 // ============================================
 // Section C：捏量表 (6個項目)
@@ -285,10 +277,6 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].extension[=].valueExpression.language = #text/fhirpath
 * item[=].item[=].extension[=].valueExpression.expression = "%pinchScore"
 
-// 轉換為Observation
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
-* item[=].item[=].extension[=].valueBoolean = true
-
 // ============================================
 // Section D：大運動分量表 (3個項目)
 // ============================================
@@ -339,15 +327,12 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].item[=].extension[=].valueExpression.language = #text/fhirpath
 * item[=].item[=].extension[=].valueExpression.expression = "%movementScore"
 
-// 轉換為Observation
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
-* item[=].item[=].extension[=].valueBoolean = true
-
 // ============================================
 // Section E：總分計算
 // ============================================
 * item[+].linkId = "E-total-score-ARAT"
 * item[=].text = "E.ARAT總分計算"
+* item[=].code[0] = CSAssessmentExtract#arat-total "ARAT total score"
 * item[=].type = #integer
 * item[=].required = false
 * item[=].readOnly = true

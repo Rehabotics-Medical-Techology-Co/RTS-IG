@@ -193,6 +193,7 @@ Description: "衛福部Fugl-Meyer上肢感覺評估問卷的完整實例，可�
 // ============================================
 * item[+].linkId = "E-total-score-FMAUESensory"
 * item[=].text = "E.FMAUE感覺總分"
+* item[=].code[0] = CSAssessmentExtract#fmaue-sensory-total "Fugl-Meyer upper extremity sensory total score"
 * item[=].type = #integer
 * item[=].readOnly = true
 * item[=].extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression"

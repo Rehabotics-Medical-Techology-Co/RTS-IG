@@ -241,6 +241,7 @@ Description: "簡易心智狀況檢查表 (Mini-Mental State Examination, MMSE)"
 //計算總分
 * item[+].linkId = "total-score-mmse"
 * item[=].text = "總分（自動計算)"
+* item[=].code[0] = CSAssessmentExtract#mmse-total "MMSE total score"
 * item[=].type = #integer
 * item[=].readOnly = true
 

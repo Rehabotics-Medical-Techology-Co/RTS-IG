@@ -396,6 +396,7 @@ Description: "衛福部Fugl-Meyer上肢動作評估問卷的完整實例，可�
 // ============================================
 * item[+].linkId = "D-total-score-FMAUEMotion"
 * item[=].text = "D.FMAUE動作總分"
+* item[=].code[0] = CSAssessmentExtract#fmaue-motor-total "Fugl-Meyer upper extremity motor total score"
 * item[=].type = #integer
 * item[=].readOnly = true
 * item[=].extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression"

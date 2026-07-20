@@ -124,10 +124,6 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 * item[=].item[=].extension[=].valueExpression.language = #text/fhirpath
 * item[=].item[=].extension[=].valueExpression.expression = "%TimedJointSegmentMovementScore"
 
-// 轉換為Observation
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
-* item[=].item[=].extension[=].valueBoolean = true
-
 // ============================================
 // Section B
 // ============================================
@@ -261,15 +257,12 @@ Description: "WMFT上肢功能評估問卷的完整實例，根據Wolf et al., 1
 * item[=].item[=].extension[=].valueExpression.language = #text/fhirpath
 * item[=].item[=].extension[=].valueExpression.expression = "%TimedIntegrativeFunctionalMovementScore"
 
-// 轉換為Observation
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
-* item[=].item[=].extension[=].valueBoolean = true
-
 // ============================================
 // Section C：總分計算
 // ============================================
 * item[+].linkId = "C-total-score-WMFT"
 * item[=].text = "C.WMFT總分計算"
+* item[=].code[0] = CSAssessmentExtract#wmft-total "WMFT total score"
 * item[=].type = #integer
 * item[=].required = true
 * item[=].extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression"

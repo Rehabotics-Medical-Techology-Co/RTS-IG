@@ -132,6 +132,7 @@ Usage: #definition
 // ============================================
 * item[+].linkId = "I-total-score-IADL"
 * item[=].text = "I.IADL總分計算"
+* item[=].code[0] = CSAssessmentExtract#iadl-total "IADL total score"
 * item[=].type = #integer
 * item[=].required = true
 * item[=].extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression"

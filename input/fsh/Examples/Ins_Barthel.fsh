@@ -208,6 +208,7 @@ Description: "巴氏量表 (Barthel Index)"
 // 總分 (Total Score)
 * item[+].linkId = "K-total-score-Barthel"
 * item[=].text = "巴氏量表總分"
+* item[=].code[0] = CSAssessmentExtract#barthel-total "Barthel Index total score"
 * item[=].type = #integer
 * item[=].required = false
 * item[=].readOnly = true
