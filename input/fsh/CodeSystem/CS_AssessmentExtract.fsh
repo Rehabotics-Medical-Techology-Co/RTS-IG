@@ -15,3 +15,4 @@ Description: "Local codes used to identify assessment total-score items for SDC 
 * #mmse-total "MMSE total score"
 * #mrc-total "MRC total score"
 * #wmft-total "WMFT total score"
+* #assessment-side "Assessment side"
