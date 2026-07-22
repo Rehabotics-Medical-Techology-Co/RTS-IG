@@ -11,3 +11,4 @@ Requirements-fromNarrative.json
 HAPI_TEST_NOTES.md
 HAPI_SERVER_GUIDE.md
 scripts/
+.agents/
