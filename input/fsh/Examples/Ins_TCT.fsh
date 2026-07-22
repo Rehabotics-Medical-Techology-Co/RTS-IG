@@ -35,6 +35,7 @@ Description: "軀幹控制測試，病患需接受四種姿勢測試，以評估
 // ====總分====
 * item[+].linkId = "tct-total"
 * item[=].text = "TCT 總分"
+* item[=].code[0] = CSAssessmentExtract#tct-total "TCT total score"
 * item[=].type = #integer
 * item[=].readOnly = true
 * item[=].extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression"
@@ -43,7 +44,9 @@ Description: "軀幹控制測試，病患需接受四種姿勢測試，以評估
     "item.where(linkId in {'roll-to-weak-side','roll-to-strong-side','balance-sitting','sit-from-lying-down'})
      .answer.valueCoding.code.toInteger().sum()"
 
-
+// 轉換為Observation
+* item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
+* item[=].extension[=].valueBoolean = true
 
 
 // SDC 4 requires versionAlgorithm when version is present.

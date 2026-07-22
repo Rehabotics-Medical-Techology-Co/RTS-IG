@@ -14,7 +14,8 @@ Description: "MRC問卷回覆"
 * item contains // 這個item 所需要用到的slice有哪些
     abduction-arm 1..1 MS and
     flexion-forearm 1..1 MS and
-    extension-wrist 1..1 MS
+    extension-wrist 1..1 MS and
+    mrc-total-score 1..1 MS
 // --- 1 肩關節外展 ---
 * item[abduction-arm].linkId = "abduction-arm" (exactly)
 * item[abduction-arm].text = "肩關節外展"
@@ -36,3 +37,10 @@ Description: "MRC問卷回覆"
 * item[extension-wrist].answer.value[x] only integer
 * item[extension-wrist].answer.valueInteger ^minValueInteger = 0
 * item[extension-wrist].answer.valueInteger ^maxValueInteger = 5
+// ---4 總分 ---
+* item[mrc-total-score].linkId = "mrc-total-score" (exactly)
+* item[mrc-total-score].text = "MRC總分"
+* item[mrc-total-score].answer 1..1 MS
+* item[mrc-total-score].answer.value[x] only integer
+* item[mrc-total-score].answer.valueInteger ^minValueInteger = 0
+* item[mrc-total-score].answer.valueInteger ^maxValueInteger = 15

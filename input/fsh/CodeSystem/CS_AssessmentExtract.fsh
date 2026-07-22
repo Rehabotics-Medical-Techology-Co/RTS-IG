@@ -14,5 +14,7 @@ Description: "Local codes used to identify assessment total-score items for SDC 
 * #iadl-total "IADL total score"
 * #mmse-total "MMSE total score"
 * #mrc-total "MRC total score"
+* #tct-total "TCT total score"
+* #miul-total "MI-UL total score"
 * #wmft-total "WMFT total score"
 * #assessment-side "Assessment side"

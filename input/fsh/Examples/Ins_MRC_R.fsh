@@ -16,3 +16,6 @@ Usage: #example
 * item[flexion-forearm].answer.valueInteger = 2
 * item[extension-wrist].linkId = "extension-wrist"
 * item[extension-wrist].answer.valueInteger = 4
+* item[mrc-total-score].linkId = "mrc-total-score"
+* item[mrc-total-score].text = "MRC總分"
+* item[mrc-total-score].answer.valueInteger = 6

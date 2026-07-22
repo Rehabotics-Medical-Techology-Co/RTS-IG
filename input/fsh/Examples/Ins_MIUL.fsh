@@ -11,7 +11,6 @@ Description: "MI-UL 上肢運動功能評估量表"
 // 1. pinch grasp
 * item[0].linkId = "pinch-grasp"
 * item[=].text = "抓握能力"
-* item[=].code = $loinc#83145-3
 * item[=].type = #integer
 * item[=].required = true
 * item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/minValue"
@@ -23,7 +22,6 @@ Description: "MI-UL 上肢運動功能評估量表"
 // 2. Elbow flexion
 * item[+].linkId = "elbow-flexion"
 * item[=].text = "肘部屈曲"
-* item[=].code = $loinc#41363-3
 * item[=].type = #integer
 * item[=].required = true
 * item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/minValue"
@@ -34,7 +32,6 @@ Description: "MI-UL 上肢運動功能評估量表"
 // 3. Shoulder abduction
 * item[+].linkId = "shoulder-abduction"
 * item[=].text = "肩外展"
-* item[=].code = $loinc#41381-5
 * item[=].type = #integer
 * item[=].required = true
 * item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/minValue"
@@ -45,11 +42,16 @@ Description: "MI-UL 上肢運動功能評估量表"
 // 總分
 * item[+].linkId = "total-score-miul"
 * item[=].text = "總分"
+* item[=].code[0] = CSAssessmentExtract#miul-total "MI-UL total score"
 * item[=].type = #integer
 * item[=].readOnly = true
 * item[=].extension[0].url = $sdcCalc
 * item[=].extension[0].valueExpression.language = #text/fhirpath
 * item[=].extension[0].valueExpression.expression = "item.where(linkId='pinch-grasp').answer.valueInteger.sum() + item.where(linkId='elbow-flexion').answer.valueInteger.sum() + item.where(linkId='shoulder-abduction').answer.valueInteger.sum()"
+
+// 轉換為Observation
+* item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
+* item[=].extension[=].valueBoolean = true
 
 // SDC 4 requires versionAlgorithm when version is present.
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
