@@ -33,7 +33,7 @@ Description: "針對Fugl-Meyer上肢感覺評估問卷的完整回覆範例"
 * item[LightTouch].linkId = "A-light-touch"
 * item[LightTouch].text = "A.輕觸覺檢測"
 * item[LightTouch].item[upperArm].linkId = "A-I-upper-arm"
-* item[LightTouch].item[upperArm].answer[0].valueInteger = 2
+* item[LightTouch].item[upperArm].answer.valueInteger = 2
 * item[LightTouch].item[forearm].linkId = "A-I-forearm"
 * item[LightTouch].item[forearm].text = "前臂輕觸覺"
 * item[LightTouch].item[forearm].answer.valueInteger = 2

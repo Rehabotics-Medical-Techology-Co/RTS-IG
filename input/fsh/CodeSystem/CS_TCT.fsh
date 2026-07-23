@@ -2,6 +2,8 @@ CodeSystem: CSTCT
 Id: CSTCT
 Title: "Trunk Control Test (TCT) 評估量表代碼及對照表"
 Description: "Trunk Control Test(TCT) 用於評估病患軀幹功能的代碼系統及其對照表"
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.25.100342124007570770194704906836470782666"
 * ^url = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/CodeSystem/CSTCT"
 * ^caseSensitive = true
 * ^experimental = false

@@ -47,7 +47,7 @@ Description: "針對IADL評估問卷的QuestionnaireResponse Profile，強制回
 * item[F1].answer.value[x] only integer
 
 //F2
-* item[F2].linkId = "B-shopping"
+* item[F2].linkId = "B-shopping" (exactly)
 * item[F2].text 1..
 * item[F2].text = "B.購物"
 * item[F2].answer 1..1
@@ -58,7 +58,7 @@ Description: "針對IADL評估問卷的QuestionnaireResponse Profile，強制回
 
 
 //F3
-* item[F3].linkId = "C-food-preparation"
+* item[F3].linkId = "C-food-preparation" (exactly)
 * item[F3].text 1..
 * item[F3].text = "C.備餐"
 * item[F3].answer 1..1
@@ -68,7 +68,7 @@ Description: "針對IADL評估問卷的QuestionnaireResponse Profile，強制回
 * item[F3].answer.valueInteger ^maxValueInteger = 4
 
 //F4
-* item[F4].linkId = "D-housekeeping"
+* item[F4].linkId = "D-housekeeping" (exactly)
 * item[F4].text 1..
 * item[F4].text = "D.處理家務"
 * item[F4].answer 1..1
@@ -79,7 +79,7 @@ Description: "針對IADL評估問卷的QuestionnaireResponse Profile，強制回
 
 
 //F5
-* item[F5].linkId = "E-laundry"
+* item[F5].linkId = "E-laundry" (exactly)
 * item[F5].text 1..
 * item[F5].text = "E.洗衣服"
 * item[F5].answer 1..1
@@ -90,7 +90,7 @@ Description: "針對IADL評估問卷的QuestionnaireResponse Profile，強制回
 
 
 //F6
-* item[F6].linkId = "F-transportation"
+* item[F6].linkId = "F-transportation" (exactly)
 * item[F6].text 1..
 * item[F6].text = "F.外出"
 * item[F6].answer 1..1
@@ -101,7 +101,7 @@ Description: "針對IADL評估問卷的QuestionnaireResponse Profile，強制回
 
 
 //F7
-* item[F7].linkId = "G-medications"
+* item[F7].linkId = "G-medications" (exactly)
 * item[F7].text 1..
 * item[F7].text = "G.服用藥物"
 * item[F7].answer 1..1
@@ -112,7 +112,7 @@ Description: "針對IADL評估問卷的QuestionnaireResponse Profile，強制回
 
 
 //F8
-* item[F8].linkId = "H-finances"
+* item[F8].linkId = "H-finances" (exactly)
 * item[F8].text 1..
 * item[F8].text = "H.處理財務的能力"
 * item[F8].answer 1..1

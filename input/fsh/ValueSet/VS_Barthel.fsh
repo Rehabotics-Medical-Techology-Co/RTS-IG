@@ -7,6 +7,8 @@ ValueSet: VSBarthelFeeding
 Id: VSBarthelFeeding
 Title: "進食-選項"
 Description: "Barthel Index feeding item answer options."
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.25.304772814440867847029259231956956601230"
 * ^experimental = false
 * insert ShareableTerminologyMetadata
 * $loinc#LA12302-8 "自己在合理時間(約 10 秒鐘吃一口)可用筷子取食眼前的食物。若需進食輔具時，應會自行穿脫。"
@@ -17,6 +19,8 @@ ValueSet: VSBarthelGrooming
 Id: VSBarthelGrooming
 Title: "個人衛生-選項"
 Description: "Barthel Index grooming item answer options."
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.25.279497198649186442393364770463069883371"
 * ^experimental = false
 * insert ShareableTerminologyMetadata
 * $loinc#LA31644-0 "可以自行洗手、刷牙、洗臉及梳頭。"
@@ -26,6 +30,8 @@ ValueSet: VSBarthelToiletUse
 Id: VSBarthelToiletUse
 Title: "上廁所-選項"
 Description: "Barthel Index toilet use item answer options."
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.25.152333738301116635539752092838106525866"
 * ^experimental = false
 * insert ShareableTerminologyMetadata
 * $loinc#LA31632-5 "可自行上下馬桶、穿脫衣服、不弄髒衣服、會自行使用衛生紙擦拭。"
@@ -36,6 +42,8 @@ ValueSet: VSBarthelBathing
 Id: VSBarthelBathing
 Title: "洗澡-選項"
 Description: "Barthel Index bathing item answer options."
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.25.340222985606035433961266130046862588368"
 * ^experimental = false
 * insert ShareableTerminologyMetadata
 * $loinc#LA31636-6 "能獨立完成(不論是盆浴或沐浴)，不需別人在旁。"
@@ -45,6 +53,8 @@ ValueSet: VSBarthelDressing
 Id: VSBarthelDressing
 Title: "穿脫衣服-選項"
 Description: "Barthel Index dressing item answer options."
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.25.329400653907082420561712281101924096017"
 * ^experimental = false
 * insert ShareableTerminologyMetadata
 * $loinc#LA31638-2 "能自己穿脫衣服、鞋子，自己扣釦子、上拉鍊或綁鞋帶。"
@@ -55,6 +65,8 @@ ValueSet: VSBarthelBowels
 Id: VSBarthelBowels
 Title: "大便控制-選項"
 Description: "Barthel Index bowel control item answer options."
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.25.66401007950051736339852523262168576207"
 * ^experimental = false
 * insert ShareableTerminologyMetadata
 * $loinc#LA31625-9 "不會失禁，能自行灌腸或使用塞劑。"
@@ -65,6 +77,8 @@ ValueSet: VSBarthelBladder
 Id: VSBarthelBladder
 Title: "小便控制-選項"
 Description: "Barthel Index bladder control item answer options."
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.25.317804999092184125030895683161930789445"
 * ^experimental = false
 * insert ShareableTerminologyMetadata
 * $loinc#LA31625-9 "能自己控制不會有失禁，或能自行使用並清潔尿套、尿袋。"
@@ -76,6 +90,8 @@ ValueSet: VSBarthelMobility
 Id: VSBarthelMobility
 Title: "平地行走-選項"
 Description: "Barthel Index mobility item answer options."
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.25.38614353647732096979490081954345755278"
 * ^experimental = false
 * insert ShareableTerminologyMetadata
 * $loinc#LA31642-4 "使用或不使用輔具，皆可獨立行走 50 公尺以上。"
@@ -87,6 +103,8 @@ ValueSet: VSBarthelStairs
 Id: VSBarthelStairs
 Title: "上下樓梯-選項"
 Description: "Barthel Index stair climbing item answer options."
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.25.142747148470068555064605786488919125405"
 * ^experimental = false
 * insert ShareableTerminologyMetadata
 * $loinc#LA12302-8 "可自行上下樓梯，可使用扶手、柺杖等輔具。"
@@ -97,6 +115,8 @@ ValueSet: VSBarthelTransfer
 Id: VSBarthelTransfer
 Title: "移位-選項"
 Description: "Barthel Index transfer item answer options."
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.25.244216082400020084066831134178960380845"
 * ^experimental = false
 * insert ShareableTerminologyMetadata
 * $loinc#LA12302-8 "整個過程可獨立完成。"
@@ -109,6 +129,8 @@ ValueSet: VSBodyStructure
 Id: VSBodyStructure
 Title: "身體部位與結構對應之Snomed CT 代碼"
 Description: "收錄復健可能會使用到的身體部位代碼"
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.25.118481850652965445923419875855435719819"
 * ^experimental = false
 * insert ShareableTerminologyMetadata
 * $SCT#91775009 "左側肩"

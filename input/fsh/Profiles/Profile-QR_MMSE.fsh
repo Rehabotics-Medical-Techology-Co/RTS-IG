@@ -1,15 +1,17 @@
 // 建立profile
 Profile: MMSEQuestionnaireResponse
-Parent: SPACQuestionnaireResponse
+Parent: QuestionnaireResponse
 Id: MMSEQuestionnaireResponse
 Title: "MMSE QuestionnaireResponse (scored)"
 Description: "MMSE 回覆：分數題逐題填答，總分需等於所有分數項目加總。"
 
 // 基本約束
+* questionnaire 1..1 MS
+* status 1..1 MS
 * status = #completed
-* subject 1..1
+* subject 1..1 MS
 * subject only Reference(Patient)
-* authored 1..1
+* authored 1..1 MS
 
 // ========== slicing：以 linkId 區分每個 section ==========
 * item ^slicing.discriminator[0].type = #value
@@ -25,12 +27,12 @@ Description: "MMSE 回覆：分數題逐題填答，總分需等於所有分數�
     section-5 1..1 MS and
     section-6 1..1 MS and
     total-score 1..1 MS
-* item[section-1].linkId = "section-a-time"
-* item[section-2].linkId = "section-b-place"
-* item[section-3].linkId = "section-c-memory"
-* item[section-4].linkId = "section-d-language"
-* item[section-5].linkId = "section-e-oral"
-* item[section-6].linkId = "section-f-build"
+* item[section-1].linkId = "section-a-time" (exactly)
+* item[section-2].linkId = "section-b-place" (exactly)
+* item[section-3].linkId = "section-c-memory" (exactly)
+* item[section-4].linkId = "section-d-language" (exactly)
+* item[section-5].linkId = "section-e-oral" (exactly)
+* item[section-6].linkId = "section-f-build" (exactly)
 
 // ========== 總分題 ==========
 * item[total-score].linkId = "total-score-mmse" (exactly)
@@ -40,7 +42,7 @@ Description: "MMSE 回覆：分數題逐題填答，總分需等於所有分數�
 // ========== 限定每個 section 中的分數型題目必須是整數 ==========
 * item[section-1].item ^slicing.discriminator.type = #value
 * item[section-1].item ^slicing.discriminator.path = "linkId"
-* item[section-1].item ^slicing.rules = #closed
+* item[section-1].item ^slicing.rules = #open
 * item[section-1].item contains
     yearScore 1..1 MS and
     monthScore 1..1 MS and
@@ -65,7 +67,7 @@ Description: "MMSE 回覆：分數題逐題填答，總分需等於所有分數�
 
 * item[section-2].item ^slicing.discriminator.type = #value
 * item[section-2].item ^slicing.discriminator.path = "linkId"
-* item[section-2].item ^slicing.rules = #closed
+* item[section-2].item ^slicing.rules = #open
 * item[section-2].item contains
     cityScore 1..1 MS and
     locationScore 1..1 MS and
@@ -90,7 +92,7 @@ Description: "MMSE 回覆：分數題逐題填答，總分需等於所有分數�
 
 * item[section-3].item ^slicing.discriminator.type = #value
 * item[section-3].item ^slicing.discriminator.path = "linkId"
-* item[section-3].item ^slicing.rules = #closed
+* item[section-3].item ^slicing.rules = #open
 * item[section-3].item contains
     memoryScore 1..1 MS
 * item[section-3].item[memoryScore].linkId = "c-item-score" (exactly)
@@ -99,7 +101,7 @@ Description: "MMSE 回覆：分數題逐題填答，總分需等於所有分數�
 
 * item[section-4].item ^slicing.discriminator.type = #value
 * item[section-4].item ^slicing.discriminator.path = "linkId"
-* item[section-4].item ^slicing.rules = #closed
+* item[section-4].item ^slicing.rules = #open
 * item[section-4].item contains
     calculationScore 1..1 MS
 * item[section-4].item[calculationScore].linkId = "d-cal-score" (exactly)
@@ -108,7 +110,7 @@ Description: "MMSE 回覆：分數題逐題填答，總分需等於所有分數�
 
 * item[section-5].item ^slicing.discriminator.type = #value
 * item[section-5].item ^slicing.discriminator.path = "linkId"
-* item[section-5].item ^slicing.rules = #closed
+* item[section-5].item ^slicing.rules = #open
 * item[section-5].item contains
     repetitionScore 1..1 MS and
     namingScore 1..1 MS and
@@ -133,7 +135,7 @@ Description: "MMSE 回覆：分數題逐題填答，總分需等於所有分數�
 
 * item[section-6].item ^slicing.discriminator.type = #value
 * item[section-6].item ^slicing.discriminator.path = "linkId"
-* item[section-6].item ^slicing.rules = #closed
+* item[section-6].item ^slicing.rules = #open
 * item[section-6].item contains
     paperScore 1..1 MS and
     drawScore 1..1 MS

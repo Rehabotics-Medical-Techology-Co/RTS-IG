@@ -2,6 +2,8 @@ CodeSystem: CSAssessmentExtract
 Id: CSAssessmentExtract
 Title: "Assessment extraction code system"
 Description: "Local codes used to identify assessment total-score items for SDC QuestionnaireResponse extraction."
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.25.84413152087298255373727469057004572997"
 * ^url = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/CodeSystem/CSAssessmentExtract"
 * ^caseSensitive = true
 * ^experimental = false

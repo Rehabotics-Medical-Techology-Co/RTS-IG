@@ -2,6 +2,8 @@ ValueSet: VSMAScore
 Id: VSMAScore
 Title: "MAS分數值集"
 Description: "MAS分數值集"
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.25.69331898181154200258822607608245261423"
 * ^url = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/ValueSet/VSMAScore"
 * ^experimental = false
 * insert ShareableTerminologyMetadata

@@ -4,19 +4,21 @@ Alias: $snomed = http://snomed.info/sct
 // WMFT QuestionnaireResponse Profile
 // ============================================
 Profile: WMFTQuestionnaireResponse
-Parent: SPACQuestionnaireResponse
+Parent: QuestionnaireResponse
 Id: WMFTQuestionnaireResponse
 Title: "WMFT上肢功能評估問卷回覆"
 Description: "針對WMFT上肢功能評估問卷的QuestionnaireResponse Profile，強制回傳格式符合問卷結構"
 
 // 固定問卷參考
+* questionnaire 1..1 MS
 * questionnaire = Canonical(WMFTQuestionnaireInstance) (exactly)
 
 // 基本約束
+* status 1..1 MS
 * status = #completed
-* subject 1..1
+* subject 1..1 MS
 * subject only Reference(Patient)
-* authored 1..1
+* authored 1..1 MS
 
 // ============================================
 // 第一層 item slicing
@@ -32,10 +34,10 @@ Description: "針對WMFT上肢功能評估問卷的QuestionnaireResponse Profile
     TimedIntegrativeFunctionalMovements 1..1 MS and
     totalScoreSection 1..1 MS
 
-* item[assessmentSide].linkId = "assessment-side-wmft"
-* item[TimedJointSegmentMovements].linkId = "A-timed-joint-segment-movements"
-* item[TimedIntegrativeFunctionalMovements].linkId = "B-timed-integrative-functional-movements"
-* item[totalScoreSection].linkId = "C-total-score-WMFT"
+* item[assessmentSide].linkId = "assessment-side-wmft" (exactly)
+* item[TimedJointSegmentMovements].linkId = "A-timed-joint-segment-movements" (exactly)
+* item[TimedIntegrativeFunctionalMovements].linkId = "B-timed-integrative-functional-movements" (exactly)
+* item[totalScoreSection].linkId = "C-total-score-WMFT" (exactly)
 
 // ========== 限定每個 section 中的分數型題目必須是整數 ==========
 * item[assessmentSide].answer 1..1
@@ -43,7 +45,7 @@ Description: "針對WMFT上肢功能評估問卷的QuestionnaireResponse Profile
 
 * item[TimedJointSegmentMovements].item ^slicing.discriminator.type = #value
 * item[TimedJointSegmentMovements].item ^slicing.discriminator.path = "linkId"
-* item[TimedJointSegmentMovements].item ^slicing.rules = #closed
+* item[TimedJointSegmentMovements].item ^slicing.rules = #open
 * item[TimedJointSegmentMovements].item contains
     forearmTable 1..1 MS and
     forearmBox 1..1 MS and
@@ -76,7 +78,7 @@ Description: "針對WMFT上肢功能評估問卷的QuestionnaireResponse Profile
 
 * item[TimedIntegrativeFunctionalMovements].item ^slicing.discriminator.type = #value
 * item[TimedIntegrativeFunctionalMovements].item ^slicing.discriminator.path = "linkId"
-* item[TimedIntegrativeFunctionalMovements].item ^slicing.rules = #closed
+* item[TimedIntegrativeFunctionalMovements].item ^slicing.rules = #open
 * item[TimedIntegrativeFunctionalMovements].item contains
     reachRetrieve 1..1 MS and
     liftCan 1..1 MS and

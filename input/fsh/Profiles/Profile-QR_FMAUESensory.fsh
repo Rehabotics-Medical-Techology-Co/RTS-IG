@@ -4,19 +4,21 @@ Alias: $snomed = http://snomed.info/sct
 // Fugl-Meyer Upper Extremity Sensory QuestionnaireResponse Profile
 // ============================================
 Profile: FMAUESensoryQuestionnaireResponse
-Parent: SPACQuestionnaireResponse
+Parent: QuestionnaireResponse
 Id: FMAUESensoryQuestionnaireResponse
 Title: "FMAUE感覺評估問卷回覆"
 Description: "針對FMAUE上肢感覺評估問卷的QuestionnaireResponse Profile，強制回傳格式符合問卷結構"
 
 // 固定問卷參考
-* questionnaire = Canonical(FMAUESensoryQuestionnaireInstance)
+* questionnaire 1..1 MS
+* questionnaire = Canonical(FMAUESensoryQuestionnaireInstance) (exactly)
 
 // 基本約束
+* status 1..1 MS
 * status = #completed
-* subject 1..1
+* subject 1..1 MS
 * subject only Reference(Patient)
-* authored 1..1
+* authored 1..1 MS
 
 // ============================================
 // 第一層 item slicing
@@ -58,16 +60,16 @@ Description: "針對FMAUE上肢感覺評估問卷的QuestionnaireResponse Profil
 // Section A+B+C+D
 // ============================================
 * item[LightTouch].linkId = "A-light-touch" (exactly)
-* item[Temperature].linkId = "B-temperature"
-* item[TactileLocalization].linkId = "C-tactile-localization"
-* item[PositionSense].linkId = "D-position-sense"
+* item[Temperature].linkId = "B-temperature" (exactly)
+* item[TactileLocalization].linkId = "C-tactile-localization" (exactly)
+* item[PositionSense].linkId = "D-position-sense" (exactly)
 
 
 // ========== 限定每個 section 中的分數型題目必須是整數 ==========
 
 * item[LightTouch].item ^slicing.discriminator.type = #value
 * item[LightTouch].item ^slicing.discriminator.path = "linkId"
-* item[LightTouch].item ^slicing.rules = #closed
+* item[LightTouch].item ^slicing.rules = #open
 * item[LightTouch].item contains
     upperArm 1..1 MS and
     forearm 1..1 MS and
@@ -84,7 +86,7 @@ Description: "針對FMAUE上肢感覺評估問卷的QuestionnaireResponse Profil
 
 * item[Temperature].item ^slicing.discriminator.type = #value
 * item[Temperature].item ^slicing.discriminator.path = "linkId"
-* item[Temperature].item ^slicing.rules = #closed
+* item[Temperature].item ^slicing.rules = #open
 * item[Temperature].item contains
     upperArm 1..1 MS and
     forearm 1..1 MS and
@@ -101,7 +103,7 @@ Description: "針對FMAUE上肢感覺評估問卷的QuestionnaireResponse Profil
 
 * item[TactileLocalization].item ^slicing.discriminator.type = #value
 * item[TactileLocalization].item ^slicing.discriminator.path = "linkId"
-* item[TactileLocalization].item ^slicing.rules = #closed
+* item[TactileLocalization].item ^slicing.rules = #open
 * item[TactileLocalization].item contains
     upperArm 1..1 MS and
     forearm 1..1 MS and
@@ -118,7 +120,7 @@ Description: "針對FMAUE上肢感覺評估問卷的QuestionnaireResponse Profil
 
 * item[PositionSense].item ^slicing.discriminator.type = #value
 * item[PositionSense].item ^slicing.discriminator.path = "linkId"
-* item[PositionSense].item ^slicing.rules = #closed
+* item[PositionSense].item ^slicing.rules = #open
 * item[PositionSense].item contains
     shoulder 1..1 MS and
     elbow 1..1 MS and

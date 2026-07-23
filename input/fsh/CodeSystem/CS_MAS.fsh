@@ -2,6 +2,8 @@ CodeSystem: CSMAS
 Id: CSMAS
 Title: "MAS分數代碼系統"
 Description: "描述MAS分數對應到的解釋"
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.25.91280444413594009688082178413873838299"
 * ^url = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/CodeSystem/CSMAS"
 * ^caseSensitive = true
 * ^experimental = false

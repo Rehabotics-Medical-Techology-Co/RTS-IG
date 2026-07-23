@@ -2,6 +2,8 @@ CodeSystem: CSReach
 Id: CSReach
 Title: "REACH test (Rating of Everyday Arm-use in the Community and at Home)"
 Description: "評估病患在日常生活中使用上肢的頻率與能力"
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.25.307713436819808113253471190448067909787"
 * ^url = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/CodeSystem/CSReach"
 * ^caseSensitive = true
 * ^experimental = false

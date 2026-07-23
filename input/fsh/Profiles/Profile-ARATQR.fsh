@@ -3,19 +3,21 @@
 // ARAT QuestionnaireResponse Profile
 // ============================================
 Profile: ARATQuestionnaireResponse
-Parent: SPACQuestionnaireResponse
+Parent: QuestionnaireResponse
 Id: ARATQuestionnaireResponse
 Title: "ARAT上肢功能評估問卷回覆"
 Description: "針對ARAT上肢功能評估問卷的QuestionnaireResponse Profile，強制回傳格式符合問卷結構"
 
 // 固定問卷參考
+* questionnaire 1..1 MS
 * questionnaire = Canonical(ARATQuestionnaireInstance) (exactly)
 
 // 基本約束
+* status 1..1 MS
 * status = #completed
-* subject 1..1
+* subject 1..1 MS
 * subject only Reference(Patient)
-* authored 1..1
+* authored 1..1 MS
 
 // ============================================
 // 第一層 item slicing
@@ -46,13 +48,13 @@ Description: "針對ARAT上肢功能評估問卷的QuestionnaireResponse Profile
 // ============================================
 // Section A+B+C+D
 // ============================================
-* item[graspSubscale].linkId = "A-grasp-subscale" 
+* item[graspSubscale].linkId = "A-grasp-subscale" (exactly)
 * item[graspSubscale].text = "A.抓力分量表"
-* item[gripSubscale].linkId = "B-grip-subscale"
+* item[gripSubscale].linkId = "B-grip-subscale" (exactly)
 * item[gripSubscale].text = "B.握力分量表"
-* item[pinchSubscale].linkId = "C-pinch-subscale"
+* item[pinchSubscale].linkId = "C-pinch-subscale" (exactly)
 * item[pinchSubscale].text = "C.捏取分量表"
-* item[grossMovementSubscale].linkId = "D-gross-movement-subscale"
+* item[grossMovementSubscale].linkId = "D-gross-movement-subscale" (exactly)
 * item[grossMovementSubscale].text = "D.粗大動作分量表"
 * item[totalScoreSection].linkId = "E-total-score-ARAT" (exactly)
 * item[totalScoreSection].text = "E.ARAT總分計算"
@@ -63,7 +65,7 @@ Description: "針對ARAT上肢功能評估問卷的QuestionnaireResponse Profile
 // ============================================
 * item[graspSubscale].item ^slicing.discriminator.type = #value
 * item[graspSubscale].item ^slicing.discriminator.path = "linkId"
-* item[graspSubscale].item ^slicing.rules = #closed
+* item[graspSubscale].item ^slicing.rules = #open
 * item[graspSubscale].item contains
     block10cm3 1..1 MS and
     block25cm3 1..1 MS and
@@ -96,7 +98,7 @@ Description: "針對ARAT上肢功能評估問卷的QuestionnaireResponse Profile
 
 * item[gripSubscale].item ^slicing.discriminator.type = #value
 * item[gripSubscale].item ^slicing.discriminator.path = "linkId"
-* item[gripSubscale].item ^slicing.rules = #closed
+* item[gripSubscale].item ^slicing.rules = #open
 * item[gripSubscale].item contains
     pourWater 1..1 MS and
     displace225Tube 1..1 MS and
@@ -121,7 +123,7 @@ Description: "針對ARAT上肢功能評估問卷的QuestionnaireResponse Profile
 
 * item[pinchSubscale].item ^slicing.discriminator.type = #value
 * item[pinchSubscale].item ^slicing.discriminator.path = "linkId"
-* item[pinchSubscale].item ^slicing.rules = #closed
+* item[pinchSubscale].item ^slicing.rules = #open
 * item[pinchSubscale].item contains
     ballRingThumb 1..1 MS and
     marbleIndexThumb 1..1 MS and
@@ -154,7 +156,7 @@ Description: "針對ARAT上肢功能評估問卷的QuestionnaireResponse Profile
 
 * item[grossMovementSubscale].item ^slicing.discriminator.type = #value
 * item[grossMovementSubscale].item ^slicing.discriminator.path = "linkId"
-* item[grossMovementSubscale].item ^slicing.rules = #closed
+* item[grossMovementSubscale].item ^slicing.rules = #open
 * item[grossMovementSubscale].item contains
     handBehindHead 1..1 MS and
     handTopHead 1..1 MS and
@@ -185,6 +187,8 @@ ValueSet: AssessmentSideValueSet
 Id: assessment-side-valueset
 Title: "評估側別選項"
 Description: "受試者評估側別選項"
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.25.296909370309054349825577980967894708033"
 * ^experimental = false
 * insert ShareableTerminologyMetadata
 * $SCT#24028007 "患者左側"

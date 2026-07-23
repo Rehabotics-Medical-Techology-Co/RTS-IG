@@ -2,6 +2,8 @@ ValueSet: VSBarthelTotal
 Id: VSBarthelTotal
 Title: "Barthel Index 總值集"
 Description: "整合 Barthel Index 各題之所有選項值集"
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.25.179903141646163067169950690631318761394"
 * ^experimental = false
 * insert ShareableTerminologyMetadata
 * include codes from valueset VSBarthelFeeding
