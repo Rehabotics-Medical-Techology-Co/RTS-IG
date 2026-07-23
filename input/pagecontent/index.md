@@ -187,22 +187,21 @@ RTS IG網站主要架構如下：
 </div>
 
 
-- [應用說明](index.html): 介紹復健訓練評估量表 IG 的背景、應用情境與實際運用場景。說明各類病患量表資料在院內、跨院所或遠距復健的交換流程。
-- [視覺化邏輯模型](): 
-- [規範文件](regulation.html)：復健訓練評估量表實作指引 RTS IG 能力聲明、所有 Profiles 與查詢參數及操作定義、專門術語及 Extensions。
-  - [能力聲明](capability.html)：復健訓練評估量表實作指引 RTS IG 於建置業務目的使用的 FHIR Server 時，該 FHIR Server 必須及建議應該支援的操作功能。  
-  - [查詢參數及操作定義](parameter.html)：查詢 FHIR Server 的 Profiles時，針對各 Profiles可使用的查詢參數及操作定義。
-  - [邏輯模型 (Logical Models)](logic.html)：復健訓練評估量表實作指引 RTS IG 的所有邏輯模型（Logical Models），各邏輯模型會定義相應情境下使用的所有資料欄位。為了便於實作者快速理解，資料欄位會使用易於理解的命名，實作者再透過邏輯模型中的功能頁籤「Mappings」瞭解各資料欄位實際使用本IG的哪個Profiles的哪個資料項目（element）。
-  - [FHIR Profiles 及 Extensions](extension.html)：
+- <strong>[應用說明](index.html)</strong>: 介紹復健訓練評估量表 IG 的背景、應用情境與實際運用場景。說明各類病患量表資料在院內、跨院所或遠距復健的交換流程。 
+- <strong>[規範文件](regulation.html)</strong>：復健訓練評估量表實作指引 RTS IG 能力聲明、所有 Profiles 與查詢參數及操作定義、專門術語及 Extensions。
+  - <strong>[能力聲明](capability.html)</strong>：復健訓練評估量表實作指引 RTS IG 於建置業務目的使用的 FHIR Server 時，該 FHIR Server 必須及建議應該支援的操作功能。  
+  - <strong>[查詢參數及操作定義](parameter.html)</strong>：查詢 FHIR Server 的 Profiles時，針對各 Profiles可使用的查詢參數及操作定義。
+  - <strong>[邏輯模型 (Logical Models)](logic.html)</strong>：復健訓練評估量表實作指引 RTS IG 的所有邏輯模型（Logical Models），各邏輯模型會定義相應情境下使用的所有資料欄位。為了便於實作者快速理解，資料欄位會使用易於理解的命名，實作者再透過邏輯模型中的功能頁籤「Mappings」瞭解各資料欄位實際使用本IG的哪個Profiles的哪個資料項目（element）。
+  - <strong>[FHIR Profiles 及 Extensions](extension.html)</strong>：
     - 復健訓練評估量表實作指引 RTS IG 的所有 Profiles 之定義與範例及Extensions。
     - 各資料項目不同實作強制程度的 Terminology
     - 各資料項目的限制（Constraints）。
     - 查詢依據復健訓練評估量表實作指引 RTS IG 實作之 FHIR Server 的特定 Profiles 時，可使用的查詢參數。
     - 有哪些 Profiles 具有查詢參數以及 Server 必須支援哪些必要的查詢參數功能。  
-- [專門術語](terminology.html)：復健訓練評估量表實作指引 RTS IG網站所使用的專門術語，包括代碼系統（Code Systems）及值集（Value Sets），內容主要依據全國專門術語服務平臺（TW terminology services）與長期照顧情境使用之術語建置。  
-- [範例](example.html)：復健訓練評估量表實作指引 RTS IG 的所有範例。
-- [結構定義與範例下載](download.html)：實作者若不偏好使用 FHIR RESTful API 驗證資料是否遵從 Profiles，可直接下載所需的格式驗證檔，包括 XML、JSON 及 Turtle 三種格式，亦可於此下載完整範例。  
-- [安全性](security.html)：主要說明採用 復健訓練評估量表實作指引 RTS IG 網站進行實作時，有關資料存取授權的作法。
+- <strong>[專門術語](terminology.html)</strong>：復健訓練評估量表實作指引 RTS IG網站所使用的專門術語，包括代碼系統（Code Systems）及值集（Value Sets），內容主要依據全國專門術語服務平臺（TW terminology services）與長期照顧情境使用之術語建置。  
+- <strong>[範例](example.html)</strong>：復健訓練評估量表實作指引 RTS IG 的所有範例。
+- <strong>[結構定義與範例下載](download.html)</strong>：實作者若不偏好使用 FHIR RESTful API 驗證資料是否遵從 Profiles，可直接下載所需的格式驗證檔，包括 XML、JSON 及 Turtle 三種格式，亦可於此下載完整範例。  
+- <strong>[安全性](security.html)</strong>：主要說明採用 復健訓練評估量表實作指引 RTS IG 網站進行實作時，有關資料存取授權的作法。
 
 
 ---
@@ -222,19 +221,19 @@ RTS IG網站主要架構如下：
   <tbody>
     <tr>
       <td>作者</td>
-      <td>v0.1.0</td>
+      <td>v0.1.0 ~ v0.2.1</td>
       <td rowspan="5" style="text-align: center; vertical-align:middle">富伯生醫股份有限公司</td>
       <td>黃建嘉</td>
       <td rowspan="5" style="text-align: center; vertical-align:middle">富伯生醫股份有限公司</td> 
     </tr>
     <tr>
       <td>作者</td>
-      <td>v0.1.0</td>
+      <td>v0.1.0 ~ v0.2.1</td>
       <td>黃嗣承</td>
     </tr>
     <tr>
       <td>作者</td>
-      <td>v0.1.0</td>
+      <td>v0.1.0 ~ v0.2.1</td>
       <td>高旭恩</td>
     </tr>
     <tr>
@@ -244,7 +243,7 @@ RTS IG網站主要架構如下：
     </tr>
     <tr>
       <td>作者</td>
-      <td>v0.1.0</td>
+      <td>v0.1.0 ~ v0.2.0</td>
       <td>楊芷紜</td>
     </tr>
   </tbody>
