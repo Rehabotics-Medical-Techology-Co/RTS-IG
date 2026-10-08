@@ -8,7 +8,7 @@ Description: "醫院實際照護計畫資料範例"
 * subject = Reference(PatientExample)
 * text.status = #generated
 * text.div = """
-<div xmlns="http://www.w3.org/1999/xhtml">
+<div xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW" xml:lang="zh-TW">
   <p><b>Home programs</b></p>
   <ol>
     <li>建議練習點點連線畫斜線、十字、方形，框框中著色、迷宮或描虛線運筆、仿疊仿組積木、使用剪刀剪方形圖形，增進精細動作發展。</li>

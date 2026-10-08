@@ -22,4 +22,4 @@ Description: "一名健康照護服務提供者角色的範例"
 * organization = Reference(OrganizationExample)
 * code = http://terminology.hl7.org/CodeSystem/v2-0286#PP "Primary Care Provider"
 * active = true
-* specialty = http://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medical-consultation-department-nhi-tw#00 "General medicine"
+* specialty = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medical-consultation-department-nhi-tw#00 "不分科"

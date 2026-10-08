@@ -9,7 +9,7 @@ name: RTSIG
 title: "復健訓練量表實作指引 (Rehabilitation Training Scale Implementation Guide)"
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
-version: 0.2.1
+version: 0.2.2
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2026+
 releaseLabel: ci-build
@@ -107,6 +107,10 @@ resources:
     exampleCanonical: TCTQuestionnaireResponse
   QuestionnaireResponse/WMFTQuestionnaireResponseExample:
     exampleCanonical: WMFTQuestionnaireResponse
+  QuestionnaireResponse/brsa-response-example-001:
+    exampleCanonical: BRSArmQuestionnaireResponse
+  QuestionnaireResponse/mmt-ue-response-example-001:
+    exampleCanonical: MMTUEQuestionnaireResponse
   CarePlan/CarePlanExample01:
     exampleCanonical: CarePlan
   Condition/ConditionExample01:
