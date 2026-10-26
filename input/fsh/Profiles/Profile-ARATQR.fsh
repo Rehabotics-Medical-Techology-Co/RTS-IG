@@ -30,6 +30,7 @@ Description: "針對ARAT上肢功能評估問卷的QuestionnaireResponse Profile
 
 * item contains
     assessmentSide 1..1 MS and
+    assessmentSideAffected 1..1 MS and
     graspSubscale 1..1 MS and
     gripSubscale 1..1 MS and
     pinchSubscale 1..1 MS and
@@ -44,6 +45,11 @@ Description: "針對ARAT上肢功能評估問卷的QuestionnaireResponse Profile
 * item[assessmentSide].answer 1..1
 * item[assessmentSide].answer.value[x] only Coding
 * item[assessmentSide].answer.valueCoding from AssessmentSideValueSet (required)
+
+* item[assessmentSideAffected].linkId = "assessment-side-affected-arat" (exactly)
+* item[assessmentSideAffected].text = "評估側是否為患側"
+* item[assessmentSideAffected].answer 1..1
+* item[assessmentSideAffected].answer.value[x] only boolean
 
 // ============================================
 // Section A+B+C+D
