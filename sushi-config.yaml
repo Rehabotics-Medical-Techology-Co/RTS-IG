@@ -81,6 +81,10 @@ menu:
   安全性: security.html
 
 resources:
+  Bundle/ReponseBundleExample:
+    exampleCanonical: ReponseBundle
+  QuestionnaireResponse/SPACQuestionnaireResponseExample:
+    exampleCanonical: SPACQuestionnaireResponse
   QuestionnaireResponse/arat-response-example-001:
     exampleCanonical: ARATQuestionnaireResponse
   QuestionnaireResponse/BarthelIndexExample:

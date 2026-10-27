@@ -36,7 +36,7 @@ InstanceOf: Organization
 Title: "機構資料範例"
 Description: "一個機構的範例"
 * name = "台灣健康醫院"
-* identifier.system = "http://hospital.mohw.gov.tw/orgID"
+* identifier.system = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/sid/example-organization-id"
 * identifier.value = "XYZ54321"
 * active = true
 * address.line = "123 健康路"

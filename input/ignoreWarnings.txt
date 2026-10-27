@@ -1,5 +1,11 @@
 == Suppressed Messages ==
 
+# FHIR R4 inherited choice-type bindings apply only to bindable types.
+# These bindings are in dependency snapshots, not in this IG's differential.
+%The Binding on the type slicer CarePlan.activity.detail.product[x] applies to all its slices%
+%The Binding on the type slicer QuestionnaireResponse.item.answer.value[x] applies to all its slices%
+%The Binding on the type slicer Questionnaire.item.answerOption.value[x] applies to all its slices%
+
 # 延後修正
 %questionnaire-response-signature%
 
