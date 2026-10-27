@@ -197,5 +197,5 @@ Description: "受試者評估側別選項"
 * ^identifier[=].value = "urn:oid:2.25.296909370309054349825577980967894708033"
 * ^experimental = false
 * insert ShareableTerminologyMetadata
-* $SCT#24028007 "患者左側"
-* $SCT#7771000 "患者右側"
+* $SCT#24028007 "患者右側"
+* $SCT#7771000 "患者左側"
