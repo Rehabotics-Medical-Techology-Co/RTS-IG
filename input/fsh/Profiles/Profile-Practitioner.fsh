@@ -32,7 +32,7 @@ Description: "執行ARAT評估的職能治療師"
 * name.use = #official
 * name.family = "李"
 * name.given = "小姐"
-* identifier.system = "http://hospital.mohw.gov.tw/docID"
+* identifier.system = "https://build.fhir.org/ig/Rehabotics-Medical-Techology-Co/RTS-IG/sid/example-practitioner-id"
 * identifier.value = "ABC12345"
 * qualification.code = http://snomed.info/sct#224609002 "Complementary health worker"
 * qualification.code.text = "職能治療師"

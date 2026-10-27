@@ -15,3 +15,17 @@ title: 結構定義與範例檔下載
 
 **範例** [xml](examples.xml.zip) [JSON](examples.json.zip) [Turtle](examples.ttl.zip)
 
+### 智慧財產權聲明
+
+{% include ip-statements.xhtml %}
+
+### 相依套件
+
+{% include dependency-table-short.xhtml %}
+
+### 版本與全域定義
+
+{% include cross-version-analysis.xhtml %}
+
+{% include globals-table.xhtml %}
+
